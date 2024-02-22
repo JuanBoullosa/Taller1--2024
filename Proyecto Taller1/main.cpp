@@ -134,19 +134,41 @@ partirString(comando, Lista1);  // Procedimiento para partir el string
 
 MostrarLista(Lista1);           // Mostramos el string partido
 
+ArbolExpresiones arbol;
+int id=0;
+Expresion expre;
+ListaExpresiones ListExp;
+CrearListaExpresiones(ListExp);
 
-//Comparar la primera palabra de la lista con los comandos
 
 
-//si la cantidad de palabras es dos
-if(streq(atomic, Lista1->palabra))
-    printf("Es igual al string atomic");
-    // y la segunda palabra es true o false de no ser dar error
-    //crear arbol de expresion
-    //crear los valornodo de cada nodo
-    //agregar el arbol a una expresion y asignarle un id
-    //agregar a la lista de expresion
 
+//Para resolver comando atomic
+if(LargoRecu(Lista1) == 2){
+if(streq(atomic, Lista1->palabra)){
+    Lista1 = Lista1->sig;
+
+    if(streq(expTrue, Lista1->palabra)){
+        Crear(arbol);
+        arbol->info.dato.valor = TRUE;
+        expre.numero = id+1;
+        expre.arbol = arbol;
+        id = id+1;
+        InsBackIterExp(ListExp, expre);
+                }
+    if(streq(expFalse, Lista1->palabra)){
+                Crear(arbol);
+                arbol->info.dato.valor = FALSE;
+                expre.numero = id+1;
+                expre.arbol = arbol;
+                id = id +1;
+                InsBackIterExp(ListExp, expre);
+                }
+                else
+                    printf("\nComando incorrecto\n");
+
+}
+}
 // si la cantidad de palabras menor a 5 y mayor a 2
 if(streq(compound, Lista1->palabra))
     printf("Es igual al string compound");
