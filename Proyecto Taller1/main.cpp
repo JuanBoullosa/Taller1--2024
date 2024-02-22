@@ -4,10 +4,6 @@
 #include "ListaString.h"
 #include "ListaExpresiones.h"
 
-
-//Prueba github
-//daleeee looocooo
-
 int main()
 {
 
@@ -141,35 +137,42 @@ int id=0;                       //Creamos id para identificar expresiones
 Expresion expre;                //Creamos  expresion
 ListaExpresiones ListExp;           //Declaramos y creamos lista de expresiones para almacenar expresion
 CrearListaExpresiones(ListExp);
+//show(arbol);
 
-
-
+str s;
+strcrear(s);
+scan(s);
+partirString(s,Lista1);
 
 //Para resolver comando atomic
-if(LargoRecu(Lista1) == 2){
-if(streq(atomic, Lista1->palabra)){
-    Lista1 = Lista1->sig;
+if(LargoRecu(Lista1) == 2)
+{
+    if(streq(atomic, Lista1->palabra))
+    {
+        Lista1 = Lista1->sig;
 
-    if(streq(expTrue, Lista1->palabra)){
-        Crear(arbol);
-        arbol->info.dato.valor = TRUE;
-        expre.numero = id+1;
-        expre.arbol = arbol;
-        id = id+1;
-        InsBackIterExp(ListExp, expre);
-                }
-    if(streq(expFalse, Lista1->palabra)){
+        if(streq(expTrue, Lista1->palabra))
+        {
+            Crear(arbol);
+            arbol->info.dato.valor = TRUE;
+            expre.numero = id+1;
+            expre.arbol = arbol;
+            id = id+1;
+            InsBackIterExp(ListExp, expre);
+        }
+            if(streq(expFalse, Lista1->palabra))
+            {
                 Crear(arbol);
                 arbol->info.dato.valor = FALSE;
                 expre.numero = id+1;
                 expre.arbol = arbol;
                 id = id +1;
                 InsBackIterExp(ListExp, expre);
-                }
-                else
-                    printf("\nComando incorrecto\n");
+            }
+                    else
+                        printf("\nComando incorrecto\n");
 
-}
+    }
 }
 // si la cantidad de palabras menor a 5 y mayor a 2
 if(streq(compound, Lista1->palabra))
@@ -181,8 +184,26 @@ if(streq(compound, Lista1->palabra))
     //crear el arbol de expresion
     //crear valor nodo para los nodos a partir de la expresiones de los numeros enteros
     //asignar un parentesis a abierto al valor mas a la izquierda del arbol y un parentesis cerrrado al valor mas a la derecha del arbol
-if(streq(show, Lista1->palabra))
-    printf("Es igual al string show");
+
+
+if(LargoRecu(Lista1) == 2)
+{
+    if(streq(show, Lista1->palabra))
+    {
+        Lista1 = Lista1->sig;
+
+        if(Lista1->palabra == expre.numero) //Ver como transformar el string para reconocer un numero
+        {
+            printf("%d", expre.numero);  //Hay que crear selectora para un futuro
+        }
+                    else
+                    {
+                        printf("\nComando incorrecto\n");
+                    }
+
+
+    }
+}
 
 if(streq(evaluate, Lista1->palabra))
     printf("Es igual al string evaluate");
@@ -195,12 +216,6 @@ if(streq(load, Lista1->palabra))
 
 if(streq(exit, Lista1->palabra))
     printf("Es igual al string atomic");
-
-
-
-
-
-
 
 }
 
