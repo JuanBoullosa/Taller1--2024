@@ -2,6 +2,7 @@
 #include "ArbolExpresiones.h"
 #include "Strigg.h"
 #include "ListaString.h"
+#include "ListaExpresiones.h"
 
 
 //Prueba github

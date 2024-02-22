@@ -10,18 +10,18 @@ typedef struct nodoL { Expresion expre;
 typedef NodoL* ListaExpresiones;
 
 //Crear Lista
-//void CrearLista (ListaExpresiones &L);
+void CrearListaExpresiones (ListaExpresiones &L);
 
 //Insertar expresion en lista de expresiones
-//void InsFront (ListaExpresiones &L, Expresion exp);
+void InsFrontExp (ListaExpresiones &L, Expresion exp);
 
 
 //Mostrar Lista
-//void MostrarLista (ListaExpresiones L);
+void MostrarListaExp (ListaExpresiones L);
 
 
 //Agregar al final de la lista
-//void InsBackIter  (ListaExpresiones &L , Expresion exp);
+void InsBackIterExp  (ListaExpresiones &L , Expresion exp);
 
 
 #endif // LISTAEXPRESIONES_H_INCLUDED
