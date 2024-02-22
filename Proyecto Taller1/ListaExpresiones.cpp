@@ -2,44 +2,42 @@
 
 
 //Crear Lista
-/*void CrearLista (ListaExpresiones &L)
+void CrearListaExpresiones (ListaExpresiones &L)
 {
   L=NULL;
 }
-*/
+
 //Devolver si la lista esta vacia
-/*boolean EsVacia (ListaExpresiones L)
+boolean EsVacia (ListaExpresiones L)
 {
   boolean es = FALSE;
-  if (L==NULL)
+  if (L == NULL)
     es = TRUE;
 
     return es;
 }
-*/
+
 //Insertar expresion en lista de expresiones
-/*void InsFront (ListaExpresiones &L, Expresion exp)
+void InsFrontExp (ListaExpresiones &L, Expresion exp)
 {
   ListaExpresiones aux = new NodoL;
   aux-> expre = exp;
   aux->sig = L;
   L = aux;
-}*/
-
-
+}
 
 //Mostrar Lista
-/*void MostrarLista (ListaExpresiones L)
+void MostrarListaExp (ListaExpresiones L)
 {
     while (L != NULL)
       {
         printf ("%d", L->expre.numero);
         L = L->sig;
       }
-}*/
+}
 
 //Agregar al final de la lista
-/*void InsBackIter  (ListaExpresiones &L , Expresion exp)
+void InsBackIterExp  (ListaExpresiones &L , Expresion exp)
 {
   ListaExpresiones nuevo = new NodoL;
   nuevo -> expre = exp;
@@ -55,4 +53,4 @@
     aux -> sig = nuevo;
   }
 }
-*/
+
