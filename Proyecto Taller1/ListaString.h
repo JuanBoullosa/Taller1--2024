@@ -13,6 +13,8 @@ typedef NodoS*ListaString;
 void CrearLista (ListaString &L);
 //Mostrar Lista
 void MostrarLista (ListaString L);
+//Devuelve el largo de una lista
+int LargoRecu (ListaString L);
 //Agregar al principio de la lista
 void InsFront (ListaString &L, str s);
 //Agregar al final de la lista

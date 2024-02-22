@@ -18,6 +18,13 @@ void MostrarLista (ListaString L)
       L = L -> sig;
     }
 }
+int LargoRecu (ListaString L)
+{
+    if (L == NULL)
+        return 0;
+    else
+        return 1 + LargoRecu (L->sig);
+}
 //Mostrar si la lista es vacia
 boolean Vacia (ListaString L)
 {

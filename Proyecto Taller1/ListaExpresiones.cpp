@@ -8,14 +8,14 @@ void CrearListaExpresiones (ListaExpresiones &L)
 }
 
 //Devolver si la lista esta vacia
-boolean EsVacia (ListaExpresiones L)
+/*boolean EsVacia (ListaExpresiones L)
 {
   boolean es = FALSE;
   if (L == NULL)
     es = TRUE;
 
     return es;
-}
+}*/
 
 //Insertar expresion en lista de expresiones
 void InsFrontExp (ListaExpresiones &L, Expresion exp)
