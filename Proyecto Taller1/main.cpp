@@ -136,10 +136,10 @@ partirString(comando, Lista1);  // Procedimiento para partir el string
 
 MostrarLista(Lista1);           // Mostramos el string partido
 
-ArbolExpresiones arbol;
-int id=0;
-Expresion expre;
-ListaExpresiones ListExp;
+ArbolExpresiones arbol;         // Creamos arbol de expresiones
+int id=0;                       //Creamos id para identificar expresiones
+Expresion expre;                //Creamos  expresion
+ListaExpresiones ListExp;           //Declaramos y creamos lista de expresiones para almacenar expresion
 CrearListaExpresiones(ListExp);
 
 
