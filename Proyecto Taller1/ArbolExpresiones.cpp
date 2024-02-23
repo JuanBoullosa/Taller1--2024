@@ -71,9 +71,13 @@ void MostrarArbol (ArbolExpresiones a)
     {
         MostrarArbol(a->hizq);
         if (a->info.dato.valor == FALSE)
-                printf(" FALSE ");
-        if (a->info.dato.valor==TRUE)
-                printf(" TRUE ");
+            printf(" FALSE ");
+            else
+                if (a->info.dato.valor== TRUE)
+                    printf(" TRUE ");
+                else
+                    printf("VALOR NO VALIDO");
+        /*
         if (a->info.dato.operador == 'A')
                 printf(" AND ");
         if (a->info.dato.operador == 'O')
@@ -84,6 +88,7 @@ void MostrarArbol (ArbolExpresiones a)
                 printf(" ( ");
         if (a->info.dato.parentesis == ')' )
                 printf(" ) ");
+                */
         MostrarArbol(a->hder);
 
     }

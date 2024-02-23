@@ -68,19 +68,19 @@ expOr[1]='r';
 expOr[2]='\0';
 
         if (streq(L->palabra, expAnd)) {
-            valNodo.discriminante = OPERADOR;
+            //valNodo.discriminante = OPERADOR;
             valNodo.dato.operador = 'A';
         } else if (streq(L->palabra, expOr)) {
-            valNodo.discriminante = OPERADOR;
+            //valNodo.discriminante = OPERADOR;
             valNodo.dato.operador = 'O';
         } else if (streq(L->palabra, expNot)) {
-            valNodo.discriminante = OPERADOR;
+            //valNodo.discriminante = OPERADOR;
             valNodo.dato.operador = 'N';
         } else if (streq(L->palabra, expTrue)) {
-            valNodo.discriminante = VALOR;
+            //valNodo.discriminante = VALOR;
             valNodo.dato.valor = TRUE;
         } else if (streq(L->palabra, expFalse)) {
-            valNodo.discriminante = VALOR;
+            //valNodo.discriminante = VALOR;
             valNodo.dato.valor = FALSE;
         }
 

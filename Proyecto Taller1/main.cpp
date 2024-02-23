@@ -129,8 +129,9 @@ CrearLista(Lista1);
 str aux;
 strcrear(aux);             //Creamos la lista
 partirString(comando, Lista1);  // Procedimiento para partir el string
-
+printf("Mostrar Lista de string: \n");
 MostrarLista(Lista1);           // Mostramos el string partido
+printf("\n");
 
 ArbolExpresiones arbolexp;         // Creamos arbol de expresiones
 Expresion expre;                //Creamos  expresion
@@ -141,30 +142,22 @@ ValorNodo valNodo;
 int contadorexp1=1;
 
 //Para resolver comando atomic
-
 if((LargoRecu(Lista1) == 2) && (streq(atomic, Lista1->palabra)))
 {
+
             Lista1=Lista1->sig;
-            CargarValorNodo(Lista1, valNodo);
-            CargarArbolAtomic(valNodo,arbolexp);
-            CargarExpresion(arbolexp, expre, contadorexp1);
-            InsBackIterExp(ListExp, expre);
+            if(streq(expTrue,Lista1->palabra)||streq(expFalse,Lista1->palabra))
+            {
+                CargarValorNodo(Lista1, valNodo);
+                CargarArbolAtomic(valNodo,arbolexp);
+                CargarExpresion(arbolexp, expre, contadorexp1);
+                InsBackIterExp(ListExp, expre);
+                printf("\nMostrar arbol: \n");
+                MostrarArbol(ListExp->expre.arbol);
             }
         else
             printf("\nComando incorrecto\n");
-
-    if(valNodo.dato.valor==TRUE)
-        {
-            printf("valnodo es true");
-        }
-    else
-        {
-            if(valNodo.dato.valor==FALSE)
-            printf("valnodo es false");
-        }
-printf("\nMostrar arbol: \n");
-
-MostrarArbol(ListExp->expre.arbol);
+            }
 
 }
 
