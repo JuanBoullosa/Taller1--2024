@@ -176,9 +176,14 @@ if((LargoRecu(Lista1) == 2) && (streq(atomic, Lista1->palabra)))
         else
             printf("\nComando incorrecto\n");
             }
+<<<<<<< Updated upstream
         else
             printf("\nComando incorrecto\n");
 }
+=======
+            else
+                printf("\nComando incorrecto\n");
+>>>>>>> Stashed changes
 
 /*
 if((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5) && (streq(compound, Lista1->palabra)))
