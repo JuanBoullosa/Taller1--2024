@@ -67,8 +67,8 @@ void partirString(str s, ListaString &L) {
     strcrear(aux);
     strcop(aux , s);
     str s1, s2, aux2 ;
-    strcrear(s1);
-    strcrear(s2);
+    //strcrear(s1);
+    //strcrear(s2);
 
 
 
@@ -82,8 +82,8 @@ void partirString(str s, ListaString &L) {
         strcop(aux, s2); // Actualizar auxiliar para el siguiente ciclo
         }
 
-        strdestruir(s1);
-        strdestruir(s2);
+        //strdestruir(s1);
+        //strdestruir(s2);
         strdestruir(aux);
         strdestruir(aux2);
 

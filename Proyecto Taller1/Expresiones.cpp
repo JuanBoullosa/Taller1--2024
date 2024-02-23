@@ -1,12 +1,11 @@
 #include "Expresiones.h"
 
-void CrearExpresion(ArbolExpresiones Aexp, Expresion &expre)
+void CargarExpresion(ArbolExpresiones Aexp, Expresion &expre, int &contadorexp)
 
 {
-    int id=0;
-    expre.numero=id+1;
+    expre.numero=contadorexp;
     expre.arbol=Aexp;
-    id++;
+    contadorexp++;
 }
 
 

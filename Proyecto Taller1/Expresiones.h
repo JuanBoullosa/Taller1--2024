@@ -8,6 +8,6 @@ typedef struct { int numero;
                } Expresion;
 
 
-void CrearExpresion(ArbolExpresiones Aexp, Expresion &expre);
+void CargarExpresion(ArbolExpresiones Aexp, Expresion &expre, int &contadorexp);
 
 #endif // EXPRESIONES_H_INCLUDED

@@ -36,7 +36,7 @@ ArbolExpresiones HijoDer (ArbolExpresiones a);
 
 void ListarExpresion (ArbolExpresiones a);
 
-void CrearArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a);
+void CargarArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a);
 
 
 

@@ -133,42 +133,44 @@ partirString(comando, Lista1);  // Procedimiento para partir el string
 MostrarLista(Lista1);           // Mostramos el string partido
 
 ArbolExpresiones arbolexp;         // Creamos arbol de expresiones
-int id=0;                       //Creamos id para identificar expresiones
 Expresion expre;                //Creamos  expresion
 ListaExpresiones ListExp;           //Declaramos y creamos lista de expresiones para almacenar expresion
 CrearListaExpresiones(ListExp);
 ValorNodo valNodo;
 //show(arbol);
 
-str s;
-strcrear(s);
-scan(s);
-partirString(s,Lista1);
+
+int contadorexp1=1;
 
 //Para resolver comando atomic
-if(LargoRecu(Lista1) == 2)
+
+if((LargoRecu(Lista1) == 2) && (streq(atomic, Lista1->palabra)))
 {
-    if(streq(atomic, Lista1->palabra))
-    {
-            CrearValorNodo(Lista1, valNodo);
-            CrearArbolAtomic(valNodo,arbolexp);
-            //CrearExpresion(arbolexp, expre);
-            expre.numero = id+1;        //Una vez creado CrearExpresion sustituimos esto para que quede mas prolijo
-            expre.arbol = arbolexp;
-            id = id+1;
+            Lista1=Lista1->sig;
+            CargarValorNodo(Lista1, valNodo);
+            CargarArbolAtomic(valNodo,arbolexp);
+            CargarExpresion(arbolexp, expre, contadorexp1);
             InsBackIterExp(ListExp, expre);
-    }
+            }
         else
             printf("\nComando incorrecto\n");
 
- }
- if(valNodo.valor==TRUE)
-    printf("valnodo es true");
-
-    else if(valNodo.valor==FALSE)
-    printf("valnodo es false");
-
+    if(valNodo.dato.valor==TRUE)
+        {
+            printf("valnodo es true");
+        }
+    else
+        {
+            if(valNodo.dato.valor==FALSE)
+            printf("valnodo es false");
+        }
 }
+
+ListarExpresion(arbolexp);
+
+
+
+
 // si la cantidad de palabras menor a 5 y mayor a 2
 //if(streq(compound, Lista1->palabra))
  //   printf("Es igual al string compound");

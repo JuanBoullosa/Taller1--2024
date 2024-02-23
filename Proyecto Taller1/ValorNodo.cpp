@@ -10,7 +10,7 @@
 //void MostrarValorNodo(ValorNodo ValNodo)
 
 
-void CrearValorNodo(ListaString L, ValorNodo &valNodo){
+void CargarValorNodo(ListaString L, ValorNodo &valNodo){
 
 str expTrue;
 strcrear(expTrue);
@@ -20,8 +20,7 @@ expTrue[1]='r';
 expTrue[2]='u';
 expTrue[3]='e';
 expTrue[4]='\0';
-print(expTrue);
-printf("\n");
+
 //Expresion false en string para comparar
 str expFalse;
 strcrear(expFalse);
@@ -68,7 +67,6 @@ expOr[0]='o';
 expOr[1]='r';
 expOr[2]='\0';
 
-     while (L->palabra != NULL) {
         if (streq(L->palabra, expAnd)) {
             valNodo.discriminante = OPERADOR;
             valNodo.dato.operador = 'A';
@@ -85,8 +83,6 @@ expOr[2]='\0';
             valNodo.discriminante = VALOR;
             valNodo.dato.valor = FALSE;
         }
-            L= L->sig;
-    }
 
 }
 

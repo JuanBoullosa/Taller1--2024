@@ -12,7 +12,7 @@ typedef struct {    int valor;
                 } ValorNodo;
 
 //Carga por teclado los datos de un Grupo
-void CrearValorNodo(ListaString L, ValorNodo &valNodo);
+void CargarValorNodo(ListaString L, ValorNodo &valNodo);
 
 //Mostrar por pantalla los datos de un Grupo
 void MostrarValorNodo(ValorNodo ValNodo);
@@ -29,6 +29,5 @@ char DarOperador(ValorNodo ValNodo);
 //Selectora Dar Parentesis
 char DarParentesis(ValorNodo ValNodo);
 
-TipoNodo DarTipoNodo(ValorNodo ValNodo);
 
 #endif // VALORNODO_H_INCLUDED
