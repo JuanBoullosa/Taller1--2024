@@ -152,10 +152,7 @@ ValorNodo valNodo;
 //show(arbol);
 int contadorexp1=1;
 
-//Ejemplo convertir string a entero.
-//int numeroprueba;
-//sscanf(comando, "%d", &numeroprueba);
-//printf("El numero convertido es: %d ", numeroprueba);
+
 
 
 
@@ -180,18 +177,24 @@ if((LargoRecu(Lista1) == 2) && (streq(atomic, Lista1->palabra)))
             printf("\nComando incorrecto\n");
 }
 
+//Ejemplo convertir string a entero.
+//int numeroprueba;
+//sscanf(comando, "%d", &numeroprueba);
+//printf("El numero convertido es: %d ", numeroprueba);
 
-/*
 if((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5) && (streq(compound, Lista1->palabra)))
 {
     Lista1=Lista1->sig;
-    if(streq(expTrue,Lista1->palabra)||streq(expFalse,Lista1->palabra))
+    if(streq(expNot,Lista1->palabra))
+    {
+        Lista1=Lista1->sig;
+        if ( )
+    }
 }
 
 
 
 
-*/
 
 
 
