@@ -95,14 +95,14 @@ void CrearArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a)
     if(ValNodo.dato.valor==FALSE)
     {
         a=new nodo;
-        a->info = FALSE;
+        a->info = ValNodo;
         a->hizq = NULL;
         a->hder = NULL;
     }
     if(ValNodo.dato.valor==TRUE)
     {
         a=new nodo;
-        a->info = TRUE;
+        a->info = ValNodo;
         a->hizq = NULL;
         a->hder = NULL;
     }

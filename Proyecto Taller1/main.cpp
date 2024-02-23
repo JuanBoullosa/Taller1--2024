@@ -152,9 +152,9 @@ if(LargoRecu(Lista1) == 2)
     {
             CrearValorNodo(Lista1, valNodo);
             CrearArbolAtomic(valNodo,arbolexp);
-            CrearExpresion(arbolexp, expre);
-            expre.numero = id+1;
-            expre.arbol = arbol;
+            //CrearExpresion(arbolexp, expre);
+            expre.numero = id+1;        //Una vez creado CrearExpresion sustituimos esto para que quede mas prolijo
+            expre.arbol = arbolexp;
             id = id+1;
             InsBackIterExp(ListExp, expre);
     }

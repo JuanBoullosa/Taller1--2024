@@ -1,7 +1,6 @@
 #include "Expresiones.h"
 
-
-CrearExpresion(ArbolExpresiones Aexp, Expresion &expre)
+void CrearExpresion(ArbolExpresiones Aexp, Expresion &expre)
 
 {
     int id=0;
