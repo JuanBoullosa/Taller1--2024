@@ -137,6 +137,7 @@ int id=0;                       //Creamos id para identificar expresiones
 Expresion expre;                //Creamos  expresion
 ListaExpresiones ListExp;           //Declaramos y creamos lista de expresiones para almacenar expresion
 CrearListaExpresiones(ListExp);
+ValorNodo valNodo;
 //show(arbol);
 
 str s;
@@ -149,34 +150,26 @@ if(LargoRecu(Lista1) == 2)
 {
     if(streq(atomic, Lista1->palabra))
     {
-        Lista1 = Lista1->sig;
-
-        if(streq(expTrue, Lista1->palabra))
-        {
-            Crear(arbol);
-            arbol->info.dato.valor = TRUE;
+            CrearValorNodo(Lista1, valNodo);
             expre.numero = id+1;
             expre.arbol = arbol;
             id = id+1;
             InsBackIterExp(ListExp, expre);
-        }
-            if(streq(expFalse, Lista1->palabra))
-            {
-                Crear(arbol);
-                arbol->info.dato.valor = FALSE;
-                expre.numero = id+1;
-                expre.arbol = arbol;
-                id = id +1;
-                InsBackIterExp(ListExp, expre);
-            }
-                    else
-                        printf("\nComando incorrecto\n");
-
     }
+        else
+            printf("\nComando incorrecto\n");
+
+ }
+ if(valNodo.valor==TRUE)
+    printf("valnodo es true");
+
+    else if(valNodo.valor==FALSE)
+    printf("valnodo es false");
+
 }
 // si la cantidad de palabras menor a 5 y mayor a 2
-if(streq(compound, Lista1->palabra))
-    printf("Es igual al string compound");
+//if(streq(compound, Lista1->palabra))
+ //   printf("Es igual al string compound");
     // si la cantidad de palabras es 3
     // comprobar si la segunda palabra es not y la tercera un entero valido de no ser dar error correspondiente
     //si la cantidad es 4
@@ -205,18 +198,18 @@ if(streq(compound, Lista1->palabra))
     }
 }*/
 
-if(streq(evaluate, Lista1->palabra))
-    printf("Es igual al string evaluate");
+//if(streq(evaluate, Lista1->palabra))
+    //printf("Es igual al string evaluate");
 
-if(streq(save, Lista1->palabra))
-    printf("Es igual al string save");
+//if(streq(save, Lista1->palabra))
+   // printf("Es igual al string save");
 
-if(streq(load, Lista1->palabra))
-    printf("Es igual al string load");
+//if(streq(load, Lista1->palabra))
+   // printf("Es igual al string load");
 
-if(streq(exit, Lista1->palabra))
-    printf("Es igual al string atomic");
+//if(streq(exit, Lista1->palabra))
+//printf("Es igual al string atomic");
 
-}
+
 
 

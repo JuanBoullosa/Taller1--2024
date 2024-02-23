@@ -224,12 +224,12 @@
 1708567867 source:d:\documentos\github\taller1--2024\proyecto taller1\tiponodo.cpp
 	"TipoNodo.h"
 
-1708567867 source:d:\documentos\github\taller1--2024\proyecto taller1\valornodo.cpp
+1708650722 source:d:\documentos\github\taller1--2024\proyecto taller1\valornodo.cpp
 	"ValorNodo.h"
 	"TipoNodo.h"
 	"ListaString.h"
 
-1708646493 source:d:\documentos\github\taller1--2024\proyecto taller1\main.cpp
+1708651086 source:d:\documentos\github\taller1--2024\proyecto taller1\main.cpp
 	<iostream>
 	"ArbolExpresiones.h"
 	"Strigg.h"

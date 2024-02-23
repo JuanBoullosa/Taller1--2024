@@ -69,13 +69,7 @@ expOr[1]='r';
 expOr[2]='\0';
 
      while (L->palabra != NULL) {
-        if (streq(L->palabra, expParAbierto)) {
-            valNodo.discriminante = PARENTESIS;
-            valNodo.dato.operador = '(';
-        } else if (streq(L->palabra, expParCerrado)) {
-            valNodo.discriminante = PARENTESIS;
-            valNodo.dato.operador = ')';
-        } else if (streq(L->palabra, expAnd)) {
+        if (streq(L->palabra, expAnd)) {
             valNodo.discriminante = OPERADOR;
             valNodo.dato.operador = 'A';
         } else if (streq(L->palabra, expOr)) {
@@ -91,6 +85,7 @@ expOr[2]='\0';
             valNodo.discriminante = VALOR;
             valNodo.dato.valor = FALSE;
         }
+            L= L->sig;
     }
 
 }
