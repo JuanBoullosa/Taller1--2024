@@ -236,11 +236,11 @@
 	"ListaString.h"
 	"ListaExpresiones.h"
 
-1708720367 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\arbolexpresiones.cpp
+1708726105 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\arbolexpresiones.cpp
 	"ArbolExpresiones.h"
 	"Expresiones.h"
 
-1708720367 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\arbolexpresiones.h
+1708726065 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\arbolexpresiones.h
 	"Boolean.h"
 	"ValorNodo.h"
 
@@ -266,7 +266,7 @@
 1708567169 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\boolean.cpp
 	"Boolean.h"
 
-1708722697 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\expresiones.cpp
+1708726322 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\expresiones.cpp
 	"Expresiones.h"
 
 1708567169 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\strigg.cpp
@@ -287,7 +287,7 @@
 	"Expresiones.h"
 	"Boolean.h"
 
-1708723223 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\listastring.cpp
+1708724674 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\listastring.cpp
 	"ListaString.h"
 	"Strigg.h"
 

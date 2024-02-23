@@ -65,11 +65,11 @@ ArbolExpresiones CosCompoundNot (ValorNodo r, ArbolExpresiones i)
 }
 
 
-void ListarExpresion (ArbolExpresiones a)
+void MostrarArbol (ArbolExpresiones a)
 {
     if (a != NULL)
     {
-        ListarExpresion(a->hizq);
+        MostrarArbol(a->hizq);
         if (a->info.dato.valor == FALSE)
                 printf(" FALSE ");
         if (a->info.dato.valor==TRUE)
@@ -84,7 +84,7 @@ void ListarExpresion (ArbolExpresiones a)
                 printf(" ( ");
         if (a->info.dato.parentesis == ')' )
                 printf(" ) ");
-        ListarExpresion(a->hder);
+        MostrarArbol(a->hder);
 
     }
 

@@ -138,8 +138,6 @@ ListaExpresiones ListExp;           //Declaramos y creamos lista de expresiones 
 CrearListaExpresiones(ListExp);
 ValorNodo valNodo;
 //show(arbol);
-
-
 int contadorexp1=1;
 
 //Para resolver comando atomic
@@ -164,9 +162,13 @@ if((LargoRecu(Lista1) == 2) && (streq(atomic, Lista1->palabra)))
             if(valNodo.dato.valor==FALSE)
             printf("valnodo es false");
         }
+printf("\nMostrar arbol: \n");
+
+MostrarArbol(ListExp->expre.arbol);
+
 }
 
-ListarExpresion(arbolexp);
+
 
 
 
