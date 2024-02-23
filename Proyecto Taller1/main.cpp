@@ -132,7 +132,7 @@ partirString(comando, Lista1);  // Procedimiento para partir el string
 
 MostrarLista(Lista1);           // Mostramos el string partido
 
-ArbolExpresiones arbol;         // Creamos arbol de expresiones
+ArbolExpresiones arbolexp;         // Creamos arbol de expresiones
 int id=0;                       //Creamos id para identificar expresiones
 Expresion expre;                //Creamos  expresion
 ListaExpresiones ListExp;           //Declaramos y creamos lista de expresiones para almacenar expresion
@@ -151,6 +151,8 @@ if(LargoRecu(Lista1) == 2)
     if(streq(atomic, Lista1->palabra))
     {
             CrearValorNodo(Lista1, valNodo);
+            CrearArbolAtomic(valNodo,arbolexp);
+            CrearExpresion(arbolexp, expre);
             expre.numero = id+1;
             expre.arbol = arbol;
             id = id+1;

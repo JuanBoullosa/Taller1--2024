@@ -90,5 +90,22 @@ void ListarExpresion (ArbolExpresiones a)
 
 }
 
+void CrearArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a)
+{
+    if(ValNodo.dato.valor==FALSE)
+    {
+        a=new nodo;
+        a->info = FALSE;
+        a->hizq = NULL;
+        a->hder = NULL;
+    }
+    if(ValNodo.dato.valor==TRUE)
+    {
+        a=new nodo;
+        a->info = TRUE;
+        a->hizq = NULL;
+        a->hder = NULL;
+    }
+}
 
 

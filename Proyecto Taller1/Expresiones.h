@@ -8,4 +8,6 @@ typedef struct { int numero;
                } Expresion;
 
 
+CrearExpresion(ArbolExpresiones Aexp, Expresion &expre);
+
 #endif // EXPRESIONES_H_INCLUDED
