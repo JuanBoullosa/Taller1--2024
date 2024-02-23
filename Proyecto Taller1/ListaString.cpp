@@ -13,7 +13,7 @@ void MostrarLista (ListaString L)
 {
     while (L != NULL)
     {
-      printf ("%s", L->palabra);
+      print (L->palabra);
       printf(" ");
       L = L -> sig;
     }
@@ -65,22 +65,30 @@ void InsBackIter(ListaString &L, str palabraS) {
 void partirString(str s, ListaString &L) {
     str aux;
     strcrear(aux);
-    str aux2;
-    strcrear(aux2);
     strcop(aux , s);
+    str s1, s2, aux2 ;
+    strcrear(s1);
+    strcrear(s2);
+
 
 
         while (!stringVacio(aux)) {
+        strcrear(aux2);
         eliminarBlancosPrincipio(aux , aux2);
-        str s1, s2 ;
+        strcrear(s1);
+        strcrear(s2);
         dividirString(aux2, s1, s2);
         InsBackIter(L, s1);
         strcop(aux, s2); // Actualizar auxiliar para el siguiente ciclo
-
         }
 
-    delete[] aux;
-    delete[] aux2;
+        strdestruir(s1);
+        strdestruir(s2);
+        strdestruir(aux);
+        strdestruir(aux2);
+
+
+
 }
 
 

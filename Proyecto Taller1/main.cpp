@@ -157,6 +157,7 @@ if(streq(atomic, Lista1->palabra)){
         expre.arbol = arbol;
         id = id+1;
         InsBackIterExp(ListExp, expre);
+        //Mostrar expresion
                 }
     if(streq(expFalse, Lista1->palabra)){
                 Crear(arbol);
@@ -165,6 +166,7 @@ if(streq(atomic, Lista1->palabra)){
                 expre.arbol = arbol;
                 id = id +1;
                 InsBackIterExp(ListExp, expre);
+                //Mostrar expresion
                 }
                 else
                     printf("\nComando incorrecto\n");

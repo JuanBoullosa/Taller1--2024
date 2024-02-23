@@ -214,7 +214,7 @@
 	"Expresiones.h"
 	"Boolean.h"
 
-1708568841 source:d:\documentos\github\taller1--2024\proyecto taller1\listastring.cpp
+1708645697 source:d:\documentos\github\taller1--2024\proyecto taller1\listastring.cpp
 	"ListaString.h"
 	"Strigg.h"
 
@@ -229,7 +229,7 @@
 	"TipoNodo.h"
 	"ListaString.h"
 
-1708568638 source:d:\documentos\github\taller1--2024\proyecto taller1\main.cpp
+1708646493 source:d:\documentos\github\taller1--2024\proyecto taller1\main.cpp
 	<iostream>
 	"ArbolExpresiones.h"
 	"Strigg.h"
