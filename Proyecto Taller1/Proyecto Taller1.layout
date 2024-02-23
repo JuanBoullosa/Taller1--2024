@@ -2,42 +2,65 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="Expresiones.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ArbolExpresiones.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="26" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="TipoNodo.cpp" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="70" topLine="0" />
+			<Cursor1 position="1685" topLine="54" />
 		</Cursor>
 		<Folding>
-			<Collapse line="9" />
+			<Collapse line="8" />
+			<Collapse line="14" />
+			<Collapse line="46" />
+			<Collapse line="59" />
 		</Folding>
 	</File>
-	<File name="main.cpp" open="1" top="1" tabpos="9" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+	<File name="ListaString.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3878" topLine="137" />
+			<Cursor1 position="390" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Boolean.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ValorNodo.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="445" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Expresiones.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="202" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="ListaExpresiones.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="645" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Boolean.cpp" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="20" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="TipoNodo.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="TipoNodo.cpp" open="0" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="140" topLine="0" />
+			<Cursor1 position="34" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Expresiones.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Boolean.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="238" topLine="0" />
+			<Cursor1 position="78" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Strigg.cpp" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ListaExpresiones.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4411" topLine="3" />
+			<Cursor1 position="872" topLine="19" />
+		</Cursor>
+	</File>
+	<File name="ArbolExpresiones.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1106" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Strigg.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4411" topLine="16" />
 		</Cursor>
 		<Folding>
 			<Collapse line="6" />
@@ -50,88 +73,49 @@
 			<Collapse line="92" />
 			<Collapse line="102" />
 			<Collapse line="107" />
-			<Collapse line="120" />
 			<Collapse line="133" />
 			<Collapse line="158" />
 			<Collapse line="188" />
 		</Folding>
 	</File>
-	<File name="ValorNodo.cpp" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+	<File name="main.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2500" topLine="62" />
+			<Cursor1 position="4354" topLine="162" />
+		</Cursor>
+	</File>
+	<File name="ListaString.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1384" topLine="0" />
 		</Cursor>
 		<Folding>
-			<Collapse line="94" />
-			<Collapse line="99" />
-			<Collapse line="104" />
-			<Collapse line="109" />
+			<Collapse line="6" />
+			<Collapse line="29" />
+			<Collapse line="38" />
+			<Collapse line="45" />
 		</Folding>
 	</File>
-	<File name="Strigg.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Strigg.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1129" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="ArbolExpresiones.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ValorNodo.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="410" topLine="30" />
+			<Cursor1 position="1379" topLine="42" />
 		</Cursor>
 		<Folding>
-			<Collapse line="8" />
-			<Collapse line="14" />
-			<Collapse line="21" />
-			<Collapse line="29" />
-			<Collapse line="37" />
-			<Collapse line="46" />
-			<Collapse line="59" />
+			<Collapse line="100" />
+			<Collapse line="105" />
 		</Folding>
 	</File>
-	<File name="ListaString.cpp" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+	<File name="TipoNodo.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1704" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="6" />
-			<Collapse line="21" />
-			<Collapse line="29" />
-			<Collapse line="38" />
-			<Collapse line="45" />
-			<Collapse line="64" />
-		</Folding>
-	</File>
-	<File name="Boolean.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="78" topLine="0" />
+			<Cursor1 position="140" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="ArbolExpresiones.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Expresiones.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="72" topLine="0" />
+			<Cursor1 position="197" topLine="0" />
 		</Cursor>
-	</File>
-	<File name="ValorNodo.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="108" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="ListaExpresiones.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="560" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="ListaString.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="390" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="ListaExpresiones.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="275" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="21" />
-			<Collapse line="30" />
-			<Collapse line="40" />
-		</Folding>
 	</File>
 </CodeBlocks_layout_file>
