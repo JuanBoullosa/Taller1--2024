@@ -118,6 +118,17 @@ expFalse[4]='e';
 expFalse[5]='\0';
 print(expFalse);
 printf("\n");
+
+str expNot;
+strcrear(expNot);
+expNot = new char[4];//Solicitamos la cantidad de espacios en memoria operador or
+expNot[0]='n';
+expNot[1]='o';
+expNot[2]='t';
+expNot[3]='\0';
+print(expNot);
+printf("\n");
+
 str comando; // Declaramos string donde va a ingresar el usuario comando
 strcrear(comando);//Creamos el string comando
 printf("Ingrese comando: ");//Solicitamos al usuario que ingrese un comando
@@ -141,6 +152,13 @@ ValorNodo valNodo;
 //show(arbol);
 int contadorexp1=1;
 
+//Ejemplo convertir string a entero.
+//int numeroprueba;
+//sscanf(comando, "%d", &numeroprueba);
+//printf("El numero convertido es: %d ", numeroprueba);
+
+
+
 //Para resolver comando atomic
 if((LargoRecu(Lista1) == 2) && (streq(atomic, Lista1->palabra)))
 {
@@ -158,11 +176,21 @@ if((LargoRecu(Lista1) == 2) && (streq(atomic, Lista1->palabra)))
         else
             printf("\nComando incorrecto\n");
             }
+        else
+            printf("\nComando incorrecto\n");
+}
 
+/*
+if((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5) && (streq(compound, Lista1->palabra)))
+{
+    Lista1=Lista1->sig;
+    if(streq(expTrue,Lista1->palabra)||streq(expFalse,Lista1->palabra))
 }
 
 
 
+
+*/
 
 
 
