@@ -186,13 +186,13 @@ if(streq(compound, Lista1->palabra))
     //asignar un parentesis a abierto al valor mas a la izquierda del arbol y un parentesis cerrrado al valor mas a la derecha del arbol
 
 
-if(LargoRecu(Lista1) == 2)
+/*if(LargoRecu(Lista1) == 2)
 {
     if(streq(show, Lista1->palabra))
     {
         Lista1 = Lista1->sig;
 
-        if(Lista1->palabra == expre.numero) //Ver como transformar el string para reconocer un numero
+        if(Lista1->palabra == expre->numero) //Ver como transformar el string para reconocer un numero
         {
             printf("%d", expre.numero);  //Hay que crear selectora para un futuro
         }
@@ -203,7 +203,7 @@ if(LargoRecu(Lista1) == 2)
 
 
     }
-}
+}*/
 
 if(streq(evaluate, Lista1->palabra))
     printf("Es igual al string evaluate");
