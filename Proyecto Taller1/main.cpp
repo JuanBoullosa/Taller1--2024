@@ -181,14 +181,30 @@ if((LargoRecu(Lista1) == 2) && (streq(atomic, Lista1->palabra)))
 //int numeroprueba;
 //sscanf(comando, "%d", &numeroprueba);
 //printf("El numero convertido es: %d ", numeroprueba);
-
+int numeroconvertido;
 if((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5) && (streq(compound, Lista1->palabra)))
 {
     Lista1=Lista1->sig;
-    if(streq(expNot,Lista1->palabra))
+    //Cargar nodo NOT
+    if((streq(expNot,Lista1->palabra))&& (LargoRecu(Lista1)==3))
     {
         Lista1=Lista1->sig;
-        if ( )
+        sscanf(Lista1->palabra, "%d", &numeroconvertido);
+        if( numeroconvertido== Expresion.numero)//condicion de si existe en la lista
+        {
+
+            CargarValorNodo(Lista1, valNodo);                           //Cargar valor NOT
+        //  Devolverexpresion(Listaexp, numeroconvertido);             //devuelve expresion ya cargada
+        //  CargarArbolCompound(ListaExp, arbolexp);
+        //  CargarExpresion(arbolexp, expre, contadorexp1);
+            InsBackIterExp(ListExp, expre);
+            printf("\nMostrar arbol: \n");
+            MostrarArbol(ListExp->expre.arbol);
+        }
+            else
+                printf("Error");
+        }
+
     }
 }
 
