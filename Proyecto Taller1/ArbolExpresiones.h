@@ -38,7 +38,7 @@ void MostrarArbol(ArbolExpresiones a);
 
 void CargarArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a);
 
-
+void CargarHijoDer (ArbolExpresiones &a, ArbolExpresiones s);
 
 
 

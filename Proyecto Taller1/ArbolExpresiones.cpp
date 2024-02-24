@@ -114,3 +114,9 @@ void CargarArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a)
 }
 
 
+void CargarHijoDer (ArbolExpresiones &a, ArbolExpresiones s)
+{
+    a -> hder = s;
+}
+
+
