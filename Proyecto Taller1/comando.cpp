@@ -2,7 +2,8 @@
 
 
 void Atomic(ListaString L, int &contadorexp){
-        //Comando atomic
+
+//Comando atomic
 str atomic; //Declaramos string para ATOMIC
 strcrear(atomic); //Creamos string ATOMIC
 atomic = new char[7];//Solicitamos la cantidad de espacios en memoria para atomic

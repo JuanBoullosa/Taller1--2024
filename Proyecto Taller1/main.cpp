@@ -175,12 +175,12 @@ if((LargoRecu(Lista1) == 2) && (streq(atomic, Lista1->palabra)))
             }
         else
             printf("\nComando incorrecto\n");
-}
+
 
 
 /*%%%%%%%%  COMANDO COMPOUND   %%%%%%%%*/
 int numeroconvertido;
-if((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5) && (streq(compound, Lista1->palabra)))
+if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq(compound, Lista1->palabra)))
 {
     Lista1=Lista1->sig;
     //Cargar nodo NOT
@@ -188,11 +188,11 @@ if((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5) && (streq(compound, Lista1->pa
     {
         Lista1=Lista1->sig;
         sscanf(Lista1->palabra, "%d", &numeroconvertido);
-        if( numeroconvertido== Expresion.numero)//condicion de si existe en la lista
+        if( numeroconvertido == expre.numero)//condicion de si existe en la lista
         {
 
             CargarValorNodo(Lista1, valNodo);                      //Cargar valor NOT
-            TraerArbolExp(Listaexp, numeroconvertido);             //devuelve expresion ya cargada
+            TraerArbolExp(ListExp, numeroconvertido);             //devuelve expresion ya cargada
         //  CargarArbolCompoundNOT(arbol,arbolcompuesto);
         //  CargarExpresionCompuesta(arbolcompuesto, expre, contadorexp1);
             InsBackIterExp(ListExp, expre);

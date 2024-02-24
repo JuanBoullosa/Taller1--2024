@@ -56,13 +56,13 @@ void InsBackIterExp  (ListaExpresiones &L , Expresion exp)
 
 
 //Devolver expresion segun el ID solicitado
-void TraerArbolExp(Listaexp, numeroconvertido)
+ArbolExpresiones TraerArbolExp(ListaExpresiones ListaExp, int numeroconvertido)
 {
-    while (Listaexp->expre.numero != numeroconvertido)
+    while (ListaExp->expre.numero != numeroconvertido)
     {
-        Listaexp=Listaexp->sig;
+        ListaExp=ListaExp->sig;
     }
-    return Listaexp->expre.arbol;
+    return ListaExp->expre.arbol;
 }
 
 

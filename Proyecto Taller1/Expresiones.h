@@ -10,8 +10,8 @@ typedef struct { int numero;
 //Cargo expresion
 void CargarExpresion(ArbolExpresiones Aexp, Expresion &expre, int &contadorexp);
 
-int DarNumero( Expresion );
+int DarNumero( Expresion expre);
 
-ArbolExpresiones DarArbolexp( Expresion );
+ArbolExpresiones DarArbolexp( Expresion expre );
 
 #endif // EXPRESIONES_H_INCLUDED

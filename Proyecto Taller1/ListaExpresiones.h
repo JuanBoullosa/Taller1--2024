@@ -24,8 +24,8 @@ void MostrarListaExp (ListaExpresiones L);
 void InsBackIterExp  (ListaExpresiones &L , Expresion exp);
 
 //Devolver expresion segun numero solicitado
-//void TraerArbolExp(Listaexp, numeroconvertido);
 
+ArbolExpresiones TraerArbolExp(ListaExpresiones ListaExp, int numeroconvertido);
 
 
 #endif // LISTAEXPRESIONES_H_INCLUDED

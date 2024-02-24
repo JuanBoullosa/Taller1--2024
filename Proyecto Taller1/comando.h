@@ -5,7 +5,7 @@
 #include "Expresiones.h"
 #include "ListaExpresiones.h"
 
-void Atomic(ListaString L, int &contadorexp)
+void Atomic(ListaString L, int &contadorexp);
 
 
 #endif // COMANDO_H_INCLUDED

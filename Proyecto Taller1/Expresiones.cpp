@@ -8,12 +8,12 @@ void CargarExpresion(ArbolExpresiones Aexp, Expresion &expre, int &contadorexp)
     contadorexp++;
 }
 
-int DarNumero( Expresion )
+int DarNumero(Expresion expre)
 {
-    return expresion.numero;
+    return expre.numero;
 }
 
-ArbolExpresiones DarArbolexp( Expresion)
+ArbolExpresiones DarArbolexp( Expresion expre)
 {
-    return expresion.arbol;
+    return expre.arbol;
 }
