@@ -58,6 +58,11 @@ void InsBackIterExp  (ListaExpresiones &L , Expresion exp)
 //Devolver expresion segun el ID solicitado
 void TraerArbolExp(Listaexp, numeroconvertido)
 {
-
+    while (Listaexp->expre.numero != numeroconvertido)
+    {
+        Listaexp=Listaexp->sig;
+    }
+    return Listaexp->expre.arbol;
 }
+
 

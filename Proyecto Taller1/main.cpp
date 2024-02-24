@@ -156,7 +156,7 @@ int contadorexp1=1;
 
 
 
-//Para resolver comando atomic
+/*%%%%%%%%  COMANDO ATOMIC   %%%%%%%%*/
 if((LargoRecu(Lista1) == 2) && (streq(atomic, Lista1->palabra)))
 {
 
@@ -177,10 +177,8 @@ if((LargoRecu(Lista1) == 2) && (streq(atomic, Lista1->palabra)))
             printf("\nComando incorrecto\n");
 }
 
-//Ejemplo convertir string a entero.
-//int numeroprueba;
-//sscanf(comando, "%d", &numeroprueba);
-//printf("El numero convertido es: %d ", numeroprueba);
+
+/*%%%%%%%%  COMANDO COMPOUND   %%%%%%%%*/
 int numeroconvertido;
 if((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5) && (streq(compound, Lista1->palabra)))
 {
@@ -194,7 +192,7 @@ if((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5) && (streq(compound, Lista1->pa
         {
 
             CargarValorNodo(Lista1, valNodo);                      //Cargar valor NOT
-        //  TraerArbolExp(Listaexp, numeroconvertido);             //devuelve expresion ya cargada
+            TraerArbolExp(Listaexp, numeroconvertido);             //devuelve expresion ya cargada
         //  CargarArbolCompoundNOT(arbol,arbolcompuesto);
         //  CargarExpresionCompuesta(arbolcompuesto, expre, contadorexp1);
             InsBackIterExp(ListExp, expre);
