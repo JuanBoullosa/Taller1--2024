@@ -1,7 +1,11 @@
 #ifndef COMANDO_H_INCLUDED
 #define COMANDO_H_INCLUDED
-#include  "ListaString.h"
+#include "ValorNodo.h"
+#include "ArbolExpresiones.h"
+#include "Expresiones.h"
+#include "ListaExpresiones.h"
 
-void Atomic(ListaString L);
+void Atomic(ListaString L, int &contadorexp)
+
 
 #endif // COMANDO_H_INCLUDED

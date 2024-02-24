@@ -48,6 +48,8 @@
 		<Unit filename="TipoNodo.h" />
 		<Unit filename="ValorNodo.cpp" />
 		<Unit filename="ValorNodo.h" />
+		<Unit filename="comando.cpp" />
+		<Unit filename="comando.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

@@ -114,9 +114,9 @@ void CargarArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a)
 }
 
 
-void CargarArbolCompound(expre, arbolexp)
+/*void CargarArbolCompound(expre, arbolexp)
 {
 
 
-}
+}*/
 

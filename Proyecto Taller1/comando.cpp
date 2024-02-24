@@ -1,8 +1,5 @@
 #include "comando.h"
-#include "ValorNodo.h"
-#include "ArbolExpresiones.h"
-#include "Expresiones.h"
-#include "ListaExpresiones.h"
+
 
 void Atomic(ListaString L, int &contadorexp){
         //Comando atomic
@@ -60,7 +57,3 @@ if((LargoRecu(L) == 2) && (streq(atomic, L->palabra)))
                 printf("\nComando incorrecto\n");
 
 }
-
-
-
-
