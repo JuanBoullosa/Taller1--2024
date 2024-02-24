@@ -23,5 +23,9 @@ void MostrarListaExp (ListaExpresiones L);
 //Agregar al final de la lista
 void InsBackIterExp  (ListaExpresiones &L , Expresion exp);
 
+//Devolver expresion segun numero solicitado
+ void Devolverexpresion(Listaexp, numeroconvertido);
+
+
 
 #endif // LISTAEXPRESIONES_H_INCLUDED

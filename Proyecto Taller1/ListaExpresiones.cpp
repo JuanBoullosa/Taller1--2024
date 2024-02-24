@@ -54,3 +54,10 @@ void InsBackIterExp  (ListaExpresiones &L , Expresion exp)
   }
 }
 
+
+//Devolver expresion segun el ID solicitado
+void Devolverexpresion(Listaexp, numeroconver)
+{
+
+}
+

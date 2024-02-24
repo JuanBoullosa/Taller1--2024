@@ -7,7 +7,11 @@ typedef struct { int numero;
                  ArbolExpresiones arbol;
                } Expresion;
 
-
+//Cargo expresion
 void CargarExpresion(ArbolExpresiones Aexp, Expresion &expre, int &contadorexp);
+
+int DarNumero( Expresion );
+
+ArbolExpresiones DarArbolexp( Expresion );
 
 #endif // EXPRESIONES_H_INCLUDED
