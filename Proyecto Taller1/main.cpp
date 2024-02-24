@@ -193,10 +193,10 @@ if((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5) && (streq(compound, Lista1->pa
         if( numeroconvertido== Expresion.numero)//condicion de si existe en la lista
         {
 
-            CargarValorNodo(Lista1, valNodo);                           //Cargar valor NOT
-        //  Devolverexpresion(Listaexp, numeroconvertido);             //devuelve expresion ya cargada
-        //  CargarArbolCompound(ListaExp, arbolexp);
-        //  CargarExpresion(arbolexp, expre, contadorexp1);
+            CargarValorNodo(Lista1, valNodo);                      //Cargar valor NOT
+        //  TraerArbolExp(Listaexp, numeroconvertido);             //devuelve expresion ya cargada
+        //  CargarArbolCompoundNOT(arbol,arbolcompuesto);
+        //  CargarExpresionCompuesta(arbolcompuesto, expre, contadorexp1);
             InsBackIterExp(ListExp, expre);
             printf("\nMostrar arbol: \n");
             MostrarArbol(ListExp->expre.arbol);
