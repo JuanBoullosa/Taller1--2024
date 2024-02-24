@@ -97,14 +97,7 @@ void MostrarArbol (ArbolExpresiones a)
 
 void CargarArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a)
 {
-    if(ValNodo.dato.valor==FALSE)
-    {
-        a=new nodo;
-        a->info = ValNodo;
-        a->hizq = NULL;
-        a->hder = NULL;
-    }
-    if(ValNodo.dato.valor==TRUE)
+    if((ValNodo.dato.valor==FALSE) || (ValNodo.dato.valor==TRUE))
     {
         a=new nodo;
         a->info = ValNodo;
