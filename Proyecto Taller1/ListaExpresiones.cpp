@@ -27,15 +27,15 @@ void InsFrontExp (ListaExpresiones &L, Expresion exp)
 }
 
 //Mostrar Lista
-void MostrarListaExp (ListaExpresiones L)
-{
+//void MostrarListaExp (ListaExpresiones L)
+/*{
     while (L != NULL)
       {
         MostrarArbol(L->expre.arbol); //DarArbolexp(L->expre);
         L = L->sig;
       }
 }
-
+*/
 //Agregar al final de la lista
 void InsBackIterExp  (ListaExpresiones &L , Expresion exp)
 {

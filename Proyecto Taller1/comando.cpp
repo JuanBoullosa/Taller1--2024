@@ -36,6 +36,7 @@ ValorNodo valNodo;
 ArbolExpresiones arbolexp;
 Expresion expre;
 ListaExpresiones ListExp;
+CrearListaExpresiones(ListExp);
 
 if((LargoRecu(L) == 2) && (streq(atomic, L->palabra)))
 {
@@ -57,4 +58,8 @@ if((LargoRecu(L) == 2) && (streq(atomic, L->palabra)))
             else
                 printf("\nComando incorrecto\n");
 
+
+
 }
+
+

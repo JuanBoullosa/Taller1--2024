@@ -3,6 +3,7 @@
 #include "Strigg.h"
 #include "ListaString.h"
 #include "ListaExpresiones.h"
+#include "comando.h"
 
 int main()
 {
@@ -133,71 +134,41 @@ str comando;                             // Declaramos string donde va a ingresa
 strcrear(comando);                      //Creamos el string comando
 ListaString Lista1;                     //Declaramos la lista que usaremos para evaluar los string
 CrearLista(Lista1);
-str aux;
-<<<<<<< HEAD
-strcrear(aux);                          //Creamos la lista
-ArbolExpresiones arbolexp;          // Creamos arbol de expresiones
-Expresion expre;                    //Creamos  expresion
-=======
-strcrear(aux);             //Creamos la lista
-partirString(comando, Lista1);  // Procedimiento para partir el string
-printf("Mostrar Lista de string: \n");
-MostrarLista(Lista1);           // Mostramos el string partido
-printf("\n");
+int contadorexp1=1;
 
-ArbolExpresiones arbolexp;        // Creamos arbol de expresiones
-ArbolExpresiones arbol;
-ArbolExpresiones arbolcompuesto;
-Expresion expre;                //Creamos  expresion
->>>>>>> 2477acb09351c792ed7e32e5074818b634fa53d7
-ListaExpresiones ListExp;           //Declaramos y creamos lista de expresiones para almacenar expresion
-CrearListaExpresiones(ListExp);
-ValorNodo valNodo;
-
-//for(int i=0;i<=2;i++){
 printf("Ingrese comando: ");            //Solicitamos al usuario que ingrese un comando
 scan(comando);                          // Scan dinamico para el ingreso de el string comando
 printf("\n");                          // Salto de linea
+
+
 
 partirString(comando, Lista1);          // Procedimiento para partir el string
 printf("Mostrar Lista de string: \n");
 MostrarLista(Lista1);                   // Mostramos el string partido
 printf("\n");
 
+Atomic(Lista1, contadorexp1);
 
-//show(arbol);
-int contadorexp1=1;
 
-/*%%%%%%%%  COMANDO ATOMIC   %%%%%%%%*/
-if((LargoRecu(Lista1) == 2) && (streq(atomic, Lista1->palabra)))
-{
-
-            Lista1=Lista1->sig;
-            if(streq(expTrue,Lista1->palabra)||streq(expFalse,Lista1->palabra))
-            {
-                CargarValorNodo(Lista1, valNodo);
-                CargarArbolAtomic(valNodo,arbolexp);
-                CargarExpresion(arbolexp, expre, contadorexp1);
-                InsBackIterExp(ListExp, expre);
-                printf("\nMostrar arbol: \n");
-                //MostrarArbol(ListExp->expre.arbol)   Son comandos de prueba si cargaron bien.
-                //MostrarArbol(arbolexp);
-                //MostrarListaExp(ListExp);              Arreglar esto!
-            }
-        else
-            printf("\nComando incorrecto\n");
-}
+str aux;
+strcrear(aux);                          //Creamos la lista
+Expresion expre;                    //Creamos  expresion
+ArbolExpresiones arbol;
+ArbolExpresiones arbolcompuesto;
+ListaExpresiones ListExp;           //Declaramos y creamos lista de expresiones para almacenar expresion
+CrearListaExpresiones(ListExp);
+ValorNodo valNodo;
 
 
 
-
-/*%%%%%%%%  COMANDO COMPOUND   %%%%%%%%*/
+//%%%%%%%%  COMANDO COMPOUND   %%%%%%%%*/
 int numeroconvertido;
 ValorNodo ValorNodoNOT;
 ValorNodo ValorNodoParIzq;
 ValorNodo ValorNodoParDer;
 ArbolExpresiones arbolexpreID;
 ArbolExpresiones arbolaux;
+
     if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq(compound, Lista1->palabra)))
     {
         Lista1=Lista1->sig;
@@ -228,14 +199,14 @@ ArbolExpresiones arbolaux;
                     printf("Error");
         }
         //Cargar nodo OR y AND
-        if  (((streq(expAND,Lista1->palabra))&& (LargoRecu(Lista1)<=4)) &&
+ /*      if  (((streq(expAND,Lista1->palabra))&& (LargoRecu(Lista1)<=4)) &&
             ((streq(expOR,Lista1->palabra))&& (LargoRecu(Lista1)<=4)))
         {
 
 
         }
 
-    }
+*/ }
 }
 
 
