@@ -64,7 +64,7 @@ Show(Lista1, ListExpPrincipal,show,contadorexp1);       //Ejecutamos show en eje
 
 
 //Estas variables deberian ir en el comando compound
-                         //Creamos la lista
+
 Expresion expre;                    //Creamos  expresion
 ArbolExpresiones arbol;
 ArbolExpresiones arbolcompuesto;
@@ -79,6 +79,7 @@ ValorNodo ValorNodoParIzq;
 ValorNodo ValorNodoParDer;
 ArbolExpresiones arbolexpreID;
 ArbolExpresiones arbolaux;
+ArbolExpresiones arbolIzq;
 
     if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq(compound, Lista1->palabra)))
     {
@@ -96,10 +97,11 @@ ArbolExpresiones arbolaux;
                 //CargarValorNodo(Lista1, valNodo);                                 //Cargar valor NOT
                 AsignarValorNodoNOT(ValorNodoNOT);                                  //Cargo ValorNodo NOT sin importar el string
                 arbolexpreID=TraerArbolExp(ListExpPrincipal, numeroconvertido);             //trae arbol indicado con ID.
-                CargarArbolNOTSinParent(ValorNodoNOT, arbolexpreID, arbolaux);        //Cargar Arbol sin parentesis (Solo hijo derecho)
                 AsignarValorParIzq(ValorNodoParIzq);
+                CargarArbolParentesisIZQ(arbolIzq, ValorNodoParIzq);
+                CargarArbolNOTSinParent(ValorNodoNOT, arbolexpreID, arbolaux, arbolIzq);        //Cargar Arbol sin parentesis (Solo hijo derecho)
                 AsignarValorParDer(ValorNodoParDer);
-                AgregarParentesisIzquierdo(arbolaux, ValorNodoParIzq);
+                //AgregarParentesisIzquierdo(arbolaux, ValorNodoParIzq);
                 AgregarParentesisDerecho(arbolaux,ValorNodoParDer);                 //Le agrego parentesis al arbol
 
                 CargarExpresion(arbolaux, expre, contadorexp1);

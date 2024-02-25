@@ -92,12 +92,12 @@ void MostrarArbol (ArbolExpresiones a)
 
 }
 
-void CargarArbolNOTSinParent(ValorNodo ValorNodoNOT,ArbolExpresiones arbolexpreID,ArbolExpresiones &a, ValorNodo  )
+void CargarArbolNOTSinParent(ValorNodo ValorNodoNOT,ArbolExpresiones arbolexpreID,ArbolExpresiones &a,ArbolExpresiones ArbolParIzq)
 {
         a=new nodo;
         a->info = ValorNodoNOT;
         a->hder = arbolexpreID;
-        a->hizq = ValorNodoParIzq;
+        a->hizq = ArbolParIzq;
 }
 
 
@@ -146,4 +146,13 @@ void AgregarParentesisDerecho(ArbolExpresiones &a, ValorNodo ValorNodoParDer)
     {
         AgregarParentesisDerecho(a->hder,ValorNodoParDer);
     }
+}
+
+
+void CargarArbolParentesisIZQ(ArbolExpresiones &a, ValorNodo ValorNodoParIzq)
+{
+        a=new nodo;
+        a->info = ValorNodoParIzq;
+        a->hder = NULL;
+        a->hizq = NULL;
 }
