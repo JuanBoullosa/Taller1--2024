@@ -134,9 +134,22 @@ strcrear(comando);                      //Creamos el string comando
 ListaString Lista1;                     //Declaramos la lista que usaremos para evaluar los string
 CrearLista(Lista1);
 str aux;
+<<<<<<< HEAD
 strcrear(aux);                          //Creamos la lista
 ArbolExpresiones arbolexp;          // Creamos arbol de expresiones
 Expresion expre;                    //Creamos  expresion
+=======
+strcrear(aux);             //Creamos la lista
+partirString(comando, Lista1);  // Procedimiento para partir el string
+printf("Mostrar Lista de string: \n");
+MostrarLista(Lista1);           // Mostramos el string partido
+printf("\n");
+
+ArbolExpresiones arbolexp;        // Creamos arbol de expresiones
+ArbolExpresiones arbol;
+ArbolExpresiones arbolcompuesto;
+Expresion expre;                //Creamos  expresion
+>>>>>>> 2477acb09351c792ed7e32e5074818b634fa53d7
 ListaExpresiones ListExp;           //Declaramos y creamos lista de expresiones para almacenar expresion
 CrearListaExpresiones(ListExp);
 ValorNodo valNodo;
@@ -208,7 +221,8 @@ ArbolExpresiones arbolaux;
                 CargarExpresion(arbolaux, expre, contadorexp1);
                 InsBackIterExp(ListExp, expre);
                 //printf("\nMostrar arbol: \n");
-                //MostrarArbol(ListExp->expre.arbol);
+                printf("\nMostrar arbol: \n");
+                MostrarArbol(ListExp->expre.arbol);
 
             }
                 else
@@ -218,7 +232,6 @@ ArbolExpresiones arbolaux;
         if  (((streq(expAND,Lista1->palabra))&& (LargoRecu(Lista1)<=4)) &&
             ((streq(expOR,Lista1->palabra))&& (LargoRecu(Lista1)<=4)))
         {
-
 
 
         }
