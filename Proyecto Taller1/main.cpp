@@ -220,7 +220,6 @@ ArbolExpresiones arbolaux;
 
                 CargarExpresion(arbolaux, expre, contadorexp1);
                 InsBackIterExp(ListExp, expre);
-                //printf("\nMostrar arbol: \n");
                 printf("\nMostrar arbol: \n");
                 MostrarArbol(ListExp->expre.arbol);
 
