@@ -42,6 +42,16 @@ printf("\n");
 
                             //Comando atomic
 Atomic(Lista1, contadorexp1, ListExpPrincipal);  // Ejecutamos el comando atomic
+printf("\n");
+delete[] Lista1;
+CrearLista(Lista1);
+
+printf("Ingrese comando: ");            //Solicitamos al usuario que ingrese un comando
+scan(comando);                          // Scan dinamico para el ingreso de el string comando
+printf("\n");                          // Salto de linea
+partirString(comando, Lista1);          // Procedimiento para partir el string
+printf("El valor de la expresion ingresa es: \n");
+Show(Lista1, ListExpPrincipal,show,contadorexp1);
 
 
 

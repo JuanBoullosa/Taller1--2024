@@ -190,7 +190,7 @@ expOr[2]='\0';
 
 }
 
-void ComandoShow(ListaString Lista1 ,ListaExpresiones L, int  contador, str show, int contadorexp1)  /// sin probar
+void Show(ListaString Lista1 ,ListaExpresiones L, str show, int contadorexp1)  /// sin probar
 {
     ArbolExpresiones arbolexpreID;
     int numeroconvertido;
