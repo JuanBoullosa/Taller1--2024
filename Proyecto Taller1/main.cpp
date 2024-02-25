@@ -30,20 +30,17 @@ CrearLista(Lista1);
 int contadorexp1=1;
 ListaExpresiones ListExpPrincipal;
 CrearListaExpresiones(ListExpPrincipal);
-
+                        // Ingreso de comando y division de palabras
 printf("Ingrese comando: ");            //Solicitamos al usuario que ingrese un comando
 scan(comando);                          // Scan dinamico para el ingreso de el string comando
 printf("\n");                          // Salto de linea
-
-
-
 partirString(comando, Lista1);          // Procedimiento para partir el string
 printf("Mostrar Lista de string: \n");
 MostrarLista(Lista1);                   // Mostramos el string partido
 printf("\n");
 
 
-//Comando atomic
+                            //Comando atomic
 Atomic(Lista1, contadorexp1, ListExpPrincipal);  // Ejecutamos el comando atomic
 
 
@@ -75,7 +72,9 @@ ArbolExpresiones arbolaux;
         {
             Lista1=Lista1->sig;
             sscanf(Lista1->palabra, "%d", &numeroconvertido);
-            if( numeroconvertido == expre.numero)//condicion de si existe en la lista
+            if( numeroconvertido < contadorexp1)//condicion de si existe en la lista
+                                                // es menor a condador es por que existe una expresion con ese numero
+                                                //
             {
 
                 //CargarValorNodo(Lista1, valNodo);                                 //Cargar valor NOT
@@ -106,24 +105,6 @@ ArbolExpresiones arbolaux;
 
 */ }
 }
-
-
-
-
-
-
-
-// si la cantidad de palabras menor a 5 y mayor a 2
-//if(streq(compound, Lista1->palabra))
- //   printf("Es igual al string compound");
-    // si la cantidad de palabras es 3
-    // comprobar si la segunda palabra es not y la tercera un entero valido de no ser dar error correspondiente
-    //si la cantidad es 4
-    // comprobar que la tercera sea and u or y la segunda y la cuarta sean un entero valido de no ser dar error correspondiente
-    //crear el arbol de expresion
-    //crear valor nodo para los nodos a partir de la expresiones de los numeros enteros
-    //asignar un parentesis a abierto al valor mas a la izquierda del arbol y un parentesis cerrrado al valor mas a la derecha del arbol
-
 
 /*if(LargoRecu(Lista1) == 2)
 {
