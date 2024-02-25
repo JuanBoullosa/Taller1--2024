@@ -38,9 +38,11 @@ void MostrarArbol(ArbolExpresiones a);
 
 void CargarArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a);
 
+void AgregarParentesisIzquierdo(ArbolExpresiones &a,ValorNodo ValorNodoParIzq);
 
+void AgregarParentesisDerecho(ArbolExpresiones &a, ValorNodo ValorNodoParDer);
 
-
+void CargarArbolNOTSinParent(ValorNodo ValorNodoNOT,ArbolExpresiones arbolexpreID,ArbolExpresiones &a);
 
 #endif // ARBOLEXPRESIONES_H_INCLUDED
 

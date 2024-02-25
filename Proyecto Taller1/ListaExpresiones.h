@@ -17,7 +17,7 @@ void InsFrontExp (ListaExpresiones &L, Expresion exp);
 
 
 //Mostrar Lista
-void MostrarListaExp (ListaExpresiones L);
+ArbolExpresiones MostrarListaExp (ListaExpresiones L);
 
 
 //Agregar al final de la lista
@@ -26,6 +26,13 @@ void InsBackIterExp  (ListaExpresiones &L , Expresion exp);
 //Devolver expresion segun numero solicitado
 
 ArbolExpresiones TraerArbolExp(ListaExpresiones ListaExp, int numeroconvertido);
+
+
+ArbolExpresiones DarArbolexp( ListaExpresiones L);
+
+void MostrarListaExp (ListaExpresiones L);
+
+
 
 
 #endif // LISTAEXPRESIONES_H_INCLUDED

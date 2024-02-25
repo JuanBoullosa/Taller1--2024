@@ -70,14 +70,11 @@ void MostrarArbol (ArbolExpresiones a)
     if (a != NULL)
     {
         MostrarArbol(a->hizq);
+
         if (a->info.dato.valor == FALSE)
             printf(" FALSE ");
-            else
-                if (a->info.dato.valor== TRUE)
+        if (a->info.dato.valor== TRUE)
                     printf(" TRUE ");
-                else
-                    printf("VALOR NO VALIDO");
-        /*
         if (a->info.dato.operador == 'A')
                 printf(" AND ");
         if (a->info.dato.operador == 'O')
@@ -88,12 +85,22 @@ void MostrarArbol (ArbolExpresiones a)
                 printf(" ( ");
         if (a->info.dato.parentesis == ')' )
                 printf(" ) ");
-                */
+
         MostrarArbol(a->hder);
 
     }
 
 }
+
+void CargarArbolNOTSinParent(ValorNodo ValorNodoNOT,ArbolExpresiones arbolexpreID,ArbolExpresiones &a)
+{
+        a=new nodo;
+        a->info = ValorNodoNOT;
+        a->hder = arbolexpreID;
+        a->hizq = NULL;
+}
+
+
 
 void CargarArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a)
 {
@@ -107,9 +114,36 @@ void CargarArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a)
 }
 
 
-/*void CargarArbolCompound(expre, arbolexp)
+
+
+void AgregarParentesisIzquierdo(ArbolExpresiones &a,ValorNodo ValorNodoParIzq)
 {
+    if (a->hizq == NULL)
+    {
+        a->hizq =new nodo;
+        a->hizq->info = ValorNodoParIzq;
+        a->hder->hizq = NULL;
+        a->hder->hder = NULL;
+    }
+    else
+    {
+        AgregarParentesisIzquierdo(a->hizq,ValorNodoParIzq);
+    }
+}
 
 
-}*/
-
+void AgregarParentesisDerecho(ArbolExpresiones &a, ValorNodo ValorNodoParDer)
+{
+    if (a->hder == NULL)
+    {
+        // Agregar un nuevo nodo como hijo derecho si el nodo actual no tiene uno
+        a->hder = new nodo;
+        a->hder->info = ValorNodoParDer;
+        a->hder->hizq = NULL;
+        a->hder->hder = NULL;
+    }
+    else
+    {
+        AgregarParentesisDerecho(a->hder,ValorNodoParDer);
+    }
+}

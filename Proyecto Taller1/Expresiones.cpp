@@ -13,7 +13,3 @@ int DarNumero(Expresion expre)
     return expre.numero;
 }
 
-ArbolExpresiones DarArbolexp( Expresion expre)
-{
-    return expre.arbol;
-}

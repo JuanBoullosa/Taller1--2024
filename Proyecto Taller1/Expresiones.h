@@ -12,6 +12,6 @@ void CargarExpresion(ArbolExpresiones Aexp, Expresion &expre, int &contadorexp);
 
 int DarNumero( Expresion expre);
 
-ArbolExpresiones DarArbolexp( Expresion expre );
+
 
 #endif // EXPRESIONES_H_INCLUDED

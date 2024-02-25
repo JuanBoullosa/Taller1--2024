@@ -29,5 +29,11 @@ char DarOperador(ValorNodo ValNodo);
 //Selectora Dar Parentesis
 char DarParentesis(ValorNodo ValNodo);
 
+void AsignarValorNodoNOT(ValorNodo &valNodo);
+
+void AsignarValorParIzq(ValorNodo &valNodo);
+
+void AsignarValorParDer(ValorNodo &valNodo);
+
 
 #endif // VALORNODO_H_INCLUDED

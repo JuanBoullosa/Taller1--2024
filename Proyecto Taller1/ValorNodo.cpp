@@ -86,6 +86,21 @@ expOr[2]='\0';
 
 }
 
+void AsignarValorNodoNOT(ValorNodo &valNodo)
+{
+    valNodo.dato.operador = 'N';
+}
+
+void AsignarValorParIzq(ValorNodo &valNodo)
+{
+    valNodo.dato.parentesis = '(';
+}
+
+void AsignarValorParDer(ValorNodo &valNodo)
+{
+    valNodo.dato.parentesis = ')';
+}
+
 //Selectora Dar Boolean
 boolean DarBoolean(ValorNodo ValNodo)
 {

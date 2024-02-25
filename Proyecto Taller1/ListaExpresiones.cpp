@@ -31,7 +31,7 @@ void MostrarListaExp (ListaExpresiones L)
 {
     while (L != NULL)
       {
-        printf ("%d", L->expre.numero);
+        MostrarArbol(L->expre.arbol); //DarArbolexp(L->expre);
         L = L->sig;
       }
 }
@@ -63,6 +63,11 @@ ArbolExpresiones TraerArbolExp(ListaExpresiones ListaExp, int numeroconvertido)
         ListaExp=ListaExp->sig;
     }
     return ListaExp->expre.arbol;
+}
+
+ArbolExpresiones DarArbolexp( ListaExpresiones L)
+{
+    return L-> expre.arbol;
 }
 
 

@@ -122,39 +122,38 @@ printf("\n");
 str expNot;
 strcrear(expNot);
 expNot = new char[4];//Solicitamos la cantidad de espacios en memoria operador or
-expNot[0]='n';
-expNot[1]='o';
-expNot[2]='t';
+expNot[0]='N';
+expNot[1]='O';
+expNot[2]='T';
 expNot[3]='\0';
 print(expNot);
 printf("\n");
 
-str comando; // Declaramos string donde va a ingresar el usuario comando
-strcrear(comando);//Creamos el string comando
-printf("Ingrese comando: ");//Solicitamos al usuario que ingrese un comando
-scan(comando);  // Scan dinamico para el ingreso de el string comando
-printf("\n");   // Salto de linea
-
-ListaString Lista1;             //Declaramos la lista que usaremos para evaluar los string
+str comando;                             // Declaramos string donde va a ingresar el usuario comando
+strcrear(comando);                      //Creamos el string comando
+ListaString Lista1;                     //Declaramos la lista que usaremos para evaluar los string
 CrearLista(Lista1);
 str aux;
-strcrear(aux);             //Creamos la lista
-partirString(comando, Lista1);  // Procedimiento para partir el string
-printf("Mostrar Lista de string: \n");
-MostrarLista(Lista1);           // Mostramos el string partido
-printf("\n");
-
-ArbolExpresiones arbolexp;         // Creamos arbol de expresiones
-Expresion expre;                //Creamos  expresion
+strcrear(aux);                          //Creamos la lista
+ArbolExpresiones arbolexp;          // Creamos arbol de expresiones
+Expresion expre;                    //Creamos  expresion
 ListaExpresiones ListExp;           //Declaramos y creamos lista de expresiones para almacenar expresion
 CrearListaExpresiones(ListExp);
 ValorNodo valNodo;
+
+//for(int i=0;i<=2;i++){
+printf("Ingrese comando: ");            //Solicitamos al usuario que ingrese un comando
+scan(comando);                          // Scan dinamico para el ingreso de el string comando
+printf("\n");                          // Salto de linea
+
+partirString(comando, Lista1);          // Procedimiento para partir el string
+printf("Mostrar Lista de string: \n");
+MostrarLista(Lista1);                   // Mostramos el string partido
+printf("\n");
+
+
 //show(arbol);
 int contadorexp1=1;
-
-
-
-
 
 /*%%%%%%%%  COMANDO ATOMIC   %%%%%%%%*/
 if((LargoRecu(Lista1) == 2) && (streq(atomic, Lista1->palabra)))
@@ -168,39 +167,60 @@ if((LargoRecu(Lista1) == 2) && (streq(atomic, Lista1->palabra)))
                 CargarExpresion(arbolexp, expre, contadorexp1);
                 InsBackIterExp(ListExp, expre);
                 printf("\nMostrar arbol: \n");
-                MostrarArbol(ListExp->expre.arbol);
+                //MostrarArbol(ListExp->expre.arbol)   Son comandos de prueba si cargaron bien.
+                //MostrarArbol(arbolexp);
+                //MostrarListaExp(ListExp);              Arreglar esto!
             }
         else
             printf("\nComando incorrecto\n");
-            }
-        else
-            printf("\nComando incorrecto\n");
+}
+
 
 
 
 /*%%%%%%%%  COMANDO COMPOUND   %%%%%%%%*/
 int numeroconvertido;
-if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq(compound, Lista1->palabra)))
-{
-    Lista1=Lista1->sig;
-    //Cargar nodo NOT
-    if((streq(expNot,Lista1->palabra))&& (LargoRecu(Lista1)==3))
+ValorNodo ValorNodoNOT;
+ValorNodo ValorNodoParIzq;
+ValorNodo ValorNodoParDer;
+ArbolExpresiones arbolexpreID;
+ArbolExpresiones arbolaux;
+    if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq(compound, Lista1->palabra)))
     {
         Lista1=Lista1->sig;
-        sscanf(Lista1->palabra, "%d", &numeroconvertido);
-        if( numeroconvertido == expre.numero)//condicion de si existe en la lista
+        //Cargar nodo NOT
+        if((streq(expNot,Lista1->palabra))&& (LargoRecu(Lista1)<=3))
+        {
+            Lista1=Lista1->sig;
+            sscanf(Lista1->palabra, "%d", &numeroconvertido);
+            if( numeroconvertido == expre.numero)//condicion de si existe en la lista
+            {
+
+                //CargarValorNodo(Lista1, valNodo);                                 //Cargar valor NOT
+                AsignarValorNodoNOT(ValorNodoNOT);                                  //Cargo ValorNodo NOT sin importar el string
+                arbolexpreID=TraerArbolExp(ListExp, numeroconvertido);             //trae arbol indicado con ID.
+                CargarArbolNOTSinParent(ValorNodoNOT, arbolexpreID, arbolaux);        //Cargar Arbol sin parentesis (Solo hijo derecho)
+                AsignarValorParIzq(ValorNodoParIzq);
+                AsignarValorParDer(ValorNodoParDer);
+                AgregarParentesisIzquierdo(arbolaux, ValorNodoParIzq);
+                AgregarParentesisDerecho(arbolaux,ValorNodoParDer);                 //Le agrego parentesis al arbol
+
+                CargarExpresion(arbolaux, expre, contadorexp1);
+                InsBackIterExp(ListExp, expre);
+                //printf("\nMostrar arbol: \n");
+                //MostrarArbol(ListExp->expre.arbol);
+
+            }
+                else
+                    printf("Error");
+        }
+        //Cargar nodo OR y AND
+        if  (((streq(expAND,Lista1->palabra))&& (LargoRecu(Lista1)<=4)) &&
+            ((streq(expOR,Lista1->palabra))&& (LargoRecu(Lista1)<=4)))
         {
 
-            CargarValorNodo(Lista1, valNodo);                      //Cargar valor NOT
-            TraerArbolExp(ListExp, numeroconvertido);             //devuelve expresion ya cargada
-            CargarArbolCompoundNOT(arbol,arbolcompuesto);
-        //  CargarExpresionCompuesta(arbolcompuesto, expre, contadorexp1);
-            InsBackIterExp(ListExp, expre);
-            printf("\nMostrar arbol: \n");
-            MostrarArbol(ListExp->expre.arbol);
-        }
-            else
-                printf("Error");
+
+
         }
 
     }
