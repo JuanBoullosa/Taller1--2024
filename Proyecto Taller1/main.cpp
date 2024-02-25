@@ -108,25 +108,7 @@ ArbolExpresiones arbolaux;
  }
 
 
- if(LargoRecu(Lista1) == 2)
-{
-    if(streq(show, Lista1->palabra))
-    {
-        Lista1 = Lista1->sig;
-        sscanf(Lista1->palabra, "%d", &numeroconvertido);
-        if(numeroconvertido < contadorexp1)
-        {
-            arbolexpreID=TraerArbolExp(ListExpPrincipal, numeroconvertido);
-            MostrarArbol(arbolexpreID);
-        }
-                    else
-                    {
-                        printf("\nNo existe una expresion con ese valor\n");
-                    }
-
-
-    }
-}*/
+*/
 
 //if(streq(evaluate, Lista1->palabra))
     //printf("Es igual al string evaluate");
