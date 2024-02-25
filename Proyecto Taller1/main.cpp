@@ -7,12 +7,12 @@
 
 int main()
 {
-//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Cargamos los comandos%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Cargamos los comandos   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 str atomic;                                 //
 str compound;                               //
 str show;                                   //
 str evaluate;                               //
-str save;                                   //Todo esto puede ir en una lista para simplificar el codigo
+str save;                                   //Todo esto puede ir en una lista(en el modulo comando) para simplificar el codigo
 str load;                                   //
 str exit;                                   //
 str expTrue;                                //
@@ -22,7 +22,7 @@ str expAnd;                                 //
 str expOr;                                  //
 CargarComandos(atomic,compound,show,evaluate,save,load,exit,expTrue,expFalse,expNot,expAnd,expOr);
 
-//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Esta es la parte principal del codigo%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Esta es la parte principal del codigo    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 str comando;                                            // Declaramos string donde va a ingresar el usuario comando
 strcrear(comando);                                      //Creamos el string comando
@@ -32,7 +32,7 @@ int contadorexp1=1;
 ListaExpresiones ListExpPrincipal;
 CrearListaExpresiones(ListExpPrincipal);
 
-//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Ingreso de comando y division de palabras%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Ingreso de comando y division de palabras  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 printf("Ingrese comando: ");                            //Solicitamos al usuario que ingrese un comando
 scan(comando);                                          // Scan dinamico para el ingreso de el string comando
@@ -42,7 +42,7 @@ printf("Mostrar Lista de string: \n");
 MostrarLista(Lista1);                                   // Mostramos el string partido
 printf("\n");
 
-//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Comando atomic%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Comando atomic  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Atomic(Lista1, contadorexp1, ListExpPrincipal);         // Ejecutamos el comando atomic
 
@@ -53,9 +53,9 @@ printf("Ingrese comando: ");                            //Solicitamos al usuario
 scan(comando);                                          // Scan dinamico para el ingreso de el string comando
 printf("\n");                                           // Salto de linea
 partirString(comando, Lista1);                          // Procedimiento para partir el string
-printf("El valor de la expresion ingresa es: \n");
 
-//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Prueba del comand Show%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Prueba del comand Show %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Show(Lista1, ListExpPrincipal,show,contadorexp1);       //Ejecutamos show en ejecucion
 

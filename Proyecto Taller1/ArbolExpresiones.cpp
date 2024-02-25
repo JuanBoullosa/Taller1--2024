@@ -92,12 +92,12 @@ void MostrarArbol (ArbolExpresiones a)
 
 }
 
-void CargarArbolNOTSinParent(ValorNodo ValorNodoNOT,ArbolExpresiones arbolexpreID,ArbolExpresiones &a)
+void CargarArbolNOTSinParent(ValorNodo ValorNodoNOT,ArbolExpresiones arbolexpreID,ArbolExpresiones &a, ValorNodo  )
 {
         a=new nodo;
         a->info = ValorNodoNOT;
         a->hder = arbolexpreID;
-        a->hizq = NULL;
+        a->hizq = ValorNodoParIzq;
 }
 
 

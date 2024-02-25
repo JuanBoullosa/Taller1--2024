@@ -190,7 +190,7 @@ expOr[2]='\0';
 
 }
 
-void Show(ListaString Lista1 ,ListaExpresiones L, str show, int contadorexp1)  /// sin probar
+void Show(ListaString Lista1 ,ListaExpresiones L, str show, int contadorexp1)
 {
     ArbolExpresiones arbolexpreID;
     int numeroconvertido;
@@ -201,6 +201,7 @@ void Show(ListaString Lista1 ,ListaExpresiones L, str show, int contadorexp1)  /
         if(numeroconvertido < contadorexp1)
         {
             arbolexpreID=TraerArbolExp(L , numeroconvertido);
+            printf("El valor de la expresion es: \n");
             MostrarArbol(arbolexpreID);
         }
                     else
@@ -208,6 +209,9 @@ void Show(ListaString Lista1 ,ListaExpresiones L, str show, int contadorexp1)  /
                         printf("\nNo existe una expresion con ese valor\n");
                     }
 
-
     }
+
+        else
+            printf("\nNo existe una expresion con ese valor\n");
+
 }
