@@ -144,7 +144,9 @@ printf("Mostrar Lista de string: \n");
 MostrarLista(Lista1);           // Mostramos el string partido
 printf("\n");
 
-ArbolExpresiones arbolexp;         // Creamos arbol de expresiones
+ArbolExpresiones arbolexp;        // Creamos arbol de expresiones
+ArbolExpresiones arbol;
+ArbolExpresiones arbolcompuesto;
 Expresion expre;                //Creamos  expresion
 ListaExpresiones ListExp;           //Declaramos y creamos lista de expresiones para almacenar expresion
 CrearListaExpresiones(ListExp);
@@ -192,7 +194,7 @@ if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq(compound, Lista1-
         {
 
             CargarValorNodo(Lista1, valNodo);                      //Cargar valor NOT
-            TraerArbolExp(ListExp, numeroconvertido);             //devuelve expresion ya cargada
+            arbol=TraerArbolExp(ListExp, numeroconvertido);             //devuelve expresion ya cargada
             CargarArbolCompoundNOT(arbol,arbolcompuesto);
         //  CargarExpresionCompuesta(arbolcompuesto, expre, contadorexp1);
             InsBackIterExp(ListExp, expre);
