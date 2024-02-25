@@ -95,30 +95,33 @@ ArbolExpresiones arbolaux;
                 else
                     printf("Error");
         }
-        //Cargar nodo OR y AND
- /*      if  (((streq(expAND,Lista1->palabra))&& (LargoRecu(Lista1)<=4)) &&
+    }
+
+     } /*  //Cargar nodo OR y AND
+        if  (((streq(expAND,Lista1->palabra))&& (LargoRecu(Lista1)<=4)) &&
             ((streq(expOR,Lista1->palabra))&& (LargoRecu(Lista1)<=4)))
         {
 
 
         }
 
-*/ }
-}
+ }
 
-/*if(LargoRecu(Lista1) == 2)
+
+ if(LargoRecu(Lista1) == 2)
 {
     if(streq(show, Lista1->palabra))
     {
         Lista1 = Lista1->sig;
-
-        if(Lista1->palabra == expre->numero) //Ver como transformar el string para reconocer un numero
+        sscanf(Lista1->palabra, "%d", &numeroconvertido);
+        if(numeroconvertido < contadorexp1)
         {
-            printf("%d", expre.numero);  //Hay que crear selectora para un futuro
+            arbolexpreID=TraerArbolExp(ListExpPrincipal, numeroconvertido);
+            MostrarArbol(arbolexpreID);
         }
                     else
                     {
-                        printf("\nComando incorrecto\n");
+                        printf("\nNo existe una expresion con ese valor\n");
                     }
 
 

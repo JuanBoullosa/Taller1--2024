@@ -189,3 +189,25 @@ expOr[2]='\0';
 
 
 }
+
+void ComandoShow(ListaString Lista1 ,ListaExpresiones L, int  contador, str show, int contadorexp1)  /// sin probar
+{
+    ArbolExpresiones arbolexpreID;
+    int numeroconvertido;
+     if(streq(show, Lista1->palabra))
+    {
+        Lista1 = Lista1->sig;
+        sscanf(Lista1->palabra, "%d", &numeroconvertido);
+        if(numeroconvertido < contadorexp1)
+        {
+            arbolexpreID=TraerArbolExp(L , numeroconvertido);
+            MostrarArbol(arbolexpreID);
+        }
+                    else
+                    {
+                        printf("\nNo existe una expresion con ese valor\n");
+                    }
+
+
+    }
+}
