@@ -90,6 +90,14 @@ void AsignarValorNodoNOT(ValorNodo &valNodo)
 {
     valNodo.dato.operador = 'N';
 }
+void AsignarValorNodoAND(ValorNodo &valNodo)
+{
+    valNodo.dato.operador = 'A';
+}
+void AsignarValorNodoOR(ValorNodo &valNodo)
+{
+    valNodo.dato.operador = 'O';
+}
 
 void AsignarValorParIzq(ValorNodo &valNodo)
 {

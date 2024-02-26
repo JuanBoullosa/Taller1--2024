@@ -31,6 +31,10 @@ char DarParentesis(ValorNodo ValNodo);
 
 void AsignarValorNodoNOT(ValorNodo &valNodo);
 
+void AsignarValorNodoAND(ValorNodo &valNodo);
+
+void AsignarValorNodoOR(ValorNodo &valNodo);
+
 void AsignarValorParIzq(ValorNodo &valNodo);
 
 void AsignarValorParDer(ValorNodo &valNodo);
