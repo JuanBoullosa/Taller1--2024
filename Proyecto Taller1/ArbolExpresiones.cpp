@@ -168,14 +168,14 @@ ArbolExpresiones Cons (ValorNodo v ,ArbolExpresiones i,ArbolExpresiones d, Arbol
   return a;
 }
 
-ArbolExpresiones Cons2 (ValorNodo v ,ArbolExpresiones i,ArbolExpresiones d, ArbolExpresiones f, ArbolExpresiones g)
+ArbolExpresiones Cons2 (ValorNodo v ,ArbolExpresiones i,ArbolExpresiones d, ArbolExpresiones g, ArbolExpresiones f)
 {
     ArbolExpresiones a = new nodo;
     a -> info = v;
     a -> hizq = i;
     a -> hder = d;
-    a ->hder->hder = f;
     a ->hizq->hizq = g;
+    a ->hder->hder = f;
 
   return a;
 }

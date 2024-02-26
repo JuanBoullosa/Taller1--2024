@@ -117,7 +117,7 @@ Expresion expre;
                     printf("Error");
         }
                             //%%%%%%%%%%   COMANDO AND Y OR  %%%%%%%%%%%%
-      /* else
+       else
             sscanf(Lista1->palabra, "%d", &numeroconvertido);                       //Convierto string 2 a entero
         if (numeroconvertido<contadorexp1)                                      //Condicion si el numero existe en la lista de expresiones
         {
@@ -136,7 +136,7 @@ Expresion expre;
                     arbolDer=TraerArbolExp(ListExpPrincipal, numeroconvertido2);  //Trae arbol indicado con ID de la lista de Expresiones.
                     CargarArbolParentesis(arbolIzqPar, ValorNodoParIzq);          //Cargamos arbol parentesis izq
                     CargarArbolParentesis(arbolDerPar, ValorNodoParDer);          //Cargamos arbol con parentesis der
-                    arbolPrincipal=Cons2(ValorNodoAND,arbolIzqPar,arbolDer,arbolDerPar,arbolIzqPar); //Cargamos el arbol principal con ( NOT Arbol ID )
+                    arbolPrincipal=Cons2(ValorNodoAND,arbolIzq,arbolDer,arbolIzqPar, arbolDerPar); //Cargamos el arbol principal con ( NOT Arbol ID )
                     CargarExpresion(arbolPrincipal, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
                     InsBackIterExp(ListExpPrincipal, expre);                         //Insertamos la expresion en la Lista Principal de Expresiones
                 }
@@ -157,7 +157,7 @@ Expresion expre;
                     arbolDer=TraerArbolExp(ListExpPrincipal, numeroconvertido2);  //Trae arbol indicado con ID de la lista de Expresiones.
                     CargarArbolParentesis(arbolIzqPar, ValorNodoParIzq);          //Cargamos arbol parentesis izq
                     CargarArbolParentesis(arbolDerPar, ValorNodoParDer);          //Cargamos arbol con parentesis der
-                    arbolPrincipal=Cons2(ValorNodoOR,arbolIzqPar,arbolDer,arbolDerPar,arbolIzqPar); //Cargamos el arbol principal con ( NOT Arbol ID )
+                    arbolPrincipal=Cons2(ValorNodoOR,arbolIzq,arbolDer,arbolIzqPar,arbolDerPar); //Cargamos el arbol principal con ( NOT Arbol ID )
                     CargarExpresion(arbolPrincipal, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
                     InsBackIterExp(ListExpPrincipal, expre);                         //Insertamos la expresion en la Lista Principal de Expresiones
                 }
@@ -165,9 +165,13 @@ Expresion expre;
                     printf("Error3\n");
             }
 
-        }*/
+        }
+        else
+            printf("Error3\n");
 
     }
+    else
+        printf("Error3\n");
 
 
 

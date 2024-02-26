@@ -45,14 +45,18 @@ void InsFront (ListaString &L, str stringg)
 //Agregar al final de la lista
 void InsBackIter(ListaString &L, str palabraS) {
     ListaString nuevo = new NodoS;
-    nuevo->palabra = palabraS;
+
+    //creamos un nuevo puntero que guarda el contenido de palabraS
+    strcrear(nuevo->palabra);
+    strcop(nuevo->palabra,palabraS);
+
     nuevo->sig = NULL;
 
     if (L == NULL) {
         L = nuevo;
     } else {
         ListaString aux = L;
-        // Buscar el último nodo de la lista
+        // Buscar el ï¿½ltimo nodo de la lista
         while (aux->sig != NULL) {
             aux = aux->sig;
         }
@@ -61,35 +65,53 @@ void InsBackIter(ListaString &L, str palabraS) {
     }
 }
 
+void EliminarListaString (ListaString &L)
+{
+    if (L != NULL)
+    {
+        EliminarListaString (L->sig);
+        delete L;
+        L = NULL;
+    }
+}
+
 
 void partirString(str s, ListaString &L) {
+
+
+    EliminarListaString(L);
+    CrearLista(L);
+
     str aux;
     strcrear(aux);
     strcop(aux , s);
-    str s1, s2, aux2 ;
-    //strcrear(s1);
-    //strcrear(s2);
+    str aux2 ;
+    str s1;
+    str s2;
 
 
 
-        while (!stringVacio(aux)) {
+    while (!stringVacio(aux)) {
         strcrear(aux2);
         eliminarBlancosPrincipio(aux , aux2);
+
         strcrear(s1);
         strcrear(s2);
         dividirString(aux2, s1, s2);
         InsBackIter(L, s1);
-        strcop(aux, s2); // Actualizar auxiliar para el siguiente ciclo
-        }
-
-        //strdestruir(s1);
-        //strdestruir(s2);
         strdestruir(aux);
-        strdestruir(aux2);
+        strcrear(aux);
+        strcop(aux, s2); // Actualizar auxiliar para el siguiente ciclo
 
+        strdestruir(aux2);
+        strdestruir(s1);
+        strdestruir(s2);
+        }
 
 
 }
+
+
 
 
 

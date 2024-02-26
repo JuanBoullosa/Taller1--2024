@@ -30,7 +30,7 @@ ArbolExpresiones TraerArbolExp(ListaExpresiones ListaExp, int numeroconvertido);
 
 ArbolExpresiones DarArbolexp( ListaExpresiones L);
 
-//void MostrarListaExp (ListaExpresiones L);
+void EliminarListaString (ListaString &L);
 
 
 

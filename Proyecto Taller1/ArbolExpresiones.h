@@ -48,7 +48,7 @@ void CargarArbolParentesis(ArbolExpresiones &a, ValorNodo ValorNodoParIzq);
 
 ArbolExpresiones Cons (ValorNodo v,ArbolExpresiones i,ArbolExpresiones d, ArbolExpresiones f);
 
-ArbolExpresiones Cons2 (ValorNodo v ,ArbolExpresiones i,ArbolExpresiones d, ArbolExpresiones f, ArbolExpresiones g);
+ArbolExpresiones Cons2 (ValorNodo v ,ArbolExpresiones i,ArbolExpresiones d, ArbolExpresiones g, ArbolExpresiones f);
 
 #endif // ARBOLEXPRESIONES_H_INCLUDED
 
