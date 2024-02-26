@@ -57,7 +57,7 @@ partirString(comando, Lista1);                          // Procedimiento para pa
 
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Prueba del comand Show %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-//Show(Lista1, ListExpPrincipal,show,contadorexp1);       //Ejecutamos show en ejecucion
+//Show(Lista1, ListExpPrincipal,show,contadorexp1);       //Ejecutamos show
 
 
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -94,7 +94,7 @@ Expresion expre;
                 arbolPrincipal=Cons(ValorNodoNOT,arbolIzq,arbolDer,arbolDerPar); //Cargamos el arbol principal con ( NOT Arbol ID )
                 CargarExpresion(arbolPrincipal, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
                 InsBackIterExp(ListExpPrincipal, expre);                         //Insertamos la expresion en la Lista Principal de Expresiones
-                printf("\nMostrar arbol: \n");
+
 
             }
                 else
@@ -102,16 +102,25 @@ Expresion expre;
         }
     }
 
-printf("\n");                                           //Salto de linea
-delete[] Lista1;                                        //Liberamos memoria de lista para ingresar nuevo comando
-CrearLista(Lista1);                                     //Asignamos memoria a lista
-printf("Ingrese comando: ");                            //Solicitamos al usuario que ingrese un comando
-scan(comando);                                          // Scan dinamico para el ingreso de el string comando
-printf("\n");                                           // Salto de linea
-partirString(comando, Lista1);                          // Procedimiento para partir el string
+
+printf("\n");                                                                    //Salto de linea
+delete[] Lista1;                                                                 //Liberamos memoria de lista para ingresar nuevo comando
+CrearLista(Lista1);                                                              //Asignamos memoria a lista
+printf("Ingrese comando: ");                                                     //Solicitamos al usuario que ingrese un comando
+scan(comando);                                                                   //Scan dinamico para el ingreso de el string comando
+printf("\n");                                                                    //Salto de linea
+partirString(comando, Lista1);                                                   //Procedimiento para partir el string
 
 
-Show(Lista1, ListExpPrincipal,show,contadorexp1);       //Ejecutamos show en ejecucion
+Show(Lista1, ListExpPrincipal,show,contadorexp1);                                //Ejecutamos show
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    Cargar nodo OR y AND      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        if  (((streq(expAnd,Lista1->palabra))&& (LargoRecu(Lista1)<=4)) &&
+            ((streq(expOr,Lista1->palabra))&& (LargoRecu(Lista1)<=4)))
+        {
+            printf("\n");
+        }
+
 }
 
 
