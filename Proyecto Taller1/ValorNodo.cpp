@@ -47,24 +47,24 @@ expParAbierto[1]='\0';
 str expAnd;
 strcrear(expAnd);
 expAnd = new char[4];//Solicitamos la cantidad de espacios en memoria para operador and
-expAnd[0]='a';
-expAnd[1]='n';
-expAnd[2]='d';
+expAnd[0]='A';
+expAnd[1]='N';
+expAnd[2]='D';
 expAnd[3]='\0';
 
 str expNot;
 strcrear(expNot);
 expNot = new char[4];//Solicitamos la cantidad de espacios en memoria operador or
-expNot[0]='n';
-expNot[1]='o';
-expNot[2]='t';
+expNot[0]='N';
+expNot[1]='O';
+expNot[2]='T';
 expNot[3]='\0';
 
 str expOr;
 strcrear(expOr);
 expOr = new char[3];//Solicitamos la cantidad de espacios en memoria operador or
-expOr[0]='o';
-expOr[1]='r';
+expOr[0]='O';
+expOr[1]='R';
 expOr[2]='\0';
 
         if (streq(L->palabra, expAnd)) {

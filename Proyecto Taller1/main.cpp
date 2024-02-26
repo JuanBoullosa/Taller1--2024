@@ -55,6 +55,19 @@ printf("\n");                                           // Salto de linea
 partirString(comando, Lista1);                          // Procedimiento para partir el string
 
 
+
+Atomic(Lista1, contadorexp1, ListExpPrincipal);         // Ejecutamos el comando atomic
+
+printf("\n");                                           //Salto de linea
+delete[] Lista1;                                        //Liberamos memoria de lista para ingresar nuevo comando
+CrearLista(Lista1);                                     //Asignamos memoria a lista
+printf("Ingrese comando: ");                            //Solicitamos al usuario que ingrese un comando
+scan(comando);                                          // Scan dinamico para el ingreso de el string comando
+printf("\n");                                           // Salto de linea
+partirString(comando, Lista1);                          // Procedimiento para partir el string
+
+
+
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Prueba del comand Show %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 //Show(Lista1, ListExpPrincipal,show,contadorexp1);       //Ejecutamos show
@@ -66,7 +79,7 @@ partirString(comando, Lista1);                          // Procedimiento para pa
 
                                                 //%%%%%%%%  COMANDO COMPOUND   %%%%%%%%*/
 int numeroconvertido, numeroconvertido2;
-str auxiliar;
+
 ValorNodo ValorNodoNOT;
 ValorNodo ValorNodoAND;
 ValorNodo ValorNodoOR;
@@ -103,10 +116,9 @@ Expresion expre;
                 else
                     printf("Error");
         }
-
-        //%%%%%%%%%%   COMANDO AND Y OR  %%%%%%%%%%%%
-        /*
-        sscanf(Lista1->palabra, "%d", &numeroconvertido);                       //Convierto string 2 a entero
+                            //%%%%%%%%%%   COMANDO AND Y OR  %%%%%%%%%%%%
+      /* else
+            sscanf(Lista1->palabra, "%d", &numeroconvertido);                       //Convierto string 2 a entero
         if (numeroconvertido<contadorexp1)                                      //Condicion si el numero existe en la lista de expresiones
         {
             Lista1=Lista1->sig;                                             //Avanzo al string 3
@@ -152,8 +164,12 @@ Expresion expre;
                  else
                     printf("Error3\n");
             }
+
         }*/
+
     }
+
+
 
 
 printf("\n");                                                                    //Salto de linea
@@ -178,7 +194,10 @@ Show(Lista1, ListExpPrincipal,show,contadorexp1);                               
 
 
 
-*/
+
+
+
+
 
 //if(streq(evaluate, Lista1->palabra))
     //printf("Es igual al string evaluate");
