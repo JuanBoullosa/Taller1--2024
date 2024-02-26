@@ -48,7 +48,6 @@ if((LargoRecu(L) == 2) && (streq(atomic, L->palabra)))
                 CargarArbolAtomic(valNodo,arbolexp);
                 CargarExpresion(arbolexp, expre, contadorexp);
                 InsBackIterExp(ListExp, expre);
-                contadorexp = contadorexp +1;
                 printf("\nMostrar arbol: \n");
                 MostrarArbol(ListExp->expre.arbol);
             }

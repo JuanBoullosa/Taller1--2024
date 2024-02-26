@@ -44,7 +44,9 @@ void AgregarParentesisDerecho(ArbolExpresiones &a, ValorNodo ValorNodoParDer);
 
 void CargarArbolNOTSinParent(ValorNodo ValorNodoNOT,ArbolExpresiones arbolexpreID,ArbolExpresiones &a,ArbolExpresiones ArbolParIzq);
 
-void CargarArbolParentesisIZQ(ArbolExpresiones &a, ValorNodo ValorNodoParIzq);
+void CargarArbolParentesis(ArbolExpresiones &a, ValorNodo ValorNodoParIzq);
+
+ArbolExpresiones Cons (ValorNodo v,ArbolExpresiones i,ArbolExpresiones d, ArbolExpresiones f);
 
 #endif // ARBOLEXPRESIONES_H_INCLUDED
 

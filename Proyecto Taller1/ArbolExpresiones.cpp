@@ -149,10 +149,21 @@ void AgregarParentesisDerecho(ArbolExpresiones &a, ValorNodo ValorNodoParDer)
 }
 
 
-void CargarArbolParentesisIZQ(ArbolExpresiones &a, ValorNodo ValorNodoParIzq)
+void CargarArbolParentesis(ArbolExpresiones &a, ValorNodo ValorNodoParIzq)
 {
         a=new nodo;
         a->info = ValorNodoParIzq;
         a->hder = NULL;
         a->hizq = NULL;
+}
+
+ArbolExpresiones Cons (ValorNodo v ,ArbolExpresiones i,ArbolExpresiones d, ArbolExpresiones f)
+{
+    ArbolExpresiones a = new nodo;
+    a -> info = v;
+    a -> hizq = i;
+    a -> hder = d;
+    a ->hder->hder = f;
+
+  return a;
 }
