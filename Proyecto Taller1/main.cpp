@@ -187,12 +187,19 @@ partirString(comando, Lista1);                                                  
 
 Show(Lista1, ListExpPrincipal,show,contadorexp1);                                //Ejecutamos show
 
-//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    Cargar nodo OR y AND      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+printf("\n");                                                                    //Salto de linea
+delete[] Lista1;                                                                 //Liberamos memoria de lista para ingresar nuevo comando
+CrearLista(Lista1);                                                              //Asignamos memoria a lista
+printf("Ingrese comando: ");                                                     //Solicitamos al usuario que ingrese un comando
+scan(comando);                                                                   //Scan dinamico para el ingreso de el string comando
+printf("\n");                                                                    //Salto de linea
+partirString(comando, Lista1);                                                   //Procedimiento para partir el string
 
+Evaluate(Lista1, ListExpPrincipal, evaluate,contadorexp1);
 
 //%%%%%%%%%%%%%%%%%%%  COMANDO EVALUATE   %%%%%%%%%%%%%%%%%%%%%%%*/
-ArbolExpresiones arbolevaluate;
+/*ArbolExpresiones arbolevaluate;
 boolean Resu;
 
 if(streq(evaluate, Lista1->palabra))
@@ -228,7 +235,7 @@ if(streq(evaluate, Lista1->palabra))
 
 
 
-
+*/
 
 
 

@@ -219,8 +219,52 @@ boolean Resultado;
                 Resultado = TRUE;
         }
     }
+    return Resultado;
 }
+/*boolean EvaluarArbol(ArbolExpresiones a)
+{
+    boolean Resultado = FALSE; // Inicializamos el resultado en falso
+
+    if (a != NULL) {
+        if (a->hizq != NULL && a->hder != NULL) {
+            EvaluarArbol(a->hizq);
+            EvaluarArbol(a->hder);
+
+            if ((a->hizq->info.valor == TRUE) && (a->hder->info.valor == TRUE))
+                Resultado = TRUE; // CASO 1: Ambos hijos son TRUE
+
+            if (((a->hizq->info.valor == TRUE) && (a->hder->info.valor == FALSE)) ||
+                ((a->hizq->info.valor == FALSE) && (a->hder->info.valor == TRUE))) {
+                // CASO 2: Hijos TRUE y FALSE distintos
+                if (a->info.dato.operador == 'A')
+                    Resultado = FALSE;
+                else
+                    Resultado = TRUE;
+            }
+
+            if ((a->hizq->info.valor == FALSE) && (a->hder->info.valor == FALSE)) {
+                // CASO 3: Los dos hijos son FALSE
+                if (a->info.dato.operador == 'A')
+                    Resultado = FALSE;
+            }
+
+            if ((a->hizq->info.dato.parentesis == '(') && (a->hder->info.valor == TRUE)) {
+                // CASO 4: Hijo izquierdo con paréntesis y hijo derecho TRUE
+                if (a->info.dato.operador == 'N')
+                    Resultado = FALSE;
+            }
+
+            if ((a->hizq->info.dato.parentesis == '(') && (a->hder->info.valor == FALSE)) {
+                // CASO 5: Hijo izquierdo con paréntesis y hijo derecho FALSE
+                if (a->info.dato.operador == 'N')
+                    Resultado = TRUE;
+            }
+        }
+    }
+
+    return Resultado; // Retornamos el resultado
 
 
+}*/
 
 

@@ -11,5 +11,5 @@ void CargarComandos (str &atomic, str & compound, str & show, str & evaluate, st
 
 void Show(ListaString Lista1 ,ListaExpresiones L, str show, int contadorexp1);
 
-
+void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal, str evaluate, int contadorexp1);
 #endif // COMANDO_H_INCLUDED

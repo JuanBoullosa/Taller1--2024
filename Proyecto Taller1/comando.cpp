@@ -214,3 +214,40 @@ void Show(ListaString Lista1 ,ListaExpresiones L, str show, int contadorexp1)
             printf("\nNo existe una expresion con ese valor\n");
 
 }
+
+
+void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal, str evaluate, int contadorexp1){
+
+    ArbolExpresiones arbolevaluate;
+    int numeroconvertido;
+
+if(streq(evaluate, Lista1->palabra))
+{
+    if (LargoRecu(Lista1)==2)                                                   //Condicion que el largo de la lista sea 2
+    {
+        Lista1=Lista1->sig;                                                     //Avanzo al string 2
+        sscanf(Lista1->palabra, "%d", &numeroconvertido);                       //Convierto el string en entero
+        if (numeroconvertido < contadorexp1)                                    //Me fijo si existe contador en la lista de expresiones
+        {
+
+            arbolevaluate=TraerArbolExp(ListExpPrincipal, numeroconvertido);    //Traigo el arbol de la lista para evaluarlo
+            //EvaluarArbol(arbolevaluate);                                      //Funcion para evaluar un arbol de expresiones
+            if(EvaluarArbol(arbolevaluate)==TRUE)
+            {
+                printf("TRUE");
+            }
+                else
+                {
+                    printf("FALSE");
+                }
+
+
+        }
+        else
+           printf("Mensaje de error\n");
+    }
+    else
+        printf("Mensaje de error\n");
+
+}
+}
