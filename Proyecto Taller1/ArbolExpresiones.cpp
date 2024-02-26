@@ -179,3 +179,48 @@ ArbolExpresiones Cons2 (ValorNodo v ,ArbolExpresiones i,ArbolExpresiones d, Arbo
 
   return a;
 }
+
+
+void EvaluarArbol(ArbolExpresiones a)
+{
+boolean Resultado;
+    if(a!=NULL)
+    {
+
+    EvaluarArbol(a->hizq);
+    EvaluarArbol(a->hder);
+    if((a->hizq->info.dato.valor == TRUE) && (a->hder->info.dato.valor == TRUE))           //CASO 1: hizq y hder son ambos TRUE
+            Resultado = TRUE;
+
+    if(((a->hizq->info.dato.valor == TRUE) &&  (a->hder->info.dato.valor == FALSE)) ||
+       ((a->hizq->info.dato.valor == FALSE) && (a->hder->info.dato.valor == TRUE)))       //CASO 2: hijos TRUE Y FALSE distintos
+        {
+            if (a->info.dato.operador == 'A')
+                 Resultado = FALSE;
+            else
+                 Resultado = TRUE;
+        }
+
+    if((a->hizq->info.dato.valor== FALSE) && (a->hder->info.dato.valor == FALSE))       //CASO 3: los dos hijos son FALSE
+        {
+            if (a->info.dato.operador == 'A')
+                Resultado = FALSE;
+        }
+
+    if((a->hizq->info.dato.parentesis == '(') && (a->hder->info.dato.valor==TRUE))          //CASO 4: hijo hizq ( y hijo derecho TRUE
+        {
+            if (a->info.dato.operador== 'N')
+                Resultado = FALSE;
+        }
+
+    if((a->hizq->info.dato.parentesis== '(') && (a->hder->info.dato.valor==FALSE))           //CASO 5: hijo hizq ( y hijo derecho FALSE
+        {
+            if (a->info.dato.operador== 'N')
+                Resultado = TRUE;
+        }
+    }
+}
+
+
+
+
