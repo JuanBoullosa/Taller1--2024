@@ -73,7 +73,7 @@ void MostrarArbol (ArbolExpresiones a)
 
         if (a->info.dato.valor == FALSE)
             printf(" FALSE ");
-        if (a->info.dato.valor== TRUE)
+        if (a->info.dato.valor == TRUE)
                     printf(" TRUE ");
         if (a->info.dato.operador == 'A')
                 printf(" AND ");
