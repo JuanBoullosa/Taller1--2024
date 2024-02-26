@@ -193,6 +193,7 @@ Show(Lista1, ListExpPrincipal,show,contadorexp1);                               
 
 //%%%%%%%%%%%%%%%%%%%  COMANDO EVALUATE   %%%%%%%%%%%%%%%%%%%%%%%*/
 ArbolExpresiones arbolevaluate;
+boolean Resu;
 
 if(streq(evaluate, Lista1->palabra))
 {
@@ -204,7 +205,17 @@ if(streq(evaluate, Lista1->palabra))
         {
 
             arbolevaluate=TraerArbolExp(ListExpPrincipal, numeroconvertido);    //Traigo el arbol de la lista para evaluarlo
-            EvaluarArbol(arbolevaluate);                                         //Funcion para evaluar un arbol de expresiones
+            //EvaluarArbol(arbolevaluate);                                      //Funcion para evaluar un arbol de expresiones
+            if(EvaluarArbol(arbolevaluate)==TRUE)
+            {
+                printf("TRUE");
+            }
+                else
+                {
+                    printf("FALSE");
+                }
+
+
         }
         else
            printf("Mensaje de error\n");

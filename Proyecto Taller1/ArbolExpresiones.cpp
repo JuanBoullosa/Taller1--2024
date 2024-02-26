@@ -181,7 +181,7 @@ ArbolExpresiones Cons2 (ValorNodo v ,ArbolExpresiones i,ArbolExpresiones d, Arbo
 }
 
 
-void EvaluarArbol(ArbolExpresiones a)
+boolean EvaluarArbol(ArbolExpresiones a)
 {
 boolean Resultado;
     if(a!=NULL)

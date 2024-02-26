@@ -237,11 +237,11 @@
 	"ListaExpresiones.h"
 	"comando.h"
 
-1708980286 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\arbolexpresiones.cpp
+1708980912 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\arbolexpresiones.cpp
 	"ArbolExpresiones.h"
 	"Expresiones.h"
 
-1708980286 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\arbolexpresiones.h
+1708980903 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\arbolexpresiones.h
 	"Boolean.h"
 	"ValorNodo.h"
 
@@ -292,7 +292,7 @@
 	"ListaString.h"
 	"Strigg.h"
 
-1708980286 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\main.cpp
+1708981064 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\main.cpp
 	<iostream>
 	"ArbolExpresiones.h"
 	"Strigg.h"
