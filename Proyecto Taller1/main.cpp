@@ -38,9 +38,9 @@ printf("Ingrese comando: ");                            //Solicitamos al usuario
 scan(comando);                                          // Scan dinamico para el ingreso de el string comando
 printf("\n");                                           // Salto de linea
 partirString(comando, Lista1);                          // Procedimiento para partir el string
-printf("Mostrar Lista de string: \n");
-MostrarLista(Lista1);                                   // Mostramos el string partido
-printf("\n");
+//printf("Mostrar Lista de string: \n");
+//MostrarLista(Lista1);                                   // Mostramos el string partido
+
 
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Comando atomic  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -96,7 +96,7 @@ Expresion expre;
     {
         Lista1=Lista1->sig;                                                     //Avanzo a string 2
 
-        if((streq(expNot,Lista1->palabra))&& (LargoRecu(Lista1)<=3))
+        if((streq(expNot,Lista1->palabra)) && (LargoRecu(Lista1)<=3))
         {
              Lista1=Lista1->sig;
              sscanf(Lista1->palabra, "%d", &numeroconvertido);
@@ -112,12 +112,14 @@ Expresion expre;
                 arbolPrincipal=Cons(ValorNodoNOT,arbolIzqPar,arbolDer,arbolDerPar); //Cargamos el arbol principal con ( NOT Arbol ID )
                 CargarExpresion(arbolPrincipal, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
                 InsBackIterExp(ListExpPrincipal, expre);                         //Insertamos la expresion en la Lista Principal de Expresiones
+
                }
-                else
-                    printf("Error");
         }
                             //%%%%%%%%%%   COMANDO AND Y OR  %%%%%%%%%%%%
        else
+       {
+
+
             sscanf(Lista1->palabra, "%d", &numeroconvertido);                       //Convierto string 2 a entero
         if (numeroconvertido<contadorexp1)                                      //Condicion si el numero existe en la lista de expresiones
         {
@@ -161,17 +163,15 @@ Expresion expre;
                     CargarExpresion(arbolPrincipal, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
                     InsBackIterExp(ListExpPrincipal, expre);                         //Insertamos la expresion en la Lista Principal de Expresiones
                 }
-                 else
-                    printf("Error3\n");
+
             }
 
+         }
         }
-        else
-            printf("Error3\n");
 
     }
-    else
-        printf("Error3\n");
+
+
 
 
 

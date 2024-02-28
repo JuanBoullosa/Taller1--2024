@@ -183,23 +183,20 @@ ArbolExpresiones Cons2 (ValorNodo v ,ArbolExpresiones i,ArbolExpresiones d, Arbo
 
 boolean EvaluarArbol(ArbolExpresiones a, boolean &result )
 {
-    if (( a->info.valor == TRUE) && ( a->info.valor == FALSE))
+    if (( a->info.valor == TRUE) || ( a->info.valor == FALSE))
         {
-            if ( a->info.valor == TRUE)
-                result = TRUE;
-            if ( a->info.valor == FALSE)
-                result = FALSE;
+                result = a->info.dato.valor;
         }
     else
         {
                 if ((a->info.dato.operador == 'A'))
-                    EvaluarArbol(a->hder, result) && EvaluarArbol(a->hizq, result);
+                    EvaluarArbol(a->hizq, result) && EvaluarArbol(a->hder, result);
                 if ((a->info.dato.operador == 'O'))
-                    EvaluarArbol(a->hder, result) || EvaluarArbol(a->hizq, result);
+                    EvaluarArbol(a->hizq, result) || EvaluarArbol(a->hder, result);
                 if  ((a->info.dato.operador == 'N'))
-                    EvaluarArbol(a->hder, result);
+                    !EvaluarArbol(a->hder, result);
         }
-        return result;
+        //return result;
 
 }
 
