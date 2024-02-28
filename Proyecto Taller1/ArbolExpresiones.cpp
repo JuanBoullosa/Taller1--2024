@@ -161,9 +161,16 @@ ArbolExpresiones Cons (ValorNodo v ,ArbolExpresiones i,ArbolExpresiones d, Arbol
 {
     ArbolExpresiones a = new nodo;
     a -> info = v;
-    a -> hizq = i;
+
+    if (a->hder == NULL)
+    a -> hder = new nodo;
     a -> hder = d;
-    a ->hder->hder = f;
+    a -> hder -> hder = new nodo;
+    a -> hder -> hder = f;
+
+    if(a->hizq == NULL)
+    a -> hizq = new nodo;
+    a -> hizq = i;
 
   return a;
 }
@@ -172,10 +179,16 @@ ArbolExpresiones Cons2 (ValorNodo v ,ArbolExpresiones i,ArbolExpresiones d, Arbo
 {
     ArbolExpresiones a = new nodo;
     a -> info = v;
+    if(a->hizq == NULL)
+    a -> hizq = new nodo;
     a -> hizq = i;
+     a -> hizq ->hizq = new nodo;
+    a -> hizq ->hizq = g;
+    if (a->hder == NULL)
+    a -> hder = new nodo;
     a -> hder = d;
-    a ->hizq->hizq = g;
-    a ->hder->hder = f;
+    a -> hder->hder = new nodo;
+    a -> hder->hder = f;
 
   return a;
 }
