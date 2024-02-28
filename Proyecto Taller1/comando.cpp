@@ -220,6 +220,7 @@ void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal, str evalua
 
     ArbolExpresiones arbolevaluate;
     int numeroconvertido;
+    boolean resu;
 
 if(streq(evaluate, Lista1->palabra))
 {
@@ -231,8 +232,7 @@ if(streq(evaluate, Lista1->palabra))
         {
 
             arbolevaluate=TraerArbolExp(ListExpPrincipal, numeroconvertido);    //Traigo el arbol de la lista para evaluarlo
-            //EvaluarArbol(arbolevaluate);                                      //Funcion para evaluar un arbol de expresiones
-            if(EvaluarArbol(arbolevaluate)==TRUE)
+            if(EvaluarArbol(arbolevaluate, resu))                               //Funcion para evaluar un arbol de expresiones
             {
                 printf("TRUE");
             }
@@ -240,8 +240,6 @@ if(streq(evaluate, Lista1->palabra))
                 {
                     printf("FALSE");
                 }
-
-
         }
         else
            printf("Mensaje de error\n");

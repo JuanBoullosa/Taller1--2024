@@ -50,7 +50,7 @@ ArbolExpresiones Cons (ValorNodo v,ArbolExpresiones i,ArbolExpresiones d, ArbolE
 
 ArbolExpresiones Cons2 (ValorNodo v ,ArbolExpresiones i,ArbolExpresiones d, ArbolExpresiones g, ArbolExpresiones f);
 
-boolean EvaluarArbol(ArbolExpresiones a);
+boolean EvaluarArbol(ArbolExpresiones a, boolean &result);
 
 #endif // ARBOLEXPRESIONES_H_INCLUDED
 
