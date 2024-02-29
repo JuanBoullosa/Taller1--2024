@@ -164,8 +164,10 @@ ArbolExpresiones Cons (ValorNodo v ,ArbolExpresiones i,ArbolExpresiones d, Arbol
     a -> hder = d;
     a -> hizq = i;
 
-    if (d -> hder == NULL)
-        d -> hder = f;
+   while (d -> hder != NULL) {
+      d = d -> hder;
+    }
+    d -> hder = f;
 
 
   return a;
@@ -179,13 +181,15 @@ ArbolExpresiones Cons2(ValorNodo v, ArbolExpresiones i, ArbolExpresiones d, Arbo
     a->hder = d;
 
 
-    if (i-> hizq == NULL) {
-        i-> hizq = g;
+    while (i-> hizq != NULL) {
+        i = i-> hizq ;
 
     }
-    if (d -> hder == NULL) {
-       d -> hder = f;
+    i ->hizq = g;
+    while (d -> hder != NULL) {
+      d = d -> hder;
     }
+    d -> hder = f;
 
     return a;
 }

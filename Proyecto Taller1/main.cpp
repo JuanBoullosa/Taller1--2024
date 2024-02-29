@@ -66,6 +66,55 @@ partirString(comando, Lista1);
 
 Show(Lista1,ListExpPrincipal,contadorexp1);
 
+printf("\n");                                           //Salto de linea
+delete[] Lista1;                                        //Liberamos memoria de lista para ingresar nuevo comando
+CrearLista(Lista1);                                     //Asignamos memoria a lista
+printf("Ingrese comando: ");                            //Solicitamos al usuario que ingrese un comando
+scan(comando);                                          // Scan dinamico para el ingreso de el string comando
+printf("\n");                                           // Salto de linea
+partirString(comando, Lista1);                          // Procedimiento para partir el string
+
+Compound4(Lista1,ListExpPrincipal,contadorexp1);
+
+printf("\n");                                           //Salto de linea
+delete[] Lista1;                                        //Liberamos memoria de lista para ingresar nuevo comando
+CrearLista(Lista1);                                     //Asignamos memoria a lista
+printf("Ingrese comando: ");                            //Solicitamos al usuario que ingrese un comando
+scan(comando);                                          // Scan dinamico para el ingreso de el string comando
+printf("\n");                                           // Salto de linea
+partirString(comando, Lista1);
+
+Show(Lista1,ListExpPrincipal,contadorexp1);
+
+printf("\n");                                           //Salto de linea
+delete[] Lista1;                                        //Liberamos memoria de lista para ingresar nuevo comando
+CrearLista(Lista1);                                     //Asignamos memoria a lista
+printf("Ingrese comando: ");                            //Solicitamos al usuario que ingrese un comando
+scan(comando);                                          // Scan dinamico para el ingreso de el string comando
+printf("\n");                                           // Salto de linea
+partirString(comando, Lista1);
+
+Show(Lista1,ListExpPrincipal,contadorexp1);
+
+printf("\n");                                           //Salto de linea
+delete[] Lista1;                                        //Liberamos memoria de lista para ingresar nuevo comando
+CrearLista(Lista1);                                     //Asignamos memoria a lista
+printf("Ingrese comando: ");                            //Solicitamos al usuario que ingrese un comando
+scan(comando);                                          // Scan dinamico para el ingreso de el string comando
+printf("\n");                                           // Salto de linea
+partirString(comando, Lista1);
+
+Show(Lista1,ListExpPrincipal,contadorexp1);
+
+printf("\n");                                           //Salto de linea
+delete[] Lista1;                                        //Liberamos memoria de lista para ingresar nuevo comando
+CrearLista(Lista1);                                     //Asignamos memoria a lista
+printf("Ingrese comando: ");                            //Solicitamos al usuario que ingrese un comando
+scan(comando);                                          // Scan dinamico para el ingreso de el string comando
+printf("\n");                                           // Salto de linea
+partirString(comando, Lista1);
+
+Show(Lista1,ListExpPrincipal,contadorexp1);
 
 
 
