@@ -323,10 +323,17 @@ Expresion expre;
                 AsignarValorNodoNOT(ValorNodoNOT);                               //Cargamos un valor nodo con Not
                 AsignarValorParIzq(ValorNodoParIzq);                             //Cargamos un valor nodo con (
                 AsignarValorParDer(ValorNodoParDer);                             //Cargamos un valor nodo con )
+
+
+
                 arbolDer=TraerArbolExp(ListExpPrincipal, numeroconvertido);      //Trae arbol indicado con ID de la lista de Expresiones.
                 CargarArbolParentesis(arbolIzqPar, ValorNodoParIzq);                //Cargamos arbol parentesis izq
                 CargarArbolParentesis(arbolDerPar, ValorNodoParDer);             //Cargamos arbol con parentesis der
                 arbolPrincipal=Cons(ValorNodoNOT,arbolIzqPar,arbolDer,arbolDerPar); //Cargamos el arbol principal con ( NOT Arbol ID )
+
+
+
+
                 CargarExpresion(arbolPrincipal, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
                 InsBackIterExp(ListExpPrincipal, expre);                         //Insertamos la expresion en la Lista Principal de Expresiones
 
@@ -351,11 +358,15 @@ Expresion expre;
                     AsignarValorNodoAND(ValorNodoAND);                           //Cargamos el valor nodo AND
                     AsignarValorParIzq(ValorNodoParIzq);                         //Cargamos un valor nodo con (
                     AsignarValorParDer(ValorNodoParDer);                         //Cargamos un valor nodo con )
+                    CargarArbolParentesis(arbolIzqPar, ValorNodoParIzq);          //Cargamos arbol parentesis izq
+                    CargarArbolParentesis(arbolDerPar, ValorNodoParDer);
+
+
                     arbolIzq=TraerArbolExp(ListExpPrincipal, numeroconvertido);  //Trae arbol indicado con ID de la lista de Expresiones.
                     arbolDer=TraerArbolExp(ListExpPrincipal, numeroconvertido2);  //Trae arbol indicado con ID de la lista de Expresiones.
-                    CargarArbolParentesis(arbolIzqPar, ValorNodoParIzq);          //Cargamos arbol parentesis izq
-                    CargarArbolParentesis(arbolDerPar, ValorNodoParDer);          //Cargamos arbol con parentesis der
                     arbolPrincipal=Cons2(ValorNodoAND,arbolIzq,arbolDer,arbolIzqPar, arbolDerPar); //Cargamos el arbol principal con ( NOT Arbol ID )
+
+
                     CargarExpresion(arbolPrincipal, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
                     InsBackIterExp(ListExpPrincipal, expre);                         //Insertamos la expresion en la Lista Principal de Expresiones
                 }
@@ -372,11 +383,14 @@ Expresion expre;
                     AsignarValorNodoOR(ValorNodoOR);                           //Cargamos el valor nodo AND
                     AsignarValorParIzq(ValorNodoParIzq);                         //Cargamos un valor nodo con (
                     AsignarValorParDer(ValorNodoParDer);                         //Cargamos un valor nodo con )
-                    arbolIzq=TraerArbolExp(ListExpPrincipal, numeroconvertido);  //Trae arbol indicado con ID de la lista de Expresiones.
-                    arbolDer=TraerArbolExp(ListExpPrincipal, numeroconvertido2);  //Trae arbol indicado con ID de la lista de Expresiones.
                     CargarArbolParentesis(arbolIzqPar, ValorNodoParIzq);          //Cargamos arbol parentesis izq
                     CargarArbolParentesis(arbolDerPar, ValorNodoParDer);          //Cargamos arbol con parentesis der
+
+                    arbolIzq=TraerArbolExp(ListExpPrincipal, numeroconvertido);                  //Trae arbol indicado con ID de la lista de Expresiones.
+                    arbolDer=TraerArbolExp(ListExpPrincipal, numeroconvertido2);                 //Trae arbol indicado con ID de la lista de Expresiones.
                     arbolPrincipal=Cons2(ValorNodoOR,arbolIzq,arbolDer,arbolIzqPar,arbolDerPar); //Cargamos el arbol principal con ( NOT Arbol ID )
+
+
                     CargarExpresion(arbolPrincipal, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
                     InsBackIterExp(ListExpPrincipal, expre);                         //Insertamos la expresion en la Lista Principal de Expresiones
                 }
