@@ -52,5 +52,10 @@ ArbolExpresiones Cons2 (ValorNodo v ,ArbolExpresiones i,ArbolExpresiones d, Arbo
 
 boolean EvaluarArbol(ArbolExpresiones a, boolean &result);
 
+void copiarArbol(ArbolExpresiones &a, ArbolExpresiones b);
+
+void guardarAbbValorNodo ( ValorNodo t, ArbolExpresiones &a );
+
+ValorNodo darValorNodoAbb( ArbolExpresiones a);
 #endif // ARBOLEXPRESIONES_H_INCLUDED
 

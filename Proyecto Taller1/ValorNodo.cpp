@@ -129,3 +129,5 @@ TipoNodo DarTipoNodo(ValorNodo ValNodo)
 {
   return ValNodo.discriminante;
 }
+
+

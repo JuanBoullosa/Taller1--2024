@@ -40,4 +40,8 @@ void AsignarValorParIzq(ValorNodo &valNodo);
 void AsignarValorParDer(ValorNodo &valNodo);
 
 
+
+
+
+
 #endif // VALORNODO_H_INCLUDED

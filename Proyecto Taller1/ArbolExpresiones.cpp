@@ -210,3 +210,52 @@ boolean EvaluarArbol(ArbolExpresiones a, boolean &result )
 
 }
 
+
+void guardarAbbValorNodo ( ValorNodo t, ArbolExpresiones &a )
+{
+    if(a==NULL)
+        a=new nodo;
+
+          a->info = t;
+          a->hder=NULL;
+          a->hizq=NULL;
+}
+
+void abreParentesis( ArbolExpresiones &a)
+{
+    ValorNodo t;
+   // cargar tipo nodo en t: cargaTNodo(t.discriminante,3);
+   // cargo el char parentesis t.dato.parentesis = ')': cargaDatoParentesis(t,'(');
+
+   if(a!=NULL)
+        abreParentesis(a->hizq);
+    else
+    {
+         a=new nodo;
+         guardarAbbValorNodo(t,a);
+     }
+}
+
+
+
+void copiarArbol(ArbolExpresiones &a, ArbolExpresiones b){
+
+    if(b != NULL)
+    {
+        guardarAbbValorNodo(darValorNodoAbb(b),a);
+        copiarArbol(a->hizq,b->hizq);
+        copiarArbol(a->hder,b->hder);
+    }
+}
+
+ValorNodo darValorNodoAbb( ArbolExpresiones a)
+{
+     if(a != NULL)
+    {
+        return a->info;
+    }
+
+}
+
+
+
