@@ -176,6 +176,9 @@ Expresion expre;
 
 
 
+
+
+
 printf("\n");                                                                    //Salto de linea
 delete[] Lista1;                                                                 //Liberamos memoria de lista para ingresar nuevo comando
 CrearLista(Lista1);                                                              //Asignamos memoria a lista
