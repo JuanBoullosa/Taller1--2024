@@ -14,4 +14,6 @@ void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1);
 void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal, str evaluate, int contadorexp1);
 
 void Compound4(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1);
+
+void save(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1);
 #endif // COMANDO_H_INCLUDED

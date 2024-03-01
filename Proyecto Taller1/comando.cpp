@@ -285,14 +285,8 @@ Expresion expre;
                 CargarArbolParentesis(arbolIzqPar, ValorNodoParIzq);                //Cargamos arbol parentesis izq
                 CargarArbolParentesis(arbolDerPar, ValorNodoParDer);             //Cargamos arbol con parentesis der
 
-
-
                 copiarArbol(arbolDer,TraerArbolExp(ListExpPrincipal, numeroconvertido));
                 Cons(ValorNodoNOT,arbolDer,arbolPrincipal,ValorNodoParIzq,ValorNodoParDer);
-
-
-
-
 
                 CargarExpresion(arbolPrincipal, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
                 InsBackIterExp(ListExpPrincipal, expre);                         //Insertamos la expresion en la Lista Principal de Expresiones
@@ -360,6 +354,67 @@ Expresion expre;
          }
         }
 
+    }
+
+}
+
+void save(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1)
+{
+str save;
+strcrear(save);
+save = new char[5];//Solicitamos la cantidad de espacios en memoria para save
+save[0]='s';
+save[1]='a';
+save[2]='v';
+save[3]='e';
+save[4]='\0';
+
+
+
+int numeroconvertido;
+
+ValorNodo ValorNodoNOT;
+ValorNodo ValorNodoAND;
+ValorNodo ValorNodoOR;
+ValorNodo ValorNodoParIzq;
+ValorNodo ValorNodoParDer;
+
+ArbolExpresiones arbolPrincipal;
+Crear(arbolPrincipal);
+ArbolExpresiones arbolSinID;
+Crear(arbolSinID);
+ArbolExpresiones arbolConID;
+Crear(arbolConID);
+
+Expresion expre;
+
+
+    if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<4)) && (streq(save, Lista1->palabra))) //Largo entre 2 y 5
+    {
+        Lista1=Lista1->sig;                                                     //Avanzo a string 2
+
+        sscanf(Lista1->palabra, "%d", &numeroconvertido);                       //Convierto string 2 a entero
+        if (numeroconvertido<contadorexp1)                                      //Condicion si el numero existe en la lista de expresiones
+        {
+            Lista1=Lista1->sig;                                                 //Avanzo al string 3
+            //if ()                                                             // Condicion que el tercer string sea tipo char y termine en .dat
+             //{
+                if(numeroconvertido<contadorexp1)                              //condicion de que el entero exista en la lista de expresiones
+                {
+                                                                                //Asignar orden al arbol
+
+                    copiarArbol(arbolSinID ,TraerArbolExp(ListExpPrincipal, numeroconvertido));     //Extraigo y copio arbol de expresiones
+                    //AsignarleIDarbol(arbolSinID, arbolConID);                                       //Funcion sin armar aun
+
+                    CargarExpresion(arbolPrincipal, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
+                    InsBackIterExp(ListExpPrincipal, expre);                        //Insertamos la expresion en la Lista Principal de Expresiones
+                    MostrarArbol(arbolPrincipal);
+                }
+                 else
+                    printf("Error2\n");
+            //}
+
+        }
     }
 
 }
