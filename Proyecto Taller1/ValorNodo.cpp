@@ -86,47 +86,40 @@ expOr[2]='\0';
 
 }
 
-void AsignarValorNodoNOT(ValorNodo &valNodo)
-{
+void AsignarValorNodoNOT(ValorNodo &valNodo){
     valNodo.dato.operador = 'N';
 }
-void AsignarValorNodoAND(ValorNodo &valNodo)
-{
+
+void AsignarValorNodoAND(ValorNodo &valNodo){
     valNodo.dato.operador = 'A';
 }
-void AsignarValorNodoOR(ValorNodo &valNodo)
-{
+
+void AsignarValorNodoOR(ValorNodo &valNodo){
     valNodo.dato.operador = 'O';
 }
 
-void AsignarValorParIzq(ValorNodo &valNodo)
-{
+void AsignarValorParIzq(ValorNodo &valNodo){
     valNodo.dato.parentesis = '(';
 }
 
-void AsignarValorParDer(ValorNodo &valNodo)
-{
+void AsignarValorParDer(ValorNodo &valNodo){
     valNodo.dato.parentesis = ')';
 }
 
 //Selectora Dar Boolean
-boolean DarBoolean(ValorNodo ValNodo)
-{
+boolean DarBoolean(ValorNodo ValNodo){
   return ValNodo.dato.valor;
 }
 //Selectora Dar operador
-char DarOperador(ValorNodo ValNodo)
-{
+char DarOperador(ValorNodo ValNodo){
   return ValNodo.dato.operador;
 }
 //Selectora Dar Parentesis
-char DarParentesis(ValorNodo ValNodo)
-{
+char DarParentesis(ValorNodo ValNodo){
   return ValNodo.dato.parentesis;
 }
 
-TipoNodo DarTipoNodo(ValorNodo ValNodo)
-{
+TipoNodo DarTipoNodo(ValorNodo ValNodo){
   return ValNodo.discriminante;
 }
 

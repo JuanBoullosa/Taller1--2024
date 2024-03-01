@@ -3,14 +3,11 @@
 
 
 //Crear lista
-void CrearLista (ListaString &L)
-{
+void CrearLista (ListaString &L){
   L=NULL;
 }
-
 //Mostrar Lista
-void MostrarLista (ListaString L)
-{
+void MostrarLista (ListaString L){
     while (L != NULL)
     {
       print (L->palabra);
@@ -18,16 +15,15 @@ void MostrarLista (ListaString L)
       L = L -> sig;
     }
 }
-int LargoRecu (ListaString L)
-{
+
+int LargoRecu (ListaString L){
     if (L == NULL)
         return 0;
     else
         return 1 + LargoRecu (L->sig);
 }
 //Mostrar si la lista es vacia
-boolean Vacia (ListaString L)
-{
+boolean Vacia (ListaString L){
 boolean esVacia = FALSE;
 if (L == NULL)
 esVacia = TRUE;
@@ -35,8 +31,7 @@ return esVacia;
 }
 
 //Insertar string al principio de la lista
-void InsFront (ListaString &L, str stringg)
-{
+void InsFront (ListaString &L, str stringg){
   ListaString aux = new NodoS;
   aux->palabra = stringg;
   aux->sig = L;
@@ -65,8 +60,7 @@ void InsBackIter(ListaString &L, str palabraS) {
     }
 }
 
-void EliminarListaString (ListaString &L)
-{
+void EliminarListaString (ListaString &L){
     if (L != NULL)
     {
         EliminarListaString (L->sig);
@@ -74,7 +68,6 @@ void EliminarListaString (ListaString &L)
         L = NULL;
     }
 }
-
 
 void partirString(str s, ListaString &L) {
 

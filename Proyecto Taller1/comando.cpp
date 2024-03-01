@@ -61,7 +61,6 @@ if((LargoRecu(L) == 2) && (streq(atomic, L->palabra)))
 
 }
 
-
 void CargarComandos (str &atomic, str & compound, str & show, str & evaluate, str & save, str &load, str & exit, str &expTrue, str &expFalse, str &expNot, str & expAnd, str & expOr){
 //Comando atomic
 
@@ -189,8 +188,7 @@ expOr[2]='\0';
 
 }
 
-void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1)
-{
+void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1){
 
     str show;
     strcrear(show);
@@ -223,7 +221,6 @@ void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1)
             printf("\nNo existe una expresion con ese valor\n");
 
 }
-
 
 void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal, str evaluate, int contadorexp1){
 

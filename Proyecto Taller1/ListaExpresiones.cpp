@@ -57,8 +57,6 @@ void InsBackIterExp  (ListaExpresiones &L , Expresion exp)
     aux -> sig = nuevo;
   }
 }
-
-
 //Devolver expresion segun el ID solicitado
 ArbolExpresiones TraerArbolExp(ListaExpresiones ListaExp, int numeroconvertido)
 {

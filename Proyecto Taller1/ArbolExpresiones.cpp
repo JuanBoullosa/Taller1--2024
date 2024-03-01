@@ -64,7 +64,6 @@ ArbolExpresiones CosCompoundNot (ValorNodo r, ArbolExpresiones i)
     return a;
 }
 
-
 void MostrarArbol (ArbolExpresiones a)
 {
     if (a != NULL)
@@ -100,8 +99,6 @@ void CargarArbolNOTSinParent(ValorNodo ValorNodoNOT,ArbolExpresiones arbolexpreI
         a->hizq = ArbolParIzq;
 }
 
-
-
 void CargarArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a)
 {
     if((ValNodo.dato.valor==FALSE) || (ValNodo.dato.valor==TRUE))
@@ -112,9 +109,6 @@ void CargarArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a)
         a->hder = NULL;
     }
 }
-
-
-
 
 void AgregarParentesisIzquierdo(ArbolExpresiones &a,ValorNodo ValorNodoParIzq)
 {
@@ -131,7 +125,6 @@ void AgregarParentesisIzquierdo(ArbolExpresiones &a,ValorNodo ValorNodoParIzq)
     }
 }
 
-
 void AgregarParentesisDerecho(ArbolExpresiones &a, ValorNodo ValorNodoParDer)
 {
     if (a == NULL)
@@ -147,7 +140,6 @@ void AgregarParentesisDerecho(ArbolExpresiones &a, ValorNodo ValorNodoParDer)
         AgregarParentesisDerecho(a->hder,ValorNodoParDer);
     }
 }
-
 
 void CargarArbolParentesis(ArbolExpresiones &a, ValorNodo ValorNodoParIzq)
 {
@@ -184,7 +176,6 @@ void Cons2(ValorNodo v, ArbolExpresiones i, ArbolExpresiones d, ValorNodo Izq, V
 
 }
 
-
 boolean EvaluarArbol(ArbolExpresiones a, boolean &result )
 {
     if (( a->info.dato.valor == TRUE) || ( a->info.dato.valor == FALSE))
@@ -204,7 +195,6 @@ boolean EvaluarArbol(ArbolExpresiones a, boolean &result )
 
 }
 
-
 void guardarAbbValorNodo ( ValorNodo t, ArbolExpresiones &a )
 {
     if(a==NULL)
@@ -215,8 +205,7 @@ void guardarAbbValorNodo ( ValorNodo t, ArbolExpresiones &a )
           a->hizq=NULL;
 }
 
-void abreParentesis( ArbolExpresiones &a)
-{
+void abreParentesis( ArbolExpresiones &a){
     ValorNodo t;
    // cargar tipo nodo en t: cargaTNodo(t.discriminante,3);
    // cargo el char parentesis t.dato.parentesis = ')': cargaDatoParentesis(t,'(');
@@ -229,8 +218,6 @@ void abreParentesis( ArbolExpresiones &a)
          guardarAbbValorNodo(t,a);
      }
 }
-
-
 
 void copiarArbol(ArbolExpresiones &a, ArbolExpresiones b){
 
