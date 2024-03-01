@@ -264,3 +264,17 @@ void Insert (ArbolExpresiones &a, ValorNodo v)
             Insert (a -> hder, v);
     }
 }
+
+
+void AsignarIDenOrden(ArbolExpresiones &a)
+{
+    int suma=1;
+    if(a!=NULL)
+    {
+        AsignarIDenOrden(a->hizq);
+        a->info.identificador = suma++;
+        AsignarIDenOrden(a->hder);
+
+    }
+}
+

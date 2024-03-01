@@ -4,6 +4,7 @@
 #include "ArbolExpresiones.h"
 #include "Expresiones.h"
 #include "ListaExpresiones.h"
+#include "Archivo.h"
 
 void Atomic(ListaString L, int &contadorexp, ListaExpresiones &ListExp);
 
@@ -15,5 +16,5 @@ void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal, str evalua
 
 void Compound4(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1);
 
-void save(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1);
+void Save(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1);
 #endif // COMANDO_H_INCLUDED

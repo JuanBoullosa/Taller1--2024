@@ -62,5 +62,7 @@ ValorNodo darValorNodoAbb( ArbolExpresiones a);
 /* precondición: el valor no existía previamente en el ABB */
 void Insert (ArbolExpresiones &a, ValorNodo v);
 
+void AsignarIDenOrden(ArbolExpresiones &a);
+
 #endif // ARBOLEXPRESIONES_H_INCLUDED
 
