@@ -178,6 +178,7 @@ void Cons2(ValorNodo v, ArbolExpresiones i, ArbolExpresiones d, ValorNodo Izq, V
 
 boolean EvaluarArbol(ArbolExpresiones a, boolean &result )
 {
+    boolean aux = FALSE;
     if (( a->info.dato.valor == TRUE) || ( a->info.dato.valor == FALSE))
         {
                 result = a->info.dato.valor;
@@ -189,7 +190,12 @@ boolean EvaluarArbol(ArbolExpresiones a, boolean &result )
                 if ((a->info.dato.operador == 'O'))
                     EvaluarArbol(a->hder, result) || EvaluarArbol(a->hizq, result);
                 if  ((a->info.dato.operador == 'N'))
-                    !EvaluarArbol(a->hder, result);
+                    EvaluarArbol(a->hder, result);
+                    if(result==aux)
+                        result=TRUE;
+                    else
+                        result=FALSE;
+
         }
         return result;
 
