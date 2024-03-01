@@ -48,8 +48,7 @@ if((LargoRecu(L) == 2) && (streq(atomic, L->palabra)))
                 CargarArbolAtomic(valNodo,arbolexp);
                 CargarExpresion(arbolexp, expre, contadorexp);
                 InsBackIterExp(ListExp, expre);
-                //printf("\nMostrar arbol: \n");
-                //MostrarArbol(ListExp->expre.arbol);
+                MostrarArbol(arbolexp);
             }
         else
             printf("\nComando incorrecto\n");
@@ -61,7 +60,7 @@ if((LargoRecu(L) == 2) && (streq(atomic, L->palabra)))
 
 }
 
-void CargarComandos (str &atomic, str & compound, str & show, str & evaluate, str & save, str &load, str & exit, str &expTrue, str &expFalse, str &expNot, str & expAnd, str & expOr){
+void CargarComandos (str &atomic, str & compound, str & show, str & evaluate, str & save, str &load, str & exit){
 //Comando atomic
 
 strcrear(atomic); //Creamos string ATOMIC
@@ -141,51 +140,6 @@ exit[1]='x';
 exit[2]='i';
 exit[3]='t';
 exit[4]='\0';
-
-//Expresion true en string para comparar
-
-strcrear(expTrue);
-expTrue = new char[5];//Solicitamos la cantidad de espacios en memoria para true
-expTrue[0]='t';
-expTrue[1]='r';
-expTrue[2]='u';
-expTrue[3]='e';
-expTrue[4]='\0';
-
-//Expresion false en string para comparar
-
-strcrear(expFalse);
-expFalse = new char[6];//Solicitamos la cantidad de espacios en memoria para false
-expFalse[0]='f';
-expFalse[1]='a';
-expFalse[2]='l';
-expFalse[3]='s';
-expFalse[4]='e';
-expFalse[5]='\0';
-
-
-
-strcrear(expNot);
-expNot = new char[4];//Solicitamos la cantidad de espacios en memoria operador or
-expNot[0]='N';
-expNot[1]='O';
-expNot[2]='T';
-expNot[3]='\0';
-
-strcrear(expAnd);
-expAnd = new char[4];//Solicitamos la cantidad de espacios en memoria operador or
-expAnd[0]='A';
-expAnd[1]='N';
-expAnd[2]='D';
-expAnd[3]='\0';
-
-strcrear(expOr);
-expOr = new char[4];//Solicitamos la cantidad de espacios en memoria operador or
-expOr[0]='O';
-expOr[1]='R';
-expOr[2]='\0';
-
-
 }
 
 void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1){
@@ -340,7 +294,7 @@ Expresion expre;
 
                 CargarExpresion(arbolPrincipal, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
                 InsBackIterExp(ListExpPrincipal, expre);                         //Insertamos la expresion en la Lista Principal de Expresiones
-
+                MostrarArbol(arbolPrincipal);
                }
         }
                             //%%%%%%%%%%   COMANDO AND Y OR  %%%%%%%%%%%%
@@ -372,7 +326,8 @@ Expresion expre;
                     Cons2(ValorNodoAND,arbolIzq,arbolDer,ValorNodoParIzq,ValorNodoParDer,arbolPrincipal);
 
                     CargarExpresion(arbolPrincipal, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
-                    InsBackIterExp(ListExpPrincipal, expre);                         //Insertamos la expresion en la Lista Principal de Expresiones
+                    InsBackIterExp(ListExpPrincipal, expre);                        //Insertamos la expresion en la Lista Principal de Expresiones
+                    MostrarArbol(arbolPrincipal);
                 }
                  else
                     printf("Error2\n");
@@ -395,6 +350,7 @@ Expresion expre;
 
                     CargarExpresion(arbolPrincipal, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
                     InsBackIterExp(ListExpPrincipal, expre);                         //Insertamos la expresion en la Lista Principal de Expresiones
+                    MostrarArbol(arbolPrincipal);
                 }
 
             }
@@ -405,3 +361,5 @@ Expresion expre;
     }
 
 }
+
+

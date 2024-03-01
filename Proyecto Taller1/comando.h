@@ -7,7 +7,7 @@
 
 void Atomic(ListaString L, int &contadorexp, ListaExpresiones &ListExp);
 
-void CargarComandos (str &atomic, str & compound, str & show, str & evaluate, str & save, str &load, str & exit, str &expTrue, str &expFalse, str &expNot, str & expAnd, str & expOr);
+void CargarComandos (str &atomic, str & compound, str & show, str & evaluate, str & save, str &load, str & exit);
 
 void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1);
 
