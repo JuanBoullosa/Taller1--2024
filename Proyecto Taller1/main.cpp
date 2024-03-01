@@ -25,7 +25,7 @@ CargarComandos(atomic,compound,show,evaluate,save,load,exit);
 do{
 
 
-printf("\nIngrese comando: \n");                            //Solicitamos al usuario que ingrese un comando
+printf("\nIngrese comando: \n");                        //Solicitamos al usuario que ingrese un comando
 scan(comando);                                          // Scan dinamico para el ingreso de el string comando
 printf("\n");                                           // Salto de linea
 partirString(comando, Lista1);                          // Procedimiento para partir el string
@@ -38,6 +38,9 @@ if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq(compound, Lista1-
 
        else  if(((LargoRecu(Lista1)==2)) && (streq(show, Lista1->palabra)))
             Show(Lista1,ListExpPrincipal,contadorexp1);
+
+            else if(((LargoRecu(Lista1)==2)) && (streq(evaluate, Lista1->palabra)))
+                Evaluate(Lista1,ListExpPrincipal,evaluate,contadorexp1);
 
 }while(!(streq(exit, Lista1->palabra)));
 
