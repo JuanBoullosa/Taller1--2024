@@ -17,4 +17,6 @@ void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal, str evalua
 void Compound4(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1);
 
 void Save(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1);
+
+void Load(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1);
 #endif // COMANDO_H_INCLUDED

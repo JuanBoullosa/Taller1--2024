@@ -369,8 +369,6 @@ save[2]='v';
 save[3]='e';
 save[4]='\0';
 
-
-
 int numeroconvertido;
 
 ArbolExpresiones arbolPrincipal;
@@ -382,13 +380,13 @@ Crear(arbolSinID);
     if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<4)) && (streq(save, Lista1->palabra))) //Largo entre 2 y 5
     {
         Lista1=Lista1->sig;                                                     //Avanzo a string 2
-
         sscanf(Lista1->palabra, "%d", &numeroconvertido);                       //Convierto string 2 a entero
         if (numeroconvertido<contadorexp1)                                      //Condicion si el numero existe en la lista de expresiones
         {
             Lista1=Lista1->sig;                                                 //Avanzo al string 3
                     copiarArbol(arbolSinID ,TraerArbolExp(ListExpPrincipal, numeroconvertido));     //Extraigo y copio arbol de expresiones
                     AsignarIDenOrden(arbolSinID);                                                   //Asigno ID en orden al arbol
+                    MostrarArbol(arbolSinID);
                     Bajar_ArbolExpresiones(arbolSinID, Lista1->palabra);
         }
                  else
@@ -398,4 +396,39 @@ Crear(arbolSinID);
 
 }
 
+void Load(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1)
+{
+str load ;
+strcrear(load);
+load = new char[5];//Solicitamos la cantidad de espacios en memoria para load
+load[0]='l';
+load[1]='o';
+load[2]='a';
+load[3]='d';
+load[4]='\0';
+
+int numeroconvertido;
+Expresion expre;
+
+ArbolExpresiones Arbolaguardar;
+Crear(Arbolaguardar);
+
+ArbolExpresiones arbolSinID;
+Crear(arbolSinID);
+
+    if ((LargoRecu(Lista1)==2)  && (streq(load, Lista1->palabra))) //Largo entre 2 y 5
+    {
+        Lista1=Lista1->sig;                                                     //Avanzo a string 2
+        if (Existe(Lista1->palabra))                                      //Condicion si el numero existe en la lista de expresiones
+        {
+        Levantar_ArbolExpresiones(Arbolaguardar, Lista1->palabra);
+        CargarExpresion(Arbolaguardar, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
+        InsBackIterExp(ListExpPrincipal, expre);                        //Insertamos la expresion en la Lista Principal de Expresiones
+        }
+                 else
+                    printf("Error2\n");
+    }
+
+
+}
 

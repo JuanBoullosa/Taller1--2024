@@ -45,6 +45,9 @@ if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq(compound, Lista1-
                 else if(((LargoRecu(Lista1)==3)) && (streq(save, Lista1->palabra)))
                 Save(Lista1,ListExpPrincipal,contadorexp1);
 
+                    else if(((LargoRecu(Lista1)==2)) && (streq(load, Lista1->palabra)))
+                    Load(Lista1,ListExpPrincipal,contadorexp1);
+
 }while(!(streq(exit, Lista1->palabra)));
 
 
