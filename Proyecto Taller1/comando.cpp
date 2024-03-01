@@ -192,14 +192,16 @@ if(streq(evaluate, Lista1->palabra))
         {
 
             arbolevaluate=TraerArbolExp(ListExpPrincipal, numeroconvertido);    //Traigo el arbol de la lista para evaluarlo
-            if(EvaluarArbol(arbolevaluate, resu))                               //Funcion para evaluar un arbol de expresiones
+            if(EvaluarArbol(arbolevaluate, resu)== TRUE)                               //Funcion para evaluar un arbol de expresiones
             {
                 printf("TRUE");
             }
-                else
+               else
+                printf("FALSE");
+                /*else
                 {
                     printf("FALSE");
-                }
+                }*/
         }
         else
            printf("Mensaje de error\n");

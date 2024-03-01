@@ -239,4 +239,22 @@ ValorNodo darValorNodoAbb( ArbolExpresiones a)
 }
 
 
-
+/* insertar un nuevo valor en el ABB */
+/* precondición: el valor no existía previamente en el ABB */
+void Insert (ArbolExpresiones &a, ValorNodo v)
+{
+    if (a == NULL)
+    {
+        a = new nodo;
+        a -> info = v;
+        a -> hizq = NULL;
+        a -> hder = NULL;
+    }
+    else
+    {
+        if (v.identificador < a->info.identificador)
+            Insert (a -> hizq, v);
+        else
+            Insert (a -> hder, v);
+    }
+}

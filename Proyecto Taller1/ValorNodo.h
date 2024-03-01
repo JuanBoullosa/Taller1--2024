@@ -3,7 +3,7 @@
 #include "TipoNodo.h"
 #include  "ListaString.h"
 
-typedef struct {    int valor;
+typedef struct {    int identificador;
                     TipoNodo discriminante;
               union {boolean valor;
                       char operador;

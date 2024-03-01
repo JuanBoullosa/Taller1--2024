@@ -57,5 +57,10 @@ void copiarArbol(ArbolExpresiones &a, ArbolExpresiones b);
 void guardarAbbValorNodo ( ValorNodo t, ArbolExpresiones &a );
 
 ValorNodo darValorNodoAbb( ArbolExpresiones a);
+
+/* insertar un nuevo valor en el ABB */
+/* precondición: el valor no existía previamente en el ABB */
+void Insert (ArbolExpresiones &a, ValorNodo v);
+
 #endif // ARBOLEXPRESIONES_H_INCLUDED
 

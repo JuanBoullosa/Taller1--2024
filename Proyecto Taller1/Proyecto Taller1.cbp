@@ -34,6 +34,8 @@
 		</Compiler>
 		<Unit filename="ArbolExpresiones.cpp" />
 		<Unit filename="ArbolExpresiones.h" />
+		<Unit filename="Archivo.cpp" />
+		<Unit filename="Archivo.h" />
 		<Unit filename="Boolean.cpp" />
 		<Unit filename="Boolean.h" />
 		<Unit filename="Expresiones.cpp" />
