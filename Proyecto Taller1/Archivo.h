@@ -1,7 +1,7 @@
 #ifndef ARCHIVO_H_INCLUDED
 #define ARCHIVO_H_INCLUDED
 #include "ListaExpresiones.h"
-/*
+
 
 
 // %%%%%%%%%% ---- OPERACIONES BASICAS---- %%%%%%%%%
@@ -39,7 +39,7 @@ void Bajar_ValorNodo (ValorNodo v, FILE*f);
 void Levantar_ValorNodo(ValorNodo &v, FILE*f);
 
 void Bajar_ArbolExpresiones_Aux(ArbolExpresiones a, FILE*f);
-void Bajar_ArbolExpresiones(ArbolExpresiones a, str nomArch);
+void Bajar_ArbolExpresiones(ArbolExpresiones a, FILE*f);
 void Levantar_ArbolExpresiones(ArbolExpresiones &a, FILE*f);
 
 void Bajar_Expresion(Expresion e, FILE*f);
@@ -49,7 +49,7 @@ void Bajar_ListaExpresiones(ListaExpresiones L, str nomArch);
 void Levantar_ListaExpresiones(ListaExpresiones &L, str nomArch);
 
 
-*/
+
 
 
 #endif // ARCHIVO_H_INCLUDED

@@ -1,4 +1,4 @@
-/*
+
 #include "Archivo.h"
 
 
@@ -111,22 +111,22 @@ void Bajar_ArbolExpresiones_Aux(ArbolExpresiones a, FILE*f)
         //El arbol tiene que estar ordenado. Hacer Funcion
         //Bajarlo en preorden
         fwrite (&(a -> info), sizeof (ValorNodo), 1, f);
-        Bajar_ArbolExpresiones (a -> hizq, f);
-        Bajar_ArbolExpresiones (a -> hder, f);
+        Bajar_ArbolExpresiones_Aux (a -> hizq, f);
+        Bajar_ArbolExpresiones_Aux (a -> hder, f);
     }
 }
 
-void Bajar_ArbolExpresiones(ArbolExpresiones a, str nomArch)
+void Bajar_ArbolExpresiones(ArbolExpresiones a, FILE * f)
 {
-   FILE*f = fopen (nomArch, "wb");
+   //FILE* f = fopen (nomArch, "wb");
    Bajar_ArbolExpresiones_Aux(a, f);
-   fclose(f);
+   //fclose(f);
 }
 
 
-void Levantar_ArbolExpresiones(ArbolExpresiones &a, FILE*f)
+void Levantar_ArbolExpresiones(ArbolExpresiones &a,  FILE * f)
 {
-    FILE*f=fopen(nomArch,"rb");
+    //FILE* f =fopen(nomArch,"rb");
     ValorNodo buffer;
     Crear(a);
     Levantar_ValorNodo(buffer,f);
@@ -136,7 +136,7 @@ void Levantar_ArbolExpresiones(ArbolExpresiones &a, FILE*f)
         Insert(a,buffer);
         fread(&buffer,sizeof(ValorNodo),1,f);
     }
-    fclose(f);
+    //fclose(f);
 }
 
 void Bajar_Expresion(Expresion e, FILE*f)
@@ -166,7 +166,7 @@ void Levantar_ListaExpresiones(ListaExpresiones &L, str nomArch)
 {
     FILE*f=fopen (nomArch, "rb");
     Expresion buffer;
-    CrearLista(L);
+    CrearListaExpresiones(L);
     Levantar_Expresion (buffer, f);
     while (!feof(f))
     {
@@ -175,6 +175,6 @@ void Levantar_ListaExpresiones(ListaExpresiones &L, str nomArch)
     }
     fclose(f);
 }
-*/
+
 
 
