@@ -118,12 +118,12 @@ void CargarArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a)
 
 void AgregarParentesisIzquierdo(ArbolExpresiones &a,ValorNodo ValorNodoParIzq)
 {
-    if (a->hizq == NULL)
+    if (a == NULL)
     {
-        a->hizq =new nodo;
-        a->hizq->info = ValorNodoParIzq;
-        a->hder->hizq = NULL;
-        a->hder->hder = NULL;
+        a =new nodo;
+        a->info = ValorNodoParIzq;
+        a->hizq = NULL;
+        a->hder = NULL;
     }
     else
     {
@@ -134,13 +134,13 @@ void AgregarParentesisIzquierdo(ArbolExpresiones &a,ValorNodo ValorNodoParIzq)
 
 void AgregarParentesisDerecho(ArbolExpresiones &a, ValorNodo ValorNodoParDer)
 {
-    if (a->hder == NULL)
+    if (a == NULL)
     {
         // Agregar un nuevo nodo como hijo derecho si el nodo actual no tiene uno
-        a->hder = new nodo;
-        a->hder->info = ValorNodoParDer;
-        a->hder->hizq = NULL;
-        a->hder->hder = NULL;
+        a = new nodo;
+        a->info = ValorNodoParDer;
+        a->hizq = NULL;
+        a->hder = NULL;
     }
     else
     {
@@ -157,41 +157,31 @@ void CargarArbolParentesis(ArbolExpresiones &a, ValorNodo ValorNodoParIzq)
         a->hizq = NULL;
 }
 
-ArbolExpresiones Cons (ValorNodo v ,ArbolExpresiones i,ArbolExpresiones d, ArbolExpresiones f)
+ArbolExpresiones Cons (ValorNodo v ,ArbolExpresiones d, ArbolExpresiones &Creado, ValorNodo Izq, ValorNodo Der )
 {
-    ArbolExpresiones a = new nodo;
-    a -> info = v;
-    a -> hder = d;
-    a -> hizq = i;
+    Creado = new nodo;
+    Creado -> info = v;
+    copiarArbol(Creado->hder, d);
 
-   while (d -> hder != NULL) {
-      d = d -> hder;
-    }
-    d -> hder = f;
-
-
-  return a;
+    AgregarParentesisIzquierdo(Creado->hizq, Izq);
+    AgregarParentesisDerecho(Creado->hder, Der);
 }
 
-ArbolExpresiones Cons2(ValorNodo v, ArbolExpresiones i, ArbolExpresiones d, ArbolExpresiones g, ArbolExpresiones f) {
-    // Crear un nuevo nodo para el árbol
-    ArbolExpresiones a = new nodo;
-    a->info = v;
-    a->hizq = i;
-    a->hder = d;
+void Cons2(ValorNodo v, ArbolExpresiones i, ArbolExpresiones d, ValorNodo Izq, ValorNodo Der, ArbolExpresiones &Creado) {
+
+    Creado = new nodo;
+    Creado -> info = v;
+    copiarArbol(Creado->hder, d);
+    copiarArbol(Creado->hizq, i);
+
+    AgregarParentesisIzquierdo(Creado->hizq, Izq);
+    AgregarParentesisDerecho(Creado->hder, Der);
 
 
-    while (i-> hizq != NULL) {
-        i = i-> hizq ;
 
-    }
-    i ->hizq = g;
-    while (d -> hder != NULL) {
-      d = d -> hder;
-    }
-    d -> hder = f;
 
-    return a;
+
+
 }
 
 
