@@ -176,8 +176,9 @@ void Cons2(ValorNodo v, ArbolExpresiones i, ArbolExpresiones d, ValorNodo Izq, V
 
 }
 
-boolean EvaluarArbol(ArbolExpresiones a, boolean &result )
+boolean EvaluarArbol(ArbolExpresiones a)
 {
+    boolean result = TRUE;
     boolean aux = FALSE;
     if (( a->info.dato.valor == TRUE) || ( a->info.dato.valor == FALSE))
         {
@@ -186,19 +187,29 @@ boolean EvaluarArbol(ArbolExpresiones a, boolean &result )
     else
         {
                 if ((a->info.dato.operador == 'A'))
-                    EvaluarArbol(a->hder, result) && EvaluarArbol(a->hizq, result);
+                    if((EvaluarArbol(a->hder)== TRUE) && (EvaluarArbol(a->hizq)== TRUE))
+                        return result;
+                        else
+                            return aux;
                 if ((a->info.dato.operador == 'O'))
-                    EvaluarArbol(a->hder, result) || EvaluarArbol(a->hizq, result);
-                if  ((a->info.dato.operador == 'N'))
-                    EvaluarArbol(a->hder, result);
-                    if(result==aux)
-                        result=TRUE;
-                    else
-                        result=FALSE;
+                   if(EvaluarArbol(a->hder) || EvaluarArbol(a->hizq))
+                        return result;
+                        else
+                            return aux;
 
-        }
+                if  ((a->info.dato.operador == 'N'))
+                    if(EvaluarArbol(a->hder)== TRUE)
+                    {result = FALSE;
+                         return result;
+                    }
+                    else
+                        result = TRUE;
+                         return result;
+
+
         return result;
 
+}
 }
 
 void guardarAbbValorNodo ( ValorNodo t, ArbolExpresiones &a )

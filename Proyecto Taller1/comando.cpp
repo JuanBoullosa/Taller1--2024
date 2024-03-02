@@ -179,6 +179,7 @@ void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1){
 void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal, str evaluate, int contadorexp1){
 
     ArbolExpresiones arbolevaluate;
+    Crear(arbolevaluate);
     int numeroconvertido;
     boolean resu;
 
@@ -191,8 +192,8 @@ if(streq(evaluate, Lista1->palabra))
         if (numeroconvertido < contadorexp1)                                    //Me fijo si existe contador en la lista de expresiones
         {
 
-            arbolevaluate=TraerArbolExp(ListExpPrincipal, numeroconvertido);    //Traigo el arbol de la lista para evaluarlo
-            if(EvaluarArbol(arbolevaluate, resu)== TRUE)                               //Funcion para evaluar un arbol de expresiones
+            copiarArbol(arbolevaluate,TraerArbolExp(ListExpPrincipal, numeroconvertido));    //Traigo el arbol de la lista para evaluarlo
+            if(EvaluarArbol(arbolevaluate)== TRUE)                               //Funcion para evaluar un arbol de expresiones
             {
                 printf("TRUE");
             }

@@ -50,7 +50,7 @@ ArbolExpresiones Cons (ValorNodo v ,ArbolExpresiones d, ArbolExpresiones &Creado
 
 void Cons2(ValorNodo v, ArbolExpresiones i, ArbolExpresiones d, ValorNodo Izq, ValorNodo Der, ArbolExpresiones &Creado);
 
-boolean EvaluarArbol(ArbolExpresiones a, boolean &result);
+boolean EvaluarArbol(ArbolExpresiones a);
 
 void copiarArbol(ArbolExpresiones &a, ArbolExpresiones b);
 
