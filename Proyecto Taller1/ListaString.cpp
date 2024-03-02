@@ -29,7 +29,6 @@ if (L == NULL)
 esVacia = TRUE;
 return esVacia;
 }
-
 //Insertar string al principio de la lista
 void InsFront (ListaString &L, str stringg){
   ListaString aux = new NodoS;

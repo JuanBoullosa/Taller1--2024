@@ -5,46 +5,30 @@
 
 
 /* crear un árbol vacío */
-void Crear (ArbolExpresiones &a)
-{
+void Crear (ArbolExpresiones &a){
     a = NULL;
 }
-
 /* saber si el árbol está vacío */
-boolean EsVacio (ArbolExpresiones a)
-{
+boolean EsVacio (ArbolExpresiones a){
     return (boolean) (a == NULL);
 }
-
 /* devolver la raíz del árbol */
 /* Precondición: Arbol NO vacío */
-ValorNodo DarRaiz (ArbolExpresiones a)
-{
+ValorNodo DarRaiz (ArbolExpresiones a){
     return a -> info;
 }
-
-
 /* obtener el subárbol izquierdo */
 /* Precondición: Arbol NO vacío */
-ArbolExpresiones HijoIzq (ArbolExpresiones a)
-{
+ArbolExpresiones HijoIzq (ArbolExpresiones a){
     return a -> hizq;
 }
-
-
 /* obtener el subárbol derecho */
 /* Precondición: Arbol NO vacío */
-ArbolExpresiones HijoDer (ArbolExpresiones a)
-{
+ArbolExpresiones HijoDer (ArbolExpresiones a){
     return a -> hder;
 }
 
-
-/* dados dos árboles y un valor, devolver un nuevo árbol
- colocando dicho valor como una nueva raíz y a los dos
- árboles como subárboles de la misma */
-ArbolExpresiones ConsCompound (ValorNodo r,ArbolExpresiones i,ArbolExpresiones d)
-{
+ArbolExpresiones ConsCompound (ValorNodo r,ArbolExpresiones i,ArbolExpresiones d){
 
 
     ArbolExpresiones a = new nodo;
@@ -56,16 +40,14 @@ ArbolExpresiones ConsCompound (ValorNodo r,ArbolExpresiones i,ArbolExpresiones d
     return a;
 }
 // Si el comando compound es una expresion negada se hace de esta forma
-ArbolExpresiones CosCompoundNot (ValorNodo r, ArbolExpresiones i)
-{
+ArbolExpresiones CosCompoundNot (ValorNodo r, ArbolExpresiones i){
     ArbolExpresiones a = new nodo;
     a-> info = r;
     a-> hder = i;
     return a;
 }
 
-void MostrarArbol (ArbolExpresiones a)
-{
+void MostrarArbol (ArbolExpresiones a){
     if (a != NULL)
     {
         MostrarArbol(a->hizq);
@@ -91,16 +73,14 @@ void MostrarArbol (ArbolExpresiones a)
 
 }
 
-void CargarArbolNOTSinParent(ValorNodo ValorNodoNOT,ArbolExpresiones arbolexpreID,ArbolExpresiones &a,ArbolExpresiones ArbolParIzq)
-{
+void CargarArbolNOTSinParent(ValorNodo ValorNodoNOT,ArbolExpresiones arbolexpreID,ArbolExpresiones &a,ArbolExpresiones ArbolParIzq){
         a=new nodo;
         a->info = ValorNodoNOT;
         a->hder = arbolexpreID;
         a->hizq = ArbolParIzq;
 }
 
-void CargarArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a)
-{
+void CargarArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a){
     if((ValNodo.dato.valor==FALSE) || (ValNodo.dato.valor==TRUE))
     {
         a=new nodo;
@@ -110,8 +90,7 @@ void CargarArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a)
     }
 }
 
-void AgregarParentesisIzquierdo(ArbolExpresiones &a,ValorNodo ValorNodoParIzq)
-{
+void AgregarParentesisIzquierdo(ArbolExpresiones &a,ValorNodo ValorNodoParIzq){
     if (a == NULL)
     {
         a =new nodo;
@@ -125,8 +104,7 @@ void AgregarParentesisIzquierdo(ArbolExpresiones &a,ValorNodo ValorNodoParIzq)
     }
 }
 
-void AgregarParentesisDerecho(ArbolExpresiones &a, ValorNodo ValorNodoParDer)
-{
+void AgregarParentesisDerecho(ArbolExpresiones &a, ValorNodo ValorNodoParDer){
     if (a == NULL)
     {
         // Agregar un nuevo nodo como hijo derecho si el nodo actual no tiene uno
@@ -141,20 +119,17 @@ void AgregarParentesisDerecho(ArbolExpresiones &a, ValorNodo ValorNodoParDer)
     }
 }
 
-void CargarArbolParentesis(ArbolExpresiones &a, ValorNodo ValorNodoParIzq)
-{
+void CargarArbolParentesis(ArbolExpresiones &a, ValorNodo ValorNodoParIzq){
         a=new nodo;
         a->info = ValorNodoParIzq;
         a->hder = NULL;
         a->hizq = NULL;
 }
 
-ArbolExpresiones Cons (ValorNodo v ,ArbolExpresiones d, ArbolExpresiones &Creado, ValorNodo Izq, ValorNodo Der )
-{
+ArbolExpresiones Cons (ValorNodo v ,ArbolExpresiones d, ArbolExpresiones &Creado, ValorNodo Izq, ValorNodo Der ){
     Creado = new nodo;
     Creado -> info = v;
     copiarArbol(Creado->hder, d);
-
     AgregarParentesisIzquierdo(Creado->hizq, Izq);
     AgregarParentesisDerecho(Creado->hder, Der);
 }
@@ -176,8 +151,7 @@ void Cons2(ValorNodo v, ArbolExpresiones i, ArbolExpresiones d, ValorNodo Izq, V
 
 }
 
-boolean EvaluarArbol(ArbolExpresiones a)
-{
+boolean EvaluarArbol(ArbolExpresiones a){
     boolean result = TRUE;
     boolean aux = FALSE;
     if (( a->info.dato.valor == TRUE) || ( a->info.dato.valor == FALSE))
@@ -207,13 +181,12 @@ boolean EvaluarArbol(ArbolExpresiones a)
                          return result;
 
 
-        return result;
+                    return result;
 
 }
 }
 
-void guardarAbbValorNodo ( ValorNodo t, ArbolExpresiones &a )
-{
+void guardarAbbValorNodo ( ValorNodo t, ArbolExpresiones &a ){
     if(a==NULL)
         a=new nodo;
 
@@ -246,8 +219,7 @@ void copiarArbol(ArbolExpresiones &a, ArbolExpresiones b){
     }
 }
 
-ValorNodo darValorNodoAbb( ArbolExpresiones a)
-{
+ValorNodo darValorNodoAbb( ArbolExpresiones a){
      if(a != NULL)
     {
         return a->info;
@@ -255,11 +227,7 @@ ValorNodo darValorNodoAbb( ArbolExpresiones a)
 
 }
 
-
-/* insertar un nuevo valor en el ABB */
-/* precondición: el valor no existía previamente en el ABB */
-void Insert (ArbolExpresiones &a, ValorNodo v)
-{
+void Insert (ArbolExpresiones &a, ValorNodo v){
     if (a == NULL)
     {
         a = new nodo;
@@ -276,9 +244,7 @@ void Insert (ArbolExpresiones &a, ValorNodo v)
     }
 }
 
-
-void AsignarIDenOrden(ArbolExpresiones &a)
-{
+void AsignarIDenOrden(ArbolExpresiones &a){
     int suma=1;
     if(a!=NULL)
     {
