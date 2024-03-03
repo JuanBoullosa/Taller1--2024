@@ -27,7 +27,6 @@ do{
 
 printf("\nIngrese comando: \n");                        //Solicitamos al usuario que ingrese un comando
 scan(comando);                                          // Scan dinamico para el ingreso de el string comando
-printf("\n");                                           // Salto de linea
 partirString(comando, Lista1);                          // Procedimiento para partir el string
 
 if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq("compound", Lista1->palabra)))//si el comando es compound y su largo es mayor a 3 y menor a 4

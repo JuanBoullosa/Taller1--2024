@@ -14,7 +14,9 @@ Expresion expre;
                 CargarArbolAtomic(valNodo,arbolexp);
                 CargarExpresion(arbolexp, expre, contadorexp);
                 InsBackIterExp(ListExp, expre);
+                printf("\nExpresion %d:\n",contadorexp-1);
                 MostrarArbol(arbolexp);
+                printf("\n");
             }
             else
             printf("\nComando incorrecto\n");
@@ -34,6 +36,7 @@ void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1){
             copiarArbol(arbolexpreID, TraerArbolExp(L , numeroconvertido));
             printf("El valor de la expresion es: \n");
             MostrarArbol(arbolexpreID);
+            printf("\n");
         }
         else
             printf("\nNo existe una expresion con ese valor\n");
@@ -56,10 +59,11 @@ void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal,int contado
             copiarArbol(arbolevaluate,TraerArbolExp(ListExpPrincipal, numeroconvertido));    //Traigo el arbol de la lista para evaluarlo
             if(EvaluarArbol(arbolevaluate)== TRUE)                               //Funcion para evaluar un arbol de expresiones
 
-                printf("TRUE");
+
+                printf("El valor de la expresion es :TRUE\n");
 
             else
-                printf("FALSE");
+                printf("El valor de la expresion es :FALSE\n");
 
         }
         else
@@ -99,7 +103,9 @@ Expresion expre;
                     Cons(ValorNodoCompound,arbolDer,arbolPrincipal,ValorNodoParIzq,ValorNodoParDer);                //Construimos el arbol a partir del valor not, el arbol copiado de la lista y le agregamos sus respectivos parentesis
                     CargarExpresion(arbolPrincipal, expre, contadorexp1);                                           //Cargamos expresion con ArbolPrincipal
                     InsBackIterExp(ListExpPrincipal, expre);                                                        //Insertamos la expresion en la Lista Principal de Expresiones
-                    MostrarArbol(arbolPrincipal);                                                                   //Mostramos el arbol construido en pantalla
+                    printf("Expresion %d",contadorexp1-1);
+                    MostrarArbol(arbolPrincipal);
+                    printf("\n");                                                                   //Mostramos el arbol construido en pantalla
                }
         }
                             //%%%%%%%%%%   COMANDO AND Y OR  %%%%%%%%%%%%
@@ -132,7 +138,9 @@ Expresion expre;
                                 Cons2(ValorNodoCompound,arbolIzq,arbolDer,ValorNodoParIzq,ValorNodoParDer,arbolPrincipal);  //Construimos el arbol a partir del valor nodo sea AND u OR sus respectivos arbols copiados a la izquierda y derecha y la correcta parentizacion
                                 CargarExpresion(arbolPrincipal, expre, contadorexp1);                                       //Cargamos expresion con ArbolPrincipal
                                 InsBackIterExp(ListExpPrincipal, expre);                                                    //Insertamos la expresion en la Lista Principal de Expresiones
+                                printf("\nExpresion %d :\n",contadorexp1-1);
                                 MostrarArbol(arbolPrincipal);
+                                printf("\n");
                             }
                             else
                                 printf("Error2\n");                                                                         //Mensaje de error
