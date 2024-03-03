@@ -6,13 +6,6 @@ void CrearListaExpresiones (ListaExpresiones &L){
   L=NULL;
 }
 
-void InsFrontExp (ListaExpresiones &L, Expresion exp){
-  ListaExpresiones aux = new NodoL;
-  aux-> expre = exp;
-  aux->sig = L;
-  L = aux;
-}
-
 void InsBackIterExp  (ListaExpresiones &L , Expresion exp){
   ListaExpresiones nuevo = new NodoL;
   nuevo -> expre = exp;

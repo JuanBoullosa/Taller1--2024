@@ -7,8 +7,7 @@ void CargarNodo (TipoNodo &Nodo);
 void MostrarNodo (TipoNodo Nodo);
 
 //Devolver tipo nodo
-TipoNodo DevolverNodo (TipoNodo Nodo)
-{
+TipoNodo DevolverNodo (TipoNodo Nodo){
   return Nodo;
 }
 
