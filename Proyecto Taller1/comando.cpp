@@ -67,7 +67,6 @@ void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal,int contado
 
 }
 
-
 void Compound(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1){
 
 
@@ -145,8 +144,7 @@ Expresion expre;
 
 }
 
-void Save(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1)
-{
+void Save(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1){
 
 int numeroconvertido;
 
@@ -175,8 +173,7 @@ Crear(arbolSinID);
 
 }
 
-void Load(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1)
-{
+void Load(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1){
 
 int numeroconvertido;
 Expresion expre;
