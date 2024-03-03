@@ -17,7 +17,8 @@ void InsBackIterExp  (ListaExpresiones &L , Expresion exp);
 ArbolExpresiones TraerArbolExp(ListaExpresiones ListaExp, int numeroconvertido);
 //Devuelve un arbol de expresiones de una lista de expresion
 ArbolExpresiones DarArbolexp( ListaExpresiones L);
-
+//Elimina una lista de expresiones
+void EliminarListaExpresiones (ListaExpresiones &L);
 
 
 

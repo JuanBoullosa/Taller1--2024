@@ -34,4 +34,11 @@ ArbolExpresiones DarArbolexp( ListaExpresiones L){
     return L-> expre.arbol;
 }
 
-
+void EliminarListaExpresiones (ListaExpresiones &L){
+    if (L != NULL)
+    {
+        EliminarListaExpresiones (L->sig);
+        delete L;
+        L = NULL;
+    }
+}
