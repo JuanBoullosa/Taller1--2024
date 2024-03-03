@@ -19,7 +19,7 @@ Expresion expre;
                 printf("\n");
             }
             else
-            printf("\nComando incorrecto\n");
+            printf("Error en el comando ingresado\n");
 
 }
 
@@ -144,13 +144,13 @@ Expresion expre;
                                     printf("\n");                                                                               //Salto de linea
                                 }
                                 else
-                                    printf("Error2\n");
+                                    printf("Error en el comando ingresado\n");
                             }
                             else
-                                 printf("Error2\n");
+                                 printf("Error en el comando ingresado\n");
                                                                                                     //Mensaje de error
             }else
-                printf("Error2\n");
+                printf("Error en el comando ingresado\n");
 
 
        }
