@@ -11,28 +11,8 @@ typedef nodo * ArbolExpresiones;
 
 /* crear un árbol vacío */
 void Crear (ArbolExpresiones &a);
-
-
 /* saber si el árbol está vacío */
 boolean EsVacio (ArbolExpresiones a);
-
-/* devolver la raíz del árbol */
-/* Precondición: Arbol NO vacío */
-ValorNodo DarRaiz (ArbolExpresiones a);
-
-/* obtener el subárbol izquierdo */
-/* Precondición: Arbol NO vacío */
-ArbolExpresiones HijoIzq (ArbolExpresiones a);
-
-/* obtener el subárbol derecho */
-/* Precondición: Arbol NO vacío */
-ArbolExpresiones HijoDer (ArbolExpresiones a);
-
-/* dados dos árboles y un valor, devolver un nuevo árbol
- colocando dicho valor como una nueva raíz y a los dos
- árboles como subárboles de la misma */
-//ArbolExpresiones Cons (ValorNodo r, ArbolExpresiones i, ArbolExpresiones d);
-
 
 void MostrarArbol(ArbolExpresiones a);
 
@@ -41,10 +21,6 @@ void CargarArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a);
 void AgregarParentesisIzquierdo(ArbolExpresiones &a,ValorNodo ValorNodoParIzq);
 
 void AgregarParentesisDerecho(ArbolExpresiones &a, ValorNodo ValorNodoParDer);
-
-void CargarArbolNOTSinParent(ValorNodo ValorNodoNOT,ArbolExpresiones arbolexpreID,ArbolExpresiones &a,ArbolExpresiones ArbolParIzq);
-
-void CargarArbolParentesis(ArbolExpresiones &a, ValorNodo ValorNodoParIzq);
 
 ArbolExpresiones Cons (ValorNodo v ,ArbolExpresiones d, ArbolExpresiones &Creado, ValorNodo Izq, ValorNodo Der);
 
@@ -65,6 +41,8 @@ void Insert (ArbolExpresiones &a, ValorNodo v);
 void AsignarIDenOrden(ArbolExpresiones &a, int &suma);
 
 void MostrarIDdelArbol (ArbolExpresiones a);   //borrar despues si no anda
+
+
 
 
 #endif // ARBOLEXPRESIONES_H_INCLUDED

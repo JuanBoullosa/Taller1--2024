@@ -12,40 +12,6 @@ void Crear (ArbolExpresiones &a){
 boolean EsVacio (ArbolExpresiones a){
     return (boolean) (a == NULL);
 }
-/* devolver la raíz del árbol */
-/* Precondición: Arbol NO vacío */
-ValorNodo DarRaiz (ArbolExpresiones a){
-    return a -> info;
-}
-/* obtener el subárbol izquierdo */
-/* Precondición: Arbol NO vacío */
-ArbolExpresiones HijoIzq (ArbolExpresiones a){
-    return a -> hizq;
-}
-/* obtener el subárbol derecho */
-/* Precondición: Arbol NO vacío */
-ArbolExpresiones HijoDer (ArbolExpresiones a){
-    return a -> hder;
-}
-
-ArbolExpresiones ConsCompound (ValorNodo r,ArbolExpresiones i,ArbolExpresiones d){
-
-
-    ArbolExpresiones a = new nodo;
-    a -> info = r;
-    a -> hizq = i;
-    a -> hder = d;
-
-
-    return a;
-}
-// Si el comando compound es una expresion negada se hace de esta forma
-ArbolExpresiones CosCompoundNot (ValorNodo r, ArbolExpresiones i){
-    ArbolExpresiones a = new nodo;
-    a-> info = r;
-    a-> hder = i;
-    return a;
-}
 
 void MostrarArbol (ArbolExpresiones a){
     if (a != NULL)
@@ -81,13 +47,6 @@ void MostrarIDdelArbol (ArbolExpresiones a){
         MostrarIDdelArbol(a->hder);
     }
 
-}
-
-void CargarArbolNOTSinParent(ValorNodo ValorNodoNOT,ArbolExpresiones arbolexpreID,ArbolExpresiones &a,ArbolExpresiones ArbolParIzq){
-        a=new nodo;
-        a->info = ValorNodoNOT;
-        a->hder = arbolexpreID;
-        a->hizq = ArbolParIzq;
 }
 
 void CargarArbolAtomic(ValorNodo ValNodo, ArbolExpresiones &a){
@@ -127,13 +86,6 @@ void AgregarParentesisDerecho(ArbolExpresiones &a, ValorNodo ValorNodoParDer){
     {
         AgregarParentesisDerecho(a->hder,ValorNodoParDer);
     }
-}
-
-void CargarArbolParentesis(ArbolExpresiones &a, ValorNodo ValorNodoParIzq){
-        a=new nodo;
-        a->info = ValorNodoParIzq;
-        a->hder = NULL;
-        a->hizq = NULL;
 }
 
 ArbolExpresiones Cons (ValorNodo v ,ArbolExpresiones d, ArbolExpresiones &Creado, ValorNodo Izq, ValorNodo Der ){
@@ -203,20 +155,6 @@ void guardarAbbValorNodo ( ValorNodo t, ArbolExpresiones &a ){
           a->info = t;
           a->hder=NULL;
           a->hizq=NULL;
-}
-
-void abreParentesis( ArbolExpresiones &a){
-    ValorNodo t;
-   // cargar tipo nodo en t: cargaTNodo(t.discriminante,3);
-   // cargo el char parentesis t.dato.parentesis = ')': cargaDatoParentesis(t,'(');
-
-   if(a!=NULL)
-        abreParentesis(a->hizq);
-    else
-    {
-         a=new nodo;
-         guardarAbbValorNodo(t,a);
-     }
 }
 
 void copiarArbol(ArbolExpresiones &a, ArbolExpresiones b){
