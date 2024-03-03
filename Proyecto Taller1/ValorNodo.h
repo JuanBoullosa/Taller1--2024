@@ -13,19 +13,14 @@ typedef struct {    int identificador;
 
 //Carga por teclado los datos de un Grupo
 void CargarValorNodo(ListaString L, ValorNodo &valNodo);
-
 //Mostrar por pantalla los datos de un Grupo
 void MostrarValorNodo(ValorNodo ValNodo);
-
 //Selectora Dar tipo de nodo.
 TipoNodo DarTipoNodo(ValorNodo ValNodo, TipoNodo &TNodo);
-
 //Selectora Dar Boolean
 boolean DarBoolean(ValorNodo ValNodo);
-
 //Selectora Dar operador
 char DarOperador(ValorNodo ValNodo);
-
 //Selectora Dar Parentesis
 char DarParentesis(ValorNodo ValNodo);
 
