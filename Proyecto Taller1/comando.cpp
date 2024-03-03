@@ -5,6 +5,7 @@ void Atomic(ListaString L, int &contadorexp, ListaExpresiones &ListExp){
 
 ValorNodo valNodo;
 ArbolExpresiones arbolexp;
+Crear(arbolexp);
 Expresion expre;
 
             L = L->sig;
@@ -21,6 +22,7 @@ Expresion expre;
             else
             printf("Error en el comando ingresado\n");
 
+            //Liberar memoria del arbolexp
 }
 
 void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1){
@@ -40,6 +42,8 @@ void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1){
         }
         else
             printf("\nNo existe una expresion con ese valor\n");
+
+            //Liberar memoria arbolexpreID
 
 
 }
@@ -68,6 +72,8 @@ void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal,int contado
         }
         else
            printf("Mensaje de error\n");
+
+           //Liberar memoria arbolevaluate
 
 }
 
@@ -155,7 +161,9 @@ Expresion expre;
 
        }
 
-
+        //Liberar arbol principal
+        //Liberar arbol izquierdo
+        //Liberar arbol derecho
 }
 
 void Save(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1){
@@ -184,7 +192,8 @@ int suma=1;
                  else
                     printf("Error2\n");
 
-
+//Liberar arbol principal
+//Liberar arbolSinID
 
 }
 
@@ -209,7 +218,8 @@ Crear(arbolSinID);
                  else
                     printf("Error2\n");
 
-
+//Liberar Arbolaguardar
+//Liberar arbolSinID
 
 }
 

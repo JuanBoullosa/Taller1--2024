@@ -92,7 +92,7 @@ void partirString(str s, ListaString &L) {
         strdestruir(s1);
         strdestruir(s2);
         }
-
+    strdestruir(aux);
 
 }
 

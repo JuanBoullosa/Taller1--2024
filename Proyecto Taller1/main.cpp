@@ -49,7 +49,9 @@ if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq("compound", Lista
 
 }while(!(streq("exit", Lista1->palabra)));
 
-
+//Destruir str comando
+//Destruir Lista String
+//Destruir lista expresiones
 }
 
 
