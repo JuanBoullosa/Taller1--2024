@@ -49,7 +49,7 @@ void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal,int contado
     ArbolExpresiones arbolevaluate;
     Crear(arbolevaluate);
     int numeroconvertido;
-    boolean resu;
+
 
         Lista1=Lista1->sig;                                                     //Avanzo al string 2
         sscanf(Lista1->palabra, "%d", &numeroconvertido);                       //Convierto el string en entero
@@ -103,9 +103,9 @@ Expresion expre;
                     Cons(ValorNodoCompound,arbolDer,arbolPrincipal,ValorNodoParIzq,ValorNodoParDer);                //Construimos el arbol a partir del valor not, el arbol copiado de la lista y le agregamos sus respectivos parentesis
                     CargarExpresion(arbolPrincipal, expre, contadorexp1);                                           //Cargamos expresion con ArbolPrincipal
                     InsBackIterExp(ListExpPrincipal, expre);                                                        //Insertamos la expresion en la Lista Principal de Expresiones
-                    printf("Expresion %d",contadorexp1-1);
-                    MostrarArbol(arbolPrincipal);
-                    printf("\n");                                                                   //Mostramos el arbol construido en pantalla
+                    printf("Expresion %d",contadorexp1-1);                                                          //Mostramos el numero de expresion
+                    MostrarArbol(arbolPrincipal);                                                                   //Mostramos el arbol construido en pantalla
+                    printf("\n");                                                                                   //Salto de linea
                }
         }
                             //%%%%%%%%%%   COMANDO AND Y OR  %%%%%%%%%%%%
@@ -125,26 +125,32 @@ Expresion expre;
                         {                                                                                                   //{
                             AsignarValorNodoOR(ValorNodoCompound);                                                          //Cargamos el valor nodo con OR
                         }                                                                                                   //}
+                            if ((ValorNodoCompound.dato.operador == 'A') || (ValorNodoCompound.dato.operador == 'O'))
+                           {
+                                Lista1=Lista1->sig;                                                                             //Avanzo al cuarto String
+                                sscanf(Lista1->palabra, "%d", &numeroconvertido2);                                              //Convierto el string 4 en entero
 
-                            Lista1=Lista1->sig;                                                                             //Avanzo al cuarto String
-                            sscanf(Lista1->palabra, "%d", &numeroconvertido2);                                              //Convierto el string 4 en entero
-
-                            if(numeroconvertido2<contadorexp1)                                                              //condicion de que el entero exista en la lista de expresiones
-                            {
-                                AsignarValorParIzq(ValorNodoParIzq);                                                        //Cargamos un valor nodo con (
-                                AsignarValorParDer(ValorNodoParDer);                                                        //Cargamos un valor nodo con )
-                                copiarArbol(arbolIzq, TraerArbolExp(ListExpPrincipal, numeroconvertido));                   //Copiamos el arbol de la lista de expresiones que tiene asignado el primer entero convertido
-                                copiarArbol(arbolDer, TraerArbolExp(ListExpPrincipal, numeroconvertido2));                  //Copiamos el arbol de la lista de expresiones que tiene asignado el segundo entero convertido
-                                Cons2(ValorNodoCompound,arbolIzq,arbolDer,ValorNodoParIzq,ValorNodoParDer,arbolPrincipal);  //Construimos el arbol a partir del valor nodo sea AND u OR sus respectivos arbols copiados a la izquierda y derecha y la correcta parentizacion
-                                CargarExpresion(arbolPrincipal, expre, contadorexp1);                                       //Cargamos expresion con ArbolPrincipal
-                                InsBackIterExp(ListExpPrincipal, expre);                                                    //Insertamos la expresion en la Lista Principal de Expresiones
-                                printf("\nExpresion %d :\n",contadorexp1-1);
-                                MostrarArbol(arbolPrincipal);
-                                printf("\n");
+                                if(numeroconvertido2<contadorexp1)                                                              //condicion de que el entero exista en la lista de expresiones
+                                {
+                                    AsignarValorParIzq(ValorNodoParIzq);                                                        //Cargamos un valor nodo con (
+                                    AsignarValorParDer(ValorNodoParDer);                                                        //Cargamos un valor nodo con )
+                                    copiarArbol(arbolIzq, TraerArbolExp(ListExpPrincipal, numeroconvertido));                   //Copiamos el arbol de la lista de expresiones que tiene asignado el primer entero convertido
+                                    copiarArbol(arbolDer, TraerArbolExp(ListExpPrincipal, numeroconvertido2));                  //Copiamos el arbol de la lista de expresiones que tiene asignado el segundo entero convertido
+                                    Cons2(ValorNodoCompound,arbolIzq,arbolDer,ValorNodoParIzq,ValorNodoParDer,arbolPrincipal);  //Construimos el arbol a partir del valor nodo sea AND u OR sus respectivos arbols copiados a la izquierda y derecha y la correcta parentizacion
+                                    CargarExpresion(arbolPrincipal, expre, contadorexp1);                                       //Cargamos expresion con ArbolPrincipal
+                                    InsBackIterExp(ListExpPrincipal, expre);                                                    //Insertamos la expresion en la Lista Principal de Expresiones
+                                    printf("\nExpresion %d :\n",contadorexp1-1);                                                //Mostramos el numero de expresion
+                                    MostrarArbol(arbolPrincipal);                                                               //Mostramos el arbol
+                                    printf("\n");                                                                               //Salto de linea
+                                }
+                                else
+                                    printf("Error2\n");
                             }
                             else
-                                printf("Error2\n");                                                                         //Mensaje de error
-            }
+                                 printf("Error2\n");
+                                                                                                    //Mensaje de error
+            }else
+                printf("Error2\n");
 
 
        }
