@@ -184,8 +184,6 @@ Crear(Arbolaguardar);
 ArbolExpresiones arbolSinID;
 Crear(arbolSinID);
 
-
-
         Lista1=Lista1->sig;                                                     //Avanzo a string 2
         if (Existe(Lista1->palabra))                                      //Condicion si el numero existe en la lista de expresiones
         {

@@ -94,7 +94,7 @@ void Bajar_ValorNodo (ValorNodo v, FILE*f)
     }
     if ((v.dato.operador=='A')|| (v.dato.operador=='O')|| (v.dato.operador=='N'))
     {
-
+        fwrite(&v.identificador, sizeof(int),1,f);
         fwrite(&v.dato.operador, sizeof(char),1,f);
     }
     if ((v.dato.parentesis=='(')|| (v.dato.parentesis==')'))
@@ -105,8 +105,23 @@ void Bajar_ValorNodo (ValorNodo v, FILE*f)
 
 }
 
+
+void Levantar_Discriminante ( )
+{
+
+}
+
+void Levantar_ValorNodo(ValorNodo &v, FILE*f)
+{
+    fread(&v.identificador, sizeof (int), 1, f);
+    fread(&v.dato, sizeof (TipoNodo), 1, f);
+
+    //Levantar_Discriminante(v.discriminante, f)
+}
+
 // Lee desde el archivo los caracteres de ValorNodo
 // Precondición: El archivo viene abierto para lectura.
+/*
 void Levantar_ValorNodo(ValorNodo &v, FILE*f)
 {
     if ((v.dato.valor==TRUE)|| (v.dato.valor==FALSE))
@@ -122,7 +137,7 @@ void Levantar_ValorNodo(ValorNodo &v, FILE*f)
         fread(&v.dato.parentesis, sizeof(char),1,f);
     }
 }
-
+*/
 void Bajar_ArbolExpresiones_Aux(ArbolExpresiones a, FILE*f)
 {
     if (a != NULL)
@@ -144,6 +159,7 @@ void Bajar_ArbolExpresiones(ArbolExpresiones a, str nomArch)
 void Levantar_ArbolExpresiones(ArbolExpresiones &a,  str nomArch)
 {
     FILE* f =fopen(nomArch,"rb");
+    !Vacio(nomArch);
     ValorNodo buffer;
     Crear(a);
     Levantar_ValorNodo(buffer,f);
