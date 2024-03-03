@@ -229,7 +229,7 @@
 	"TipoNodo.h"
 	"ListaString.h"
 
-1709353593 source:d:\documentos\github\taller1--2024\proyecto taller1\main.cpp
+1709443277 source:d:\documentos\github\taller1--2024\proyecto taller1\main.cpp
 	<iostream>
 	"ArbolExpresiones.h"
 	"Strigg.h"
@@ -300,10 +300,10 @@
 	"ListaExpresiones.h"
 	"comando.h"
 
-1709353588 source:d:\documentos\github\taller1--2024\proyecto taller1\comando.cpp
+1709443272 source:d:\documentos\github\taller1--2024\proyecto taller1\comando.cpp
 	"comando.h"
 
-1709353603 d:\documentos\github\taller1--2024\proyecto taller1\comando.h
+1709442616 d:\documentos\github\taller1--2024\proyecto taller1\comando.h
 	"ValorNodo.h"
 	"ArbolExpresiones.h"
 	"Expresiones.h"

@@ -71,10 +71,7 @@ void Compound(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & conta
 
 
 int numeroconvertido, numeroconvertido2;
-
-ValorNodo ValorNodoNOT;
-ValorNodo ValorNodoAND;
-ValorNodo ValorNodoOR;
+ValorNodo ValorNodoCompound;
 ValorNodo ValorNodoParIzq;
 ValorNodo ValorNodoParDer;
 ArbolExpresiones arbolPrincipal;
@@ -90,8 +87,8 @@ Crear(arbolDerPar);
 Expresion expre;
 
 
-    if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq("compound", Lista1->palabra))) //Largo entre 2 y 5
-    {
+
+
         Lista1=Lista1->sig;                                                     //Avanzo a string 2
 
         if((streq("NOT",Lista1->palabra)) && (LargoRecu(Lista1)<=3))
@@ -99,19 +96,17 @@ Expresion expre;
              Lista1=Lista1->sig;
              sscanf(Lista1->palabra, "%d", &numeroconvertido);
 
-             if(numeroconvertido < contadorexp1)                                //Es menor a contador es por que existe una expresion con ese numero
+             if(numeroconvertido < contadorexp1)                                                                //Es menor a contador es por que existe una expresion con ese numero
                {
-                AsignarValorNodoNOT(ValorNodoNOT);                               //Cargamos un valor nodo con Not
-                AsignarValorParIzq(ValorNodoParIzq);                             //Cargamos un valor nodo con (
-                AsignarValorParDer(ValorNodoParDer);                             //Cargamos un valor nodo con )
-                CargarArbolParentesis(arbolIzqPar, ValorNodoParIzq);                //Cargamos arbol parentesis izq
-                CargarArbolParentesis(arbolDerPar, ValorNodoParDer);             //Cargamos arbol con parentesis der
-
+                AsignarValorNodoNOT(ValorNodoCompound);                                                         //Cargamos un valor nodo con Not
+                AsignarValorParIzq(ValorNodoParIzq);                                                            //Cargamos un valor nodo con (
+                AsignarValorParDer(ValorNodoParDer);                                                            //Cargamos un valor nodo con )
+                CargarArbolParentesis(arbolIzqPar, ValorNodoParIzq);                                            //Cargamos arbol parentesis izq
+                CargarArbolParentesis(arbolDerPar, ValorNodoParDer);                                            //Cargamos arbol con parentesis der
                 copiarArbol(arbolDer,TraerArbolExp(ListExpPrincipal, numeroconvertido));
-                Cons(ValorNodoNOT,arbolDer,arbolPrincipal,ValorNodoParIzq,ValorNodoParDer);
-
-                CargarExpresion(arbolPrincipal, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
-                InsBackIterExp(ListExpPrincipal, expre);                         //Insertamos la expresion en la Lista Principal de Expresiones
+                Cons(ValorNodoCompound,arbolDer,arbolPrincipal,ValorNodoParIzq,ValorNodoParDer);
+                CargarExpresion(arbolPrincipal, expre, contadorexp1);                                           //Cargamos expresion con ArbolPrincipal
+                InsBackIterExp(ListExpPrincipal, expre);                                                        //Insertamos la expresion en la Lista Principal de Expresiones
                 MostrarArbol(arbolPrincipal);
                }
         }
@@ -120,76 +115,45 @@ Expresion expre;
        {
 
 
-            sscanf(Lista1->palabra, "%d", &numeroconvertido);                       //Convierto string 2 a entero
-        if (numeroconvertido<contadorexp1)                                      //Condicion si el numero existe en la lista de expresiones
+            sscanf(Lista1->palabra, "%d", &numeroconvertido);                                                   //Convierto string 2 a entero
+        if (numeroconvertido<contadorexp1)                                                                      //Condicion si el numero existe en la lista de expresiones
         {
-            Lista1=Lista1->sig;                                             //Avanzo al string 3
-            //---COMANDO AND----//
-            if (streq("AND",Lista1->palabra))                                  // Condicion que el tercer string sea AND
+            Lista1=Lista1->sig;                                                                                 //Avanzo al string 3
+
+            if (streq("AND",Lista1->palabra))                                                                   // Condicion que el tercer string sea AND
              {
-                Lista1=Lista1->sig;                                         //Avanzo al cuarto String
-                sscanf(Lista1->palabra, "%d", &numeroconvertido2);                      //Convierto el string 4 en entero
-                if(numeroconvertido2<contadorexp1)                              //condicion de que el entero exista en la lista de expresiones
+                AsignarValorNodoAND(ValorNodoCompound);
+             }
+             else if(streq("OR",Lista1->palabra)){                                                              // Condicion que el tercer string sea OR
+                AsignarValorNodoOR(ValorNodoCompound);
+             }
+                Lista1=Lista1->sig;                                                                             //Avanzo al cuarto String
+                sscanf(Lista1->palabra, "%d", &numeroconvertido2);                                              //Convierto el string 4 en entero
+
+                if(numeroconvertido2<contadorexp1)                                                              //condicion de que el entero exista en la lista de expresiones
                 {
-                    AsignarValorNodoAND(ValorNodoAND);                           //Cargamos el valor nodo AND
-                    AsignarValorParIzq(ValorNodoParIzq);                         //Cargamos un valor nodo con (
-                    AsignarValorParDer(ValorNodoParDer);                         //Cargamos un valor nodo con )
-
-                    CargarArbolParentesis(arbolIzqPar, ValorNodoParIzq);          //Cargamos arbol parentesis izq
+                    AsignarValorParIzq(ValorNodoParIzq);                                                        //Cargamos un valor nodo con (
+                    AsignarValorParDer(ValorNodoParDer);                                                        //Cargamos un valor nodo con )
+                    CargarArbolParentesis(arbolIzqPar, ValorNodoParIzq);                                        //Cargamos arbol parentesis izq
                     CargarArbolParentesis(arbolDerPar, ValorNodoParDer);
-
-
                     copiarArbol(arbolIzq, TraerArbolExp(ListExpPrincipal, numeroconvertido));
                     copiarArbol(arbolDer, TraerArbolExp(ListExpPrincipal, numeroconvertido2));
-                    Cons2(ValorNodoAND,arbolIzq,arbolDer,ValorNodoParIzq,ValorNodoParDer,arbolPrincipal);
-
-                    CargarExpresion(arbolPrincipal, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
-                    InsBackIterExp(ListExpPrincipal, expre);                        //Insertamos la expresion en la Lista Principal de Expresiones
+                    Cons2(ValorNodoCompound,arbolIzq,arbolDer,ValorNodoParIzq,ValorNodoParDer,arbolPrincipal);
+                    CargarExpresion(arbolPrincipal, expre, contadorexp1);                                       //Cargamos expresion con ArbolPrincipal
+                    InsBackIterExp(ListExpPrincipal, expre);                                                    //Insertamos la expresion en la Lista Principal de Expresiones
                     MostrarArbol(arbolPrincipal);
                 }
                  else
                     printf("Error2\n");
-             }
-             //---COMANDO OR----//
-            if(streq("OR",Lista1->palabra))                                     // Condicion que el tercer string sea OR
-            {
-                Lista1=Lista1->sig;                                         //Avanzo al cuarto String
-                sscanf(Lista1->palabra, "%d", &numeroconvertido2);              //Convierto el string 4 en entero
-                if(numeroconvertido2<contadorexp1)                              //condicion de que el entero exista en la lista de expresiones
-                {
-                    AsignarValorNodoOR(ValorNodoOR);                           //Cargamos el valor nodo AND
-                    AsignarValorParIzq(ValorNodoParIzq);                         //Cargamos un valor nodo con (
-                    AsignarValorParDer(ValorNodoParDer);                         //Cargamos un valor nodo con )
-
-                    copiarArbol(arbolIzq, TraerArbolExp(ListExpPrincipal, numeroconvertido));
-                    copiarArbol(arbolDer, TraerArbolExp(ListExpPrincipal, numeroconvertido2));
-                    Cons2(ValorNodoOR,arbolIzq,arbolDer,ValorNodoParIzq,ValorNodoParDer,arbolPrincipal); //Cargamos el arbol principal con ( NOT Arbol ID )
-
-
-                    CargarExpresion(arbolPrincipal, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
-                    InsBackIterExp(ListExpPrincipal, expre);                         //Insertamos la expresion en la Lista Principal de Expresiones
-                    MostrarArbol(arbolPrincipal);
-                }
+         }
 
             }
 
-         }
-        }
-
-    }
 
 }
 
 void Save(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1)
 {
-str save;
-strcrear(save);
-save = new char[5];//Solicitamos la cantidad de espacios en memoria para save
-save[0]='s';
-save[1]='a';
-save[2]='v';
-save[3]='e';
-save[4]='\0';
 
 int numeroconvertido;
 
@@ -199,8 +163,8 @@ ArbolExpresiones arbolSinID;
 Crear(arbolSinID);
 
 
-    if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<4)) && (streq(save, Lista1->palabra))) //Largo entre 2 y 5
-    {
+
+
         Lista1=Lista1->sig;                                                     //Avanzo a string 2
         sscanf(Lista1->palabra, "%d", &numeroconvertido);                       //Convierto string 2 a entero
         if (numeroconvertido<contadorexp1)                                      //Condicion si el numero existe en la lista de expresiones
@@ -213,21 +177,13 @@ Crear(arbolSinID);
         }
                  else
                     printf("Error2\n");
-    }
+
 
 
 }
 
 void Load(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1)
 {
-str load ;
-strcrear(load);
-load = new char[5];//Solicitamos la cantidad de espacios en memoria para load
-load[0]='l';
-load[1]='o';
-load[2]='a';
-load[3]='d';
-load[4]='\0';
 
 int numeroconvertido;
 Expresion expre;
@@ -238,8 +194,8 @@ Crear(Arbolaguardar);
 ArbolExpresiones arbolSinID;
 Crear(arbolSinID);
 
-    if ((LargoRecu(Lista1)==2)  && (streq(load, Lista1->palabra))) //Largo entre 2 y 5
-    {
+
+
         Lista1=Lista1->sig;                                                     //Avanzo a string 2
         if (Existe(Lista1->palabra))                                      //Condicion si el numero existe en la lista de expresiones
         {
@@ -249,7 +205,7 @@ Crear(arbolSinID);
         }
                  else
                     printf("Error2\n");
-    }
+
 
 
 }

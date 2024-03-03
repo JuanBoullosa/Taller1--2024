@@ -31,7 +31,7 @@ printf("\n");                                           // Salto de linea
 partirString(comando, Lista1);                          // Procedimiento para partir el string
 
 if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq("compound", Lista1->palabra)))
-    Compound4(Lista1,ListExpPrincipal,contadorexp1);
+    Compound(Lista1,ListExpPrincipal,contadorexp1);
 
     else if(((LargoRecu(Lista1)==2)) && (streq("atomic", Lista1->palabra)))
         Atomic(Lista1,contadorexp1,ListExpPrincipal);
