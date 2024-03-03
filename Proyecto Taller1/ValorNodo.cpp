@@ -3,13 +3,6 @@
 #include "ListaString.h"
 
 
-//Carga por teclado los datos de un Grupo
-//void CrearValorNodo(ValorNodo &ValNodo)
-
-//Mostrar por pantalla los datos de un Grupo
-//void MostrarValorNodo(ValorNodo ValNodo)
-
-
 void CargarValorNodo(ListaString L, ValorNodo &valNodo){
 
         if (streq(L->palabra, "AND")) {

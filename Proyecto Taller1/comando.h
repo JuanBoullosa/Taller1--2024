@@ -6,14 +6,13 @@
 #include "ListaExpresiones.h"
 #include "Archivo.h"
 
+//Toma un string ingresado lo divide en palabras, lo ingresa en una lista y a partir de esta verifica que sea correcto y crear arbol binario y lo guarda en una lista de expresiones
 void Atomic(ListaString L, int &contadorexp, ListaExpresiones &ListExp);
-
-void CargarComandos (str &atomic, str & compound, str & show, str & evaluate, str & save, str &load, str & exit);
-
+//Toma un string ingresado lo divide en palabras, lo ingresa en una lista y a partir de esta verifica que sea correcto y muestra en pantalla una expresion con el valor ingresado
 void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1);
-
+//Toma un string ingresado lo divide en palabras, lo ingresa en una lista y a partir de esta verifica que sea correcto y evalua las expresiones asignadas en la lista de string
 void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal,int contadorexp1);
-
+//Toma un string ingreso lo divide en palabras, lo ingresa en una lista y a partir de esta crear arbol binario y lo guarda en una lista de expresiones
 void Compound(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1);
 
 void Save(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1);

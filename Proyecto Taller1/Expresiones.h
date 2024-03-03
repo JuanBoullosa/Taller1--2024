@@ -9,7 +9,7 @@ typedef struct { int numero;
 
 //Cargo expresion
 void CargarExpresion(ArbolExpresiones Aexp, Expresion &expre, int &contadorexp);
-
+//Devuelve el entero asignado dentro de la expresion
 int DarNumero( Expresion expre);
 
 

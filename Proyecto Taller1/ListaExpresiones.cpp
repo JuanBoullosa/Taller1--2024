@@ -27,7 +27,7 @@ ArbolExpresiones TraerArbolExp(ListaExpresiones ListaExp, int numeroconvertido){
     {
         ListaExp=ListaExp->sig;
     }
-    return ListaExp->expre.arbol;
+    return DarArbolexp(ListaExp);
 }
 
 ArbolExpresiones DarArbolexp( ListaExpresiones L){

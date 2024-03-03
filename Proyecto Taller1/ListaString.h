@@ -19,10 +19,10 @@ int LargoRecu (ListaString L);
 void InsFront (ListaString &L, str s);
 //Agregar al final de la lista
 void InsBackIter  (ListaString &L , str s);
-//Verificar largo del string
 //A parte un string en palabras y los coloca en una lista
 void partirString (str s, ListaString &L);
-
+//Elimina una lista de string dada
+void EliminarListaString (ListaString &L);
 
 
 #endif // LISTASTRING_H_INCLUDED

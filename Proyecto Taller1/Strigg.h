@@ -18,14 +18,8 @@ int strlar (str s);
 void strcop (str &s1, str s2);
 /* lee el string s desde teclado */
 void scan (str &s);
-/* concatena el contenido de s2 al final de s1 */
-void strcon (str &s1, str s2);
-/* intercambia los contenidos de s1 y s2 */
-void strswp (str &s1, str &s2);
 /* imprime el string s por pantalla */
 void print (str s);
-/* determina si s1 es alfabéticamente menor que s2 */
-boolean strmen (str s1, str s2);
 /* determina si los strings s1 y s2 son iguales */
 boolean streq (str s1, str s2);
 //Divide un string en otro con la primera palabra y el resto de palabras en otro string
