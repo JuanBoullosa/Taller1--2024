@@ -55,7 +55,7 @@ void MostrarArbol (ArbolExpresiones a){
         if (a->info.dato.valor == FALSE)
             printf(" FALSE ");
         if (a->info.dato.valor == TRUE)
-                    printf(" TRUE ");
+            printf(" TRUE ");
         if (a->info.dato.operador == 'A')
                 printf(" AND ");
         if (a->info.dato.operador == 'O')
@@ -69,6 +69,16 @@ void MostrarArbol (ArbolExpresiones a){
 
         MostrarArbol(a->hder);
 
+    }
+
+}
+
+void MostrarIDdelArbol (ArbolExpresiones a){
+    if (a != NULL)
+    {
+        MostrarIDdelArbol(a->hizq);
+        printf(" %d", a->info.identificador);
+        MostrarIDdelArbol(a->hder);
     }
 
 }
@@ -244,14 +254,13 @@ void Insert (ArbolExpresiones &a, ValorNodo v){
     }
 }
 
-void AsignarIDenOrden(ArbolExpresiones &a){
-    int suma=1;
+void AsignarIDenOrden(ArbolExpresiones &a, int &suma){
     if(a!=NULL)
     {
-        AsignarIDenOrden(a->hizq);
-        a->info.identificador = suma++;
-        AsignarIDenOrden(a->hder);
-
+        AsignarIDenOrden(a->hizq, suma);
+        a->info.identificador = suma;
+        suma=suma +1;
+        AsignarIDenOrden(a->hder, suma);
     }
 }
 

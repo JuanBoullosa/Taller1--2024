@@ -152,7 +152,7 @@ ArbolExpresiones arbolPrincipal;
 Crear(arbolPrincipal);
 ArbolExpresiones arbolSinID;
 Crear(arbolSinID);
-
+int suma=1;
 
 
 
@@ -162,8 +162,9 @@ Crear(arbolSinID);
         {
             Lista1=Lista1->sig;                                                 //Avanzo al string 3
                     copiarArbol(arbolSinID ,TraerArbolExp(ListExpPrincipal, numeroconvertido));     //Extraigo y copio arbol de expresiones
-                    AsignarIDenOrden(arbolSinID);                                                   //Asigno ID en orden al arbol
+                    AsignarIDenOrden(arbolSinID, suma);                                                   //Asigno ID en orden al arbol
                     MostrarArbol(arbolSinID);
+                    MostrarIDdelArbol (arbolSinID);
                     Bajar_ArbolExpresiones(arbolSinID, Lista1->palabra);
         }
                  else
