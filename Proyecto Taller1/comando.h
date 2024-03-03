@@ -14,8 +14,8 @@ void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1);
 void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal,int contadorexp1);
 //Toma un string ingreso lo divide en palabras, lo ingresa en una lista y a partir de esta crear arbol binario y lo guarda en una lista de expresiones
 void Compound(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1);
-
+//Toma un string ingreso lo divide en palabras, lo ingresa en una lista y a partir de esta crea un archivo para guardar el arbol indicado en el string
 void Save(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1);
-
+//Toma un string ingreso lo divide en palabras, lo ingresa en una lista y a partir de esta crea un archivo para cargar el arbol indicado en el string
 void Load(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1);
 #endif // COMANDO_H_INCLUDED
