@@ -3,28 +3,24 @@
 //Operaciones Basicas
 
 /* crea un string vacío */
-void strcrear (str &s)
-{
+void strcrear (str &s){
     s = new char[1];
     s[0] = '\0';
 }
 /* libera la memoria usada por el string */
-void strdestruir (str &s)
-{
+void strdestruir (str &s){
     delete [] s;
     s = NULL;
 }
 /* devuelve el largo del string s */
-int strlar (str s)
-{
+int strlar (str s){
     int i = 0;
     while (s[i] != '\0')
         i++;
     return i;
 }
 /* copia el contenido del string s2 en s1 */
-void strcop (str &s1,str s2)
-{
+void strcop (str &s1,str s2){
     int i = 0;
     int largo = strlar(s2) + 1;
     delete [] s1;
@@ -37,8 +33,7 @@ void strcop (str &s1,str s2)
     s1[i] = '\0';
 }
 /* lee el string s desde teclado */
-void scan (str &s)
-{
+void scan (str &s){
     str aux = new char[MAX];
     int i=0;
     char c;
@@ -53,44 +48,8 @@ void scan (str &s)
     strcop (s,aux);
     strdestruir (aux);
 }
-/* concatena el contenido de s2 al final de s1 */
-void strcon (str &s1,str s2)
-{
-    str aux;
-    strcrear (aux);
-    strcop (aux, s1);
-    int largo = strlar (s1) + strlar (s2) + 1;
-    if (largo > MAX)
-        largo = MAX;
-    delete [] s1;
-    s1 = new char[largo];
-    int i = 0;
-    while (aux[i] != '\0')
-    {
-        s1[i] = aux[i];
-        i++;
-    }
-    int j = 0;
-    while (s2[j] != '\0' && i < MAX-1)
-    {
-        s1[i] = s2[j];
-        i++;
-        j++;
-    }
-    s1[i] = '\0';
-    strdestruir (aux);
-}
-/* intercambia los contenidos de s1 y s2 */
-void strswp (str &s1, str &s2)
-{
-    str aux;
-    aux = s1;
-    s1 = s2;
-    s2 = aux;
-}
 /* imprime el string s por pantalla */
-void print (str s)
-{
+void print (str s){
     int i = 0;
     while(s[i]!= '\0')
     {
@@ -98,27 +57,8 @@ void print (str s)
         i++;
     }
 }
-/* determina si s1 es alfabéticamente menor que s2 */
-boolean strmen (str s1, str s2)
-{
-    int i = 0;
-    boolean encontre = FALSE;
-    boolean menor = FALSE;
-    while ((!encontre) && (s1[i] != '\0') && (s2[i] != '\0'))
-    {
-        if (s1[i] != s2[i])
-            encontre = TRUE;
-        if (s1[i] < s2[i])
-            menor = TRUE;
-        i++;
-    }
-    if ((!encontre) && (s2[i]!='\0'))
-        menor = TRUE;
-    return menor;
-}
 /* determina si los strings s1 y s2 son iguales */
-boolean streq(str s1, str s2)
-{
+boolean streq(str s1, str s2){
     int i = 0;
     boolean iguales =TRUE;
     while (iguales && (s1[i] != '\0') && (s2[i] != '\0')) {
@@ -185,8 +125,7 @@ void dividirString(str comando, str &palabra1, str &resto) {
     resto[j] = '\0';
 }
 //Devuelve si un string esta vacio
-boolean stringVacio (str &s)
-{
+boolean stringVacio (str &s){
   int i = 0;
   boolean vacio = FALSE;
 

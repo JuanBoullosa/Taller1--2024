@@ -29,13 +29,6 @@ if (L == NULL)
 esVacia = TRUE;
 return esVacia;
 }
-//Insertar string al principio de la lista
-void InsFront (ListaString &L, str stringg){
-  ListaString aux = new NodoS;
-  aux->palabra = stringg;
-  aux->sig = L;
-  L = aux;
-}
 //Agregar al final de la lista
 void InsBackIter(ListaString &L, str palabraS) {
     ListaString nuevo = new NodoS;

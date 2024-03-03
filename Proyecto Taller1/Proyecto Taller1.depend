@@ -174,7 +174,7 @@
 	"TipoNodo.h"
 	"ListaString.h"
 
-1709354312 source:d:\documentos\github\taller1--2024\proyecto taller1\arbolexpresiones.cpp
+1709446000 source:d:\documentos\github\taller1--2024\proyecto taller1\arbolexpresiones.cpp
 	"ArbolExpresiones.h"
 	"Expresiones.h"
 
@@ -207,29 +207,29 @@
 1709354312 source:d:\documentos\github\taller1--2024\proyecto taller1\expresiones.cpp
 	"Expresiones.h"
 
-1709354312 source:d:\documentos\github\taller1--2024\proyecto taller1\listaexpresiones.cpp
+1709446377 source:d:\documentos\github\taller1--2024\proyecto taller1\listaexpresiones.cpp
 	"ListaExpresiones.h"
 
 1709240380 d:\documentos\github\taller1--2024\proyecto taller1\listaexpresiones.h
 	"Expresiones.h"
 	"Boolean.h"
 
-1709354312 source:d:\documentos\github\taller1--2024\proyecto taller1\listastring.cpp
+1709446375 source:d:\documentos\github\taller1--2024\proyecto taller1\listastring.cpp
 	"ListaString.h"
 	"Strigg.h"
 
-1708567867 source:d:\documentos\github\taller1--2024\proyecto taller1\strigg.cpp
+1709446375 source:d:\documentos\github\taller1--2024\proyecto taller1\strigg.cpp
 	"Strigg.h"
 
-1709354312 source:d:\documentos\github\taller1--2024\proyecto taller1\tiponodo.cpp
+1709446377 source:d:\documentos\github\taller1--2024\proyecto taller1\tiponodo.cpp
 	"TipoNodo.h"
 
-1709350726 source:d:\documentos\github\taller1--2024\proyecto taller1\valornodo.cpp
+1709446377 source:d:\documentos\github\taller1--2024\proyecto taller1\valornodo.cpp
 	"ValorNodo.h"
 	"TipoNodo.h"
 	"ListaString.h"
 
-1709443277 source:d:\documentos\github\taller1--2024\proyecto taller1\main.cpp
+1709446375 source:d:\documentos\github\taller1--2024\proyecto taller1\main.cpp
 	<iostream>
 	"ArbolExpresiones.h"
 	"Strigg.h"
@@ -300,7 +300,7 @@
 	"ListaExpresiones.h"
 	"comando.h"
 
-1709443272 source:d:\documentos\github\taller1--2024\proyecto taller1\comando.cpp
+1709446000 source:d:\documentos\github\taller1--2024\proyecto taller1\comando.cpp
 	"comando.h"
 
 1709442616 d:\documentos\github\taller1--2024\proyecto taller1\comando.h
