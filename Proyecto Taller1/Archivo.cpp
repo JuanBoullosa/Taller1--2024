@@ -1,16 +1,13 @@
-
 #include "Archivo.h"
 
 
-void Agregar (str nomArch, int entero)
-{
+void Agregar (str nomArch, int entero){
      FILE * f = fopen (nomArch, "ab");
      fwrite (&entero, sizeof(int), 1, f);
      fclose (f);
 }
 
-boolean Existe (str nomArch)
-{
+boolean Existe (str nomArch){
      boolean existeArchivo = TRUE;
      FILE * f = fopen (nomArch, "rb");
      if (f == NULL)
@@ -20,9 +17,7 @@ boolean Existe (str nomArch)
      return existeArchivo;
 }
 
-boolean Vacio (str nomArch)
-//// una posible solución /////////////
-{
+boolean Vacio (str nomArch){
      boolean archivoVacio = FALSE;
      FILE * f = fopen (nomArch, "rb");
      fseek (f, 0, SEEK_END);
@@ -32,8 +27,7 @@ boolean Vacio (str nomArch)
      return archivoVacio;
 }
 
-boolean Pertenece (str nomArch, int entero)
-{
+boolean Pertenece (str nomArch, int entero){
      boolean esta = FALSE;
      FILE * f = fopen (nomArch, "rb");
      int buffer;
@@ -49,8 +43,7 @@ boolean Pertenece (str nomArch, int entero)
      return esta;
 }
 
-int Largo (str nomArch)
-{
+int Largo (str nomArch){
      int largoArchivo;
      FILE * f = fopen (nomArch, "rb");
      fseek (f, 0, SEEK_END);
@@ -59,19 +52,7 @@ int Largo (str nomArch)
      return largoArchivo;
 }
 
-
-//int K_esimo (str nomArch, int k)
-//{
-//     int buffer;
-//     FILE * f = fopen (nomArch, "rb");
-//     fseek (f, (k-1) * sizeof(int), SEEK_SET);
-//     fread (&buffer, sizeof(int), 1, f);
-//     fclose (f);
-//     return buffer;
-//}
-
-void Desplegar (str nomArch)
-{
+void Desplegar (str nomArch){
      FILE * f = fopen (nomArch, "rb");
      int buffer;
      fread (&buffer, sizeof(int), 1, f);
@@ -82,64 +63,45 @@ void Desplegar (str nomArch)
      }
      fclose (f);
 }
-
 // Escribe en el archivo los caracteres de ValorNodo
 // Precondición: El archivo viene abierto para escritura.
-void Bajar_ValorNodo (ValorNodo v, FILE*f)
-{
-    if ((v.dato.valor==TRUE)|| (v.dato.valor==FALSE))
+void Bajar_ValorNodo (ValorNodo v, FILE*f){
+    fwrite(&v.identificador, sizeof(int), 1, f);
+    if (v.discriminante==VALOR)
     {
-        fwrite(&v.identificador, sizeof(int),1,f);
-        fwrite(&v.dato.valor, sizeof(boolean),1,f);
+        fwrite(&v.discriminante, sizeof (TipoNodo), 1, f);
+        fwrite(&v.dato.valor, sizeof(boolean), 1, f);
     }
-    if ((v.dato.operador=='A')|| (v.dato.operador=='O')|| (v.dato.operador=='N'))
+    if (v.discriminante==OPERADOR)
     {
-        fwrite(&v.identificador, sizeof(int),1,f);
-        fwrite(&v.dato.operador, sizeof(char),1,f);
+        fwrite(&v.discriminante, sizeof (TipoNodo), 1, f);
+        fwrite(&v.dato.operador, sizeof(char), 1, f);
     }
-    if ((v.dato.parentesis=='(')|| (v.dato.parentesis==')'))
+      if (v.discriminante==PARENTESIS)
     {
-        fwrite(&v.identificador, sizeof(int),1,f);
-        fwrite(&v.dato.parentesis, sizeof(char),1,f);
+        fwrite(&v.discriminante, sizeof (TipoNodo), 1, f);
+        fwrite(&v.dato.parentesis, sizeof(char), 1, f);
     }
-
 }
 
-
-void Levantar_Discriminante ( )
-{
-
-}
-
-void Levantar_ValorNodo(ValorNodo &v, FILE*f)
-{
+void Levantar_ValorNodo(ValorNodo &v, FILE*f){
     fread(&v.identificador, sizeof (int), 1, f);
-    fread(&v.dato, sizeof (TipoNodo), 1, f);
-
-    //Levantar_Discriminante(v.discriminante, f)
-}
-
-// Lee desde el archivo los caracteres de ValorNodo
-// Precondición: El archivo viene abierto para lectura.
-/*
-void Levantar_ValorNodo(ValorNodo &v, FILE*f)
-{
-    if ((v.dato.valor==TRUE)|| (v.dato.valor==FALSE))
+    fread(&v.discriminante, sizeof(TipoNodo),1,f);
+    if(v.discriminante==VALOR)
     {
-        fread(&v.dato.valor, sizeof(boolean),1,f);
+        fread(&v.dato.valor, sizeof(boolean),1, f);
     }
-    if ((v.dato.operador=='A')|| (v.dato.operador=='O')|| (v.dato.operador=='N'))
+     if(v.discriminante==OPERADOR)
     {
-        fread(&v.dato.operador, sizeof(char),1,f);
+        fread(&v.dato.operador, sizeof(char),1, f);
     }
-    if ((v.dato.parentesis=='(')|| (v.dato.parentesis==')'))
+     if(v.discriminante==PARENTESIS)
     {
-        fread(&v.dato.parentesis, sizeof(char),1,f);
+        fread(&v.dato.valor, sizeof(char),1, f);
     }
 }
-*/
-void Bajar_ArbolExpresiones_Aux(ArbolExpresiones a, FILE*f)
-{
+
+void Bajar_ArbolExpresiones_Aux(ArbolExpresiones a, FILE*f){
     if (a != NULL)
     {
         Bajar_ValorNodo(a->info , f);
@@ -148,18 +110,16 @@ void Bajar_ArbolExpresiones_Aux(ArbolExpresiones a, FILE*f)
     }
 }
 
-void Bajar_ArbolExpresiones(ArbolExpresiones a, str nomArch)
-{
+void Bajar_ArbolExpresiones(ArbolExpresiones a, str nomArch){
    FILE* f = fopen (nomArch, "wb");
    Bajar_ArbolExpresiones_Aux(a, f);
    fclose(f);
 }
 
-
-void Levantar_ArbolExpresiones(ArbolExpresiones &a,  str nomArch)
-{
+void Levantar_ArbolExpresiones(ArbolExpresiones &a,  str nomArch){
     FILE* f =fopen(nomArch,"rb");
-    !Vacio(nomArch);
+    if(!Vacio(nomArch))
+    {
     ValorNodo buffer;
     Crear(a);
     Levantar_ValorNodo(buffer,f);
@@ -169,4 +129,7 @@ void Levantar_ArbolExpresiones(ArbolExpresiones &a,  str nomArch)
         Levantar_ValorNodo(buffer,f);
     }
     fclose(f);
+    }
+    else
+        printf("\nEl archivo no existe");
 }
