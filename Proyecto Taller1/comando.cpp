@@ -67,40 +67,7 @@ void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal,int contado
 
 }
 
-void Compound4(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1){
-str compound;
-strcrear(compound);
-compound = new char[9];//Solicitamos la cantidad de espacios en memoria para compound
-compound[0]='c';
-compound[1]='o';
-compound[2]='m';
-compound[3]='p';
-compound[4]='o';
-compound[5]='u';
-compound[6]='n';
-compound[7]='d';
-compound[8]='\0';
-str expNot;
-strcrear(expNot);
-expNot = new char[4];//Solicitamos la cantidad de espacios en memoria operador or
-expNot[0]='N';
-expNot[1]='O';
-expNot[2]='T';
-expNot[3]='\0';
-str expAnd;
-strcrear(expAnd);
-expAnd = new char[4];//Solicitamos la cantidad de espacios en memoria operador or
-expAnd[0]='A';
-expAnd[1]='N';
-expAnd[2]='D';
-expAnd[3]='\0';
-str expOr;
-strcrear(expOr);
-expOr = new char[4];//Solicitamos la cantidad de espacios en memoria operador or
-expOr[0]='O';
-expOr[1]='R';
-expOr[2]='\0';
-
+void Compound(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1){
 
 
 int numeroconvertido, numeroconvertido2;
@@ -123,11 +90,11 @@ Crear(arbolDerPar);
 Expresion expre;
 
 
-    if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq(compound, Lista1->palabra))) //Largo entre 2 y 5
+    if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq("compound", Lista1->palabra))) //Largo entre 2 y 5
     {
         Lista1=Lista1->sig;                                                     //Avanzo a string 2
 
-        if((streq(expNot,Lista1->palabra)) && (LargoRecu(Lista1)<=3))
+        if((streq("NOT",Lista1->palabra)) && (LargoRecu(Lista1)<=3))
         {
              Lista1=Lista1->sig;
              sscanf(Lista1->palabra, "%d", &numeroconvertido);
@@ -158,7 +125,7 @@ Expresion expre;
         {
             Lista1=Lista1->sig;                                             //Avanzo al string 3
             //---COMANDO AND----//
-            if (streq(expAnd,Lista1->palabra))                                  // Condicion que el tercer string sea AND
+            if (streq("AND",Lista1->palabra))                                  // Condicion que el tercer string sea AND
              {
                 Lista1=Lista1->sig;                                         //Avanzo al cuarto String
                 sscanf(Lista1->palabra, "%d", &numeroconvertido2);                      //Convierto el string 4 en entero
@@ -184,7 +151,7 @@ Expresion expre;
                     printf("Error2\n");
              }
              //---COMANDO OR----//
-            if(streq(expOr,Lista1->palabra))                                     // Condicion que el tercer string sea OR
+            if(streq("OR",Lista1->palabra))                                     // Condicion que el tercer string sea OR
             {
                 Lista1=Lista1->sig;                                         //Avanzo al cuarto String
                 sscanf(Lista1->palabra, "%d", &numeroconvertido2);              //Convierto el string 4 en entero
