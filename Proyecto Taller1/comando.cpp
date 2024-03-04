@@ -20,9 +20,9 @@ Expresion expre;
                 printf("\n");
             }
             else
-            printf("Error en el comando ingresado\n");
+            printf("\nExpresion invalida\n");
 
-            //Liberar memoria del arbolexp
+
 }
 
 void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1){
@@ -43,7 +43,7 @@ void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1){
         else
             printf("\nNo existe una expresion con ese valor\n");
 
-            //Liberar memoria arbolexpreID
+
 
 
 }
@@ -71,9 +71,9 @@ void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal,int contado
 
         }
         else
-           printf("Mensaje de error\n");
+           printf("\Expresion invalida\n");
 
-           //Liberar memoria arbolevaluate
+
 
 }
 
@@ -113,6 +113,8 @@ Expresion expre;
                     MostrarArbol(arbolPrincipal);                                                                   //Mostramos el arbol construido en pantalla
                     printf("\n");                                                                                   //Salto de linea
                }
+               else
+                    printf("\nExpresion invalida");
         }
                             //%%%%%%%%%%   COMANDO AND Y OR  %%%%%%%%%%%%
        else                                                                                                                 //Si no es NOT
@@ -150,20 +152,18 @@ Expresion expre;
                                     printf("\n");                                                                               //Salto de linea
                                 }
                                 else
-                                    printf("Error en el comando ingresado\n");
+                                   printf("\nLa segunda expresion no es valida\n");
                             }
                             else
-                                 printf("Error en el comando ingresado\n");
-                                                                                                    //Mensaje de error
+                                 printf("\nEl operador no es valido\n");
+                                                                                                                                //Mensaje de error
             }else
-                printf("Error en el comando ingresado\n");
+                printf("\nLa primera expresion no es valida\n");
 
 
        }
 
-        //Liberar arbol principal
-        //Liberar arbol izquierdo
-        //Liberar arbol derecho
+
 }
 
 void Save(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1){
@@ -190,10 +190,9 @@ int suma=1;
                     Bajar_ArbolExpresiones(arbolSinID, Lista1->palabra);
         }
                  else
-                    printf("Error2\n");
+                    printf("\nLa expresion que desea guardar no es valida\n");
 
-//Liberar arbol principal
-//Liberar arbolSinID
+
 
 }
 
@@ -216,10 +215,9 @@ Crear(arbolSinID);
         InsBackIterExp(ListExpPrincipal, expre);                        //Insertamos la expresion en la Lista Principal de Expresiones
         }
                  else
-                    printf("Error2\n");
+                    printf("\nNombre de archivo incorrecto\n");
 
-//Liberar Arbolaguardar
-//Liberar arbolSinID
+
 
 }
 
