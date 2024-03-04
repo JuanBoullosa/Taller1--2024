@@ -237,31 +237,31 @@
 	"ListaExpresiones.h"
 	"comando.h"
 
-1709493639 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\arbolexpresiones.cpp
+1709501791 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\arbolexpresiones.cpp
 	"ArbolExpresiones.h"
 	"Expresiones.h"
 
-1709493481 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\arbolexpresiones.h
+1709501791 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\arbolexpresiones.h
 	"Boolean.h"
 	"ValorNodo.h"
 
 1708567169 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\boolean.h
 	<stdio.h>
 
-1709262422 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\valornodo.h
+1709501791 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\valornodo.h
 	"TipoNodo.h"
 	"ListaString.h"
 
-1708567169 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\tiponodo.h
+1709501791 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\tiponodo.h
 	"Boolean.h"
 
-1708569201 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\listastring.h
+1709501791 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\listastring.h
 	"Strigg.h"
 
-1708567169 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\strigg.h
+1709501791 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\strigg.h
 	"Boolean.h"
 
-1708977624 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\expresiones.h
+1709501791 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\expresiones.h
 	"ArbolExpresiones.h"
 
 1708567169 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\boolean.cpp
@@ -273,26 +273,26 @@
 1709480491 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\strigg.cpp
 	"Strigg.h"
 
-1709480491 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\tiponodo.cpp
+1709501791 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\tiponodo.cpp
 	"TipoNodo.h"
 
-1709480491 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\valornodo.cpp
+1709501791 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\valornodo.cpp
 	"ValorNodo.h"
 	"TipoNodo.h"
 	"ListaString.h"
 
-1709480491 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\listaexpresiones.cpp
+1709558847 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\listaexpresiones.cpp
 	"ListaExpresiones.h"
 
-1709480491 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\listaexpresiones.h
+1709558847 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\listaexpresiones.h
 	"Expresiones.h"
 	"Boolean.h"
 
-1709480491 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\listastring.cpp
+1709505788 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\listastring.cpp
 	"ListaString.h"
 	"Strigg.h"
 
-1709480491 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\main.cpp
+1709558847 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\main.cpp
 	<iostream>
 	"ArbolExpresiones.h"
 	"Strigg.h"
@@ -313,17 +313,17 @@
 1709493444 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\comando.cpp
 	"comando.h"
 
-1709480491 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\comando.h
+1709501791 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\comando.h
 	"ValorNodo.h"
 	"ArbolExpresiones.h"
 	"Expresiones.h"
 	"ListaExpresiones.h"
 	"Archivo.h"
 
-1709491607 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\archivo.cpp
+1709559492 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\archivo.cpp
 	"Archivo.h"
 
-1709329676 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\archivo.h
+1709558847 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\archivo.h
 	"ListaExpresiones.h"
 
 1709525939 source:d:\documentos\github\taller1--2024\proyecto taller1\archivo.cpp

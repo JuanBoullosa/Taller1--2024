@@ -78,8 +78,8 @@ void Bajar_ValorNodo (ValorNodo v, FILE*f){
     fwrite(&v.identificador, sizeof(int), 1, f);
     if (v.discriminante==VALOR) // verifica que sea igual al tipo de nodo.
     {
-        fwrite(&v.discriminante, sizeof (TipoNodo), 1, f); //escribe los datos correspondientes en el archivo.
-        fwrite(&v.dato.valor, sizeof(boolean), 1, f);
+        fwrite(&v.discriminante, sizeof (TipoNodo), 1, f); //escribe el campo discriminante en el archivo.
+        fwrite(&v.dato.valor, sizeof(boolean), 1, f);       //escribe el valor nodo del tipo boolean en el campo dato
     }
     if (v.discriminante==OPERADOR)
     {
@@ -133,10 +133,10 @@ void Bajar_ArbolExpresiones(ArbolExpresiones a, str nomArch){
 //Carga el arbol de Expresiones desde un archivo
 void Levantar_ArbolExpresiones(ArbolExpresiones &a,  str nomArch){
     FILE* f =fopen(nomArch,"rb"); // abre el archivo en modo lectura y se leeran datos binarios.
-    if(!Vacio(nomArch))
+    if(!Vacio(nomArch))           //Verifica que noe este vacio
     {
-    ValorNodo buffer;
-    Crear(a);
+    ValorNodo buffer;             //Defino el bufer
+    Crear(a);                     //Creo el arbol
     Levantar_ValorNodo(buffer,f);
     while (!feof(f))
     {

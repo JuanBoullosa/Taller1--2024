@@ -186,7 +186,6 @@ int suma=1;
                     copiarArbol(arbolSinID ,TraerArbolExp(ListExpPrincipal, numeroconvertido));     //Extraigo y copio arbol de expresiones
                     AsignarIDenOrden(arbolSinID, suma);                                                   //Asigno ID en orden al arbol
                     MostrarArbol(arbolSinID);
-                    MostrarIDdelArbol (arbolSinID);
                     Bajar_ArbolExpresiones(arbolSinID, Lista1->palabra);
         }
                  else
