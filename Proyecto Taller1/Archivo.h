@@ -20,9 +20,6 @@ boolean Pertenece (str nomArch, int entero);
 // Devuelve la cantidad de enteros almacenados en el archivo. Precondición: El archivo existe
 int Largo (str nomArch);
 
-// Devuelve el k-ésimo entero almacenado en el archivo. Precondición: El archivo existe
-// y su largo es  k.
-//int K-esimo (str nomArch, int k);
 
 // Despliega por pantalla los enteros almacenados en el archivo. Precondición: El archivo existe
 void Desplegar (str nomArch);
@@ -38,8 +35,13 @@ void Bajar_ValorNodo (ValorNodo v, FILE*f);
 // Precondición: El archivo viene abierto para lectura.
 void Levantar_ValorNodo(ValorNodo &v, FILE*f);
 
+//Escribe el arbol de expresiones en un archivo, usando un auxiliar.
 void Bajar_ArbolExpresiones_Aux(ArbolExpresiones a, FILE*f);
+
+//Escribe el arbol de expresiones en un archivo
 void Bajar_ArbolExpresiones(ArbolExpresiones a, str nomArch);
+
+//Carga el arbol de Expresiones desde un archivo
 void Levantar_ArbolExpresiones(ArbolExpresiones &a, str nomArch);
 
 

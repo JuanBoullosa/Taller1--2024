@@ -332,3 +332,71 @@
 1709332931 d:\documentos\github\taller1--2024\proyecto taller1\archivo.h
 	"ListaExpresiones.h"
 
+1709505815 source:c:\users\federico\documents\github\taller1--2024\proyecto taller1\arbolexpresiones.cpp
+	"ArbolExpresiones.h"
+	"Expresiones.h"
+
+1709505815 c:\users\federico\documents\github\taller1--2024\proyecto taller1\arbolexpresiones.h
+	"Boolean.h"
+	"ValorNodo.h"
+
+1708567868 c:\users\federico\documents\github\taller1--2024\proyecto taller1\boolean.h
+	<stdio.h>
+
+1709505815 c:\users\federico\documents\github\taller1--2024\proyecto taller1\valornodo.h
+	"TipoNodo.h"
+	"ListaString.h"
+
+1709505815 c:\users\federico\documents\github\taller1--2024\proyecto taller1\tiponodo.h
+	"Boolean.h"
+
+1709505815 c:\users\federico\documents\github\taller1--2024\proyecto taller1\listastring.h
+	"Strigg.h"
+
+1709505815 c:\users\federico\documents\github\taller1--2024\proyecto taller1\strigg.h
+	"Boolean.h"
+
+1709505815 c:\users\federico\documents\github\taller1--2024\proyecto taller1\expresiones.h
+	"ArbolExpresiones.h"
+
+1709506105 source:c:\users\federico\documents\github\taller1--2024\proyecto taller1\archivo.cpp
+	"Archivo.h"
+
+1709505808 c:\users\federico\documents\github\taller1--2024\proyecto taller1\archivo.h
+	"ListaExpresiones.h"
+
+1709506551 c:\users\federico\documents\github\taller1--2024\proyecto taller1\listaexpresiones.h
+	"Expresiones.h"
+	"Boolean.h"
+
+1708567868 source:c:\users\federico\documents\github\taller1--2024\proyecto taller1\boolean.cpp
+	"Boolean.h"
+
+1709505815 source:c:\users\federico\documents\github\taller1--2024\proyecto taller1\comando.cpp
+	"comando.h"
+
+1709505816 c:\users\federico\documents\github\taller1--2024\proyecto taller1\comando.h
+	"ValorNodo.h"
+	"ArbolExpresiones.h"
+	"Expresiones.h"
+	"ListaExpresiones.h"
+	"Archivo.h"
+
+1709447678 source:c:\users\federico\documents\github\taller1--2024\proyecto taller1\expresiones.cpp
+	"Expresiones.h"
+
+1709505815 source:c:\users\federico\documents\github\taller1--2024\proyecto taller1\listastring.cpp
+	"ListaString.h"
+	"Strigg.h"
+
+1709480138 source:c:\users\federico\documents\github\taller1--2024\proyecto taller1\strigg.cpp
+	"Strigg.h"
+
+1709505815 source:c:\users\federico\documents\github\taller1--2024\proyecto taller1\tiponodo.cpp
+	"TipoNodo.h"
+
+1709505815 source:c:\users\federico\documents\github\taller1--2024\proyecto taller1\valornodo.cpp
+	"ValorNodo.h"
+	"TipoNodo.h"
+	"ListaString.h"
+
