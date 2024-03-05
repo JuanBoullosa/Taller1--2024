@@ -31,7 +31,9 @@ void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1){
         Crear(arbolexpreID);
 
         Lista1 = Lista1->sig;
-        sscanf(Lista1->palabra, "%d", &numeroconvertido);
+        if(EsDigito(Lista1->palabra))
+        {
+            sscanf(Lista1->palabra, "%d", &numeroconvertido);
         if(numeroconvertido < contadorexp1)
         {
             copiarArbol(arbolexpreID, TraerArbolExp(L , numeroconvertido));
@@ -41,6 +43,10 @@ void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1){
         }
         else
             printf("\nNo existe una expresion con ese valor\n");
+        }
+        else
+            printf("Expresion incorrecta");
+
 
 
 
