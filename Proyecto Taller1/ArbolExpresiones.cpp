@@ -113,38 +113,31 @@ void Cons2(ValorNodo v, ArbolExpresiones i, ArbolExpresiones d, ValorNodo Izq, V
 
 }
 
-boolean EvaluarArbol(ArbolExpresiones a){
-    boolean result = TRUE;
-    boolean aux = FALSE;
-    if (( a->info.dato.valor == TRUE) || ( a->info.dato.valor == FALSE))
-        {
-                result = a->info.dato.valor;
-        }
-    else
-        {
-                if ((a->info.dato.operador == 'A'))
-                    if((EvaluarArbol(a->hder)== TRUE) && (EvaluarArbol(a->hizq)== TRUE))
-                        return result;
-                        else
-                            return aux;
-                if ((a->info.dato.operador == 'O'))
-                   if(EvaluarArbol(a->hder) || EvaluarArbol(a->hizq))
-                        return result;
-                        else
-                            return aux;
+boolean EvaluarArbol(ArbolExpresiones a, boolean &resultado) {
+    boolean resultadoaux;
 
-                if  ((a->info.dato.operador == 'N'))
-                    if(EvaluarArbol(a->hder)== TRUE)
-                    {result = FALSE;
-                         return result;
-                    }
-                    else
-                        result = TRUE;
-                         return result;
+    if (a->info.dato.valor == TRUE) {
+        resultado = TRUE;
+            }
+        else
+            if (a->info.dato.valor == FALSE) {
+                resultado = FALSE;
+            }
+        else
+            if (a->info.dato.operador == 'A') {
+                resultado = (boolean)(EvaluarArbol(a->hder, resultado) && EvaluarArbol(a->hizq, resultado));
+            }
+        else
+            if (a->info.dato.operador == 'O') {
+                resultado = (boolean)(EvaluarArbol(a->hder, resultado) || EvaluarArbol(a->hizq, resultado));
+            }
+       else
+            if (a->info.dato.operador == 'N') {
+                resultadoaux = (boolean)(EvaluarArbol(a->hder, resultado));
+                resultado = (boolean)(!resultadoaux);
+            }
 
-
-                    return result;
-
+    return resultado;
 }
 }
 
