@@ -1,3 +1,4 @@
+#include "comando.h"
 
 void Atomic(ListaString L, int &contadorexp, ListaExpresiones &ListExp){
 

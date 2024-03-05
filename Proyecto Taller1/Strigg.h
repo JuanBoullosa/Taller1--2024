@@ -28,4 +28,6 @@ void dividirString (str comando, str &palabra1,str &resto);
 void eliminarBlancosPrincipio(str comando, str &s2);
 //Devuelve si un string esta vacio
 boolean stringVacio (str &s);
+
+boolean EsDigito (str palabra);
 #endif // STRIGG_H_INCLUDED

@@ -138,3 +138,17 @@ boolean stringVacio (str &s){
   return vacio;
 }
 
+boolean EsDigito (str palabra){
+
+boolean Digito = TRUE;
+int i;
+
+        for (i = 0; palabra[i] != '\0'; ++i)
+        {
+            if (!(palabra[i] >= '0' && palabra[i] <= '9'))
+            Digito = FALSE;
+        }
+
+            return Digito;
+
+}
