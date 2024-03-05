@@ -1,9 +1,5 @@
 #ifndef COMANDO_H_INCLUDED
 #define COMANDO_H_INCLUDED
-#include "ValorNodo.h"
-#include "ArbolExpresiones.h"
-#include "Expresiones.h"
-#include "ListaExpresiones.h"
 #include "Archivo.h"
 
 //Toma un string ingresado lo divide en palabras, lo ingresa en una lista y a partir de esta verifica que sea correcto y crear arbol binario y lo guarda en una lista de expresiones

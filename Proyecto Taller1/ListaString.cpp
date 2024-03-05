@@ -1,12 +1,12 @@
 #include "ListaString.h"
-#include "Strigg.h"
 
 
-//Crear lista
+
+
 void CrearLista (ListaString &L){
   L=NULL;
 }
-//Mostrar Lista
+
 void MostrarLista (ListaString L){
     while (L != NULL)
     {
@@ -22,14 +22,14 @@ int LargoRecu (ListaString L){
     else
         return 1 + LargoRecu (L->sig);
 }
-//Mostrar si la lista es vacia
+
 boolean Vacia (ListaString L){
 boolean esVacia = FALSE;
 if (L == NULL)
 esVacia = TRUE;
 return esVacia;
 }
-//Agregar al final de la lista
+
 void InsBackIter(ListaString &L, str palabraS) {
     ListaString nuevo = new NodoS;
 

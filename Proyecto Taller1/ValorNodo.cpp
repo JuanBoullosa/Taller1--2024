@@ -1,6 +1,5 @@
 #include "ValorNodo.h"
-#include "TipoNodo.h"
-#include "ListaString.h"
+
 
 
 void CargarValorNodo(ListaString L, ValorNodo &valNodo){
@@ -48,15 +47,15 @@ void AsignarValorParDer(ValorNodo &valNodo){
     valNodo.discriminante = PARENTESIS;
     valNodo.dato.parentesis = ')';
 }
-//Selectora Dar Boolean
+
 boolean DarBoolean(ValorNodo ValNodo){
   return ValNodo.dato.valor;
 }
-//Selectora Dar operador
+
 char DarOperador(ValorNodo ValNodo){
   return ValNodo.dato.operador;
 }
-//Selectora Dar Parentesis
+
 char DarParentesis(ValorNodo ValNodo){
   return ValNodo.dato.parentesis;
 }

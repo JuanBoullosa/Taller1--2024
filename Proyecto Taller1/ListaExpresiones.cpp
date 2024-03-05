@@ -1,7 +1,7 @@
 #include "ListaExpresiones.h"
 
 
-//Crear Lista
+
 void CrearListaExpresiones (ListaExpresiones &L){
   L=NULL;
 }
@@ -21,7 +21,7 @@ void InsBackIterExp  (ListaExpresiones &L , Expresion exp){
     aux -> sig = nuevo;
   }
 }
-//Devolver expresion segun el ID solicitado
+
 ArbolExpresiones TraerArbolExp(ListaExpresiones ListaExp, int numeroconvertido){
     while (ListaExp->expre.numero != numeroconvertido)
     {

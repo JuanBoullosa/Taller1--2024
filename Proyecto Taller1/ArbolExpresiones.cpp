@@ -1,14 +1,10 @@
 #include "ArbolExpresiones.h"
-#include "Expresiones.h"
 
 
-
-
-/* crear un árbol vacío */
 void Crear (ArbolExpresiones &a){
     a = NULL;
 }
-/* saber si el árbol está vacío */
+
 boolean EsVacio (ArbolExpresiones a){
     return (boolean) (a == NULL);
 }

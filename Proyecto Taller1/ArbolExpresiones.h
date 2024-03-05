@@ -1,6 +1,5 @@
 #ifndef ARBOLEXPRESIONES_H_INCLUDED
 #define ARBOLEXPRESIONES_H_INCLUDED
-#include "Boolean.h"
 #include "ValorNodo.h"
 typedef struct nodoA { ValorNodo info;
                        nodoA * hizq;

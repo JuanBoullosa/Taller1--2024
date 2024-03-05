@@ -1,25 +1,23 @@
 #include "Strigg.h"
 
-//Operaciones Basicas
 
-/* crea un string vacío */
 void strcrear (str &s){
     s = new char[1];
     s[0] = '\0';
 }
-/* libera la memoria usada por el string */
+
 void strdestruir (str &s){
     delete [] s;
     s = NULL;
 }
-/* devuelve el largo del string s */
+
 int strlar (str s){
     int i = 0;
     while (s[i] != '\0')
         i++;
     return i;
 }
-/* copia el contenido del string s2 en s1 */
+
 void strcop (str &s1,str s2){
     int i = 0;
     int largo = strlar(s2) + 1;
@@ -32,7 +30,7 @@ void strcop (str &s1,str s2){
     }
     s1[i] = '\0';
 }
-/* lee el string s desde teclado */
+
 void scan (str &s){
     str aux = new char[MAX];
     int i=0;
@@ -48,7 +46,7 @@ void scan (str &s){
     strcop (s,aux);
     strdestruir (aux);
 }
-/* imprime el string s por pantalla */
+
 void print (str s){
     int i = 0;
     while(s[i]!= '\0')
@@ -57,7 +55,7 @@ void print (str s){
         i++;
     }
 }
-/* determina si los strings s1 y s2 son iguales */
+
 boolean streq(str s1, str s2){
     int i = 0;
     boolean iguales =TRUE;
@@ -70,7 +68,7 @@ boolean streq(str s1, str s2){
         iguales = FALSE;
     return iguales;
 }
-//Elimina espacios en blanco al principio de un string
+
 void eliminarBlancosPrincipio(str comando, str &sinEspacios) {
     int i = 0;
     int j = 0;
@@ -95,7 +93,7 @@ void eliminarBlancosPrincipio(str comando, str &sinEspacios) {
     }
     sinEspacios[j] = '\0'; // Agregar el terminador nulo al final de sinEspacios
 }
-//Divide un string en otro con la primera palabra y el resto de palabras en otro string
+
 void dividirString(str comando, str &palabra1, str &resto) {
     // Definir variables para recorrer el string y calcular la longitud de la primera palabra
     int f = 0;
@@ -124,7 +122,7 @@ void dividirString(str comando, str &palabra1, str &resto) {
     }
     resto[j] = '\0';
 }
-//Devuelve si un string esta vacio
+
 boolean stringVacio (str &s){
   int i = 0;
   boolean vacio = FALSE;

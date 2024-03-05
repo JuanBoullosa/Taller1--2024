@@ -1,8 +1,4 @@
 #include <iostream>
-#include "ArbolExpresiones.h"
-#include "Strigg.h"
-#include "ListaString.h"
-#include "ListaExpresiones.h"
 #include "comando.h"
 
 int main()
