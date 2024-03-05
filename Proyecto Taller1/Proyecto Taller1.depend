@@ -195,7 +195,7 @@
 1709499548 d:\documentos\github\taller1--2024\proyecto taller1\listastring.h
 	"Strigg.h"
 
-1709604647 d:\documentos\github\taller1--2024\proyecto taller1\strigg.h
+1709605975 d:\documentos\github\taller1--2024\proyecto taller1\strigg.h
 	"Boolean.h"
 
 1709527249 d:\documentos\github\taller1--2024\proyecto taller1\expresiones.h
@@ -218,7 +218,7 @@
 	"ListaString.h"
 	"Strigg.h"
 
-1709604473 source:d:\documentos\github\taller1--2024\proyecto taller1\strigg.cpp
+1709609985 source:d:\documentos\github\taller1--2024\proyecto taller1\strigg.cpp
 	"Strigg.h"
 
 1709499416 source:d:\documentos\github\taller1--2024\proyecto taller1\tiponodo.cpp
@@ -300,7 +300,7 @@
 	"ListaExpresiones.h"
 	"comando.h"
 
-1709604113 source:d:\documentos\github\taller1--2024\proyecto taller1\comando.cpp
+1709609062 source:d:\documentos\github\taller1--2024\proyecto taller1\comando.cpp
 	"comando.h"
 
 1709500357 d:\documentos\github\taller1--2024\proyecto taller1\comando.h

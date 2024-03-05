@@ -198,29 +198,41 @@ Expresion expre;
 void Save(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1){
 
 int numeroconvertido;
-
-ArbolExpresiones arbolPrincipal;
-Crear(arbolPrincipal);
+str archivo;
+str dat;
+strcrear(archivo);
+strcrear(dat);
 ArbolExpresiones arbolSinID;
 Crear(arbolSinID);
 int suma=1;
 
 
 
-        Lista1=Lista1->sig;                                                     //Avanzo a string 2
-        sscanf(Lista1->palabra, "%d", &numeroconvertido);                       //Convierto string 2 a entero
-        if (numeroconvertido<contadorexp1)                                      //Condicion si el numero existe en la lista de expresiones
+        Lista1=Lista1->sig;
+        if(EsDigito(Lista1->palabra))
         {
-            Lista1=Lista1->sig;                                                 //Avanzo al string 3
-                    copiarArbol(arbolSinID ,TraerArbolExp(ListExpPrincipal, numeroconvertido));     //Extraigo y copio arbol de expresiones
-                    AsignarIDenOrden(arbolSinID, suma);                                                   //Asigno ID en orden al arbol
-                    MostrarArbol(arbolSinID);
-                    MostrarIDdelArbol (arbolSinID);
-                    Bajar_ArbolExpresiones(arbolSinID, Lista1->palabra);
-        }
-                 else
+            sscanf(Lista1->palabra, "%d", &numeroconvertido);                       //Convierto string 2 a entero
+            if (numeroconvertido<contadorexp1)                                      //Condicion si el numero existe en la lista de expresiones
+            {
+                    Lista1=Lista1->sig;
+                    dividirLoad(Lista1->palabra,archivo,dat);
+
+                    if((Alfabeto(archivo))&& (streq(".dat",dat)))
+                    {
+                        copiarArbol(arbolSinID ,TraerArbolExp(ListExpPrincipal, numeroconvertido));     //Extraigo y copio arbol de expresiones
+                        AsignarIDenOrden(arbolSinID, suma);                                                   //Asigno ID en orden al arbol
+                        Bajar_ArbolExpresiones(arbolSinID, Lista1->palabra);
+                        printf("\nLa expresion se guardo con exito\n");
+
+                    }else
                     printf("\nLa expresion que desea guardar no es valida\n");
 
+            }else
+                    printf("\nLa expresion que desea guardar no es valida\n");
+
+
+        }else
+                    printf("\nLa expresion que desea guardar no es valida\n");
 
 
 }
@@ -229,21 +241,30 @@ void Load(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadore
 
 int numeroconvertido;
 Expresion expre;
+str archivo;
+str dat;
+strcrear(archivo);
+strcrear(dat);
 
 ArbolExpresiones Arbolaguardar;
 Crear(Arbolaguardar);
 
-ArbolExpresiones arbolSinID;
-Crear(arbolSinID);
 
-        Lista1=Lista1->sig;                                                     //Avanzo a string 2
-        if (Existe(Lista1->palabra))                                      //Condicion si el numero existe en la lista de expresiones
+        Lista1=Lista1->sig;
+        dividirLoad(Lista1->palabra,archivo,dat);
+        if((Alfabeto(archivo))&& (streq(".dat",dat)))
+        {
+           if (Existe(Lista1->palabra))                                      //Condicion si el numero existe en la lista de expresiones
         {
         Levantar_ArbolExpresiones(Arbolaguardar, Lista1->palabra);
         CargarExpresion(Arbolaguardar, expre, contadorexp1);            //Cargamos expresion con ArbolPrincipal
-        InsBackIterExp(ListExpPrincipal, expre);                        //Insertamos la expresion en la Lista Principal de Expresiones
+        InsBackIterExp(ListExpPrincipal, expre);
+        printf("\nEL archivo se cargo correctamente en la Expresion : %d", contadorexp1-1);                        //Insertamos la expresion en la Lista Principal de Expresiones
         }
                  else
+                    printf("\nNombre de archivo incorrecto\n");
+        }
+         else
                     printf("\nNombre de archivo incorrecto\n");
 
 

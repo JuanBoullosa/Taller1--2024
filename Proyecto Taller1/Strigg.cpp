@@ -161,12 +161,12 @@ int i=0;
 
         while ((palabra[i] != '\0') && (Alfabeto == TRUE))
         {
-            if (!((palabra[i] >= 'A' && palabra[i] <= 'Z')&&(palabra[i] >= 'a' && palabra[i] <= 'z')))
+            return Alfabeto;
+            if (!(((palabra[i] >= 'A' && palabra[i] <= 'Z') || (palabra[i] >= 'a' && palabra[i] <= 'z')) || (palabra[i] == '.'  )))
             Alfabeto = FALSE;
             i++;
         }
 
-            return Alfabeto;
 
 }
 
