@@ -20,6 +20,8 @@ ArbolExpresiones DarArbolexp( ListaExpresiones L);
 //Elimina una lista de expresiones
 void EliminarListaExpresiones (ListaExpresiones &L);
 
+void EliminarListaYArbol(ListaExpresiones &L);
+
 
 
 

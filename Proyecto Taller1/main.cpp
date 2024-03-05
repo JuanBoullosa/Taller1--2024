@@ -54,8 +54,8 @@ if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq("compound", Lista
 
 strdestruir(comando);
 EliminarListaString(Lista1);
-EliminarListaExpresiones(ListExpPrincipal);
-printf("Hasta la proxima");
+EliminarListaYArbol(ListExpPrincipal);
+printf("\nHasta la proxima\n");
 }
 
 

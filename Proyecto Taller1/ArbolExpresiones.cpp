@@ -202,3 +202,13 @@ void AsignarIDenOrden(ArbolExpresiones &a, int &suma){
     }
 }
 
+void EliminarAbb (ArbolExpresiones &a){
+
+    if (a != NULL)
+    {
+        EliminarAbb(a->hizq);
+        EliminarAbb(a->hder);
+        delete a;
+        a = NULL;
+    }
+}

@@ -42,3 +42,24 @@ void EliminarListaExpresiones (ListaExpresiones &L){
         L = NULL;
     }
 }
+
+void EliminarListaYArbol(ListaExpresiones &L) {
+
+    ListaExpresiones temp;
+    CrearListaExpresiones(temp);
+
+    while (L != NULL) {
+        EliminarAbb(L->expre.arbol);
+
+        temp = L->sig;
+
+
+        delete L;
+
+
+        L = temp;
+    }
+}
+
+
+

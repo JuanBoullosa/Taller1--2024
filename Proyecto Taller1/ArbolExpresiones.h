@@ -40,8 +40,8 @@ void Insert (ArbolExpresiones &a, ValorNodo v);
 void AsignarIDenOrden(ArbolExpresiones &a, int &suma);
 //Muestra el ID de los nodo del arbol
 void MostrarIDdelArbol (ArbolExpresiones a);   //borrar despues si no anda
-
-
+//Eliminar arbol de expresiones
+void EliminarAbb (ArbolExpresiones &a);
 
 
 #endif // ARBOLEXPRESIONES_H_INCLUDED
