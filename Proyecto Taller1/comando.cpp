@@ -200,6 +200,7 @@ void Save(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadore
 int numeroconvertido;
 str archivo;
 str dat;
+char c;
 strcrear(archivo);
 strcrear(dat);
 ArbolExpresiones arbolSinID;
@@ -219,13 +220,23 @@ int suma=1;
 
                     if((Alfabeto(archivo))&& (streq(".dat",dat)))
                     {
-                        copiarArbol(arbolSinID ,TraerArbolExp(ListExpPrincipal, numeroconvertido));     //Extraigo y copio arbol de expresiones
-                        AsignarIDenOrden(arbolSinID, suma);                                                   //Asigno ID en orden al arbol
-                        Bajar_ArbolExpresiones(arbolSinID, Lista1->palabra);
-                        printf("\nLa expresion se guardo con exito\n");
+                        if (!Existe(Lista1->palabra))
+                        {
+
+
+                                    copiarArbol(arbolSinID ,TraerArbolExp(ListExpPrincipal, numeroconvertido));     //Extraigo y copio arbol de expresiones
+                                    AsignarIDenOrden(arbolSinID, suma);                                                   //Asigno ID en orden al arbol
+                                    Bajar_ArbolExpresiones(arbolSinID, Lista1->palabra);
+                                    printf("\nLa expresion se guardo con exito\n");
+
+
+                        }else
+                            printf("\nYa existe una expresion con ese nombre\n");
+
+
 
                     }else
-                    printf("\nLa expresion que desea guardar no es valida\n");
+                        printf("\nLa expresion que desea guardar no es valida\n");
 
             }else
                     printf("\nLa expresion que desea guardar no es valida\n");
