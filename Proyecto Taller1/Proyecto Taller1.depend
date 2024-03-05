@@ -174,11 +174,11 @@
 	"TipoNodo.h"
 	"ListaString.h"
 
-1709611583 source:d:\documentos\github\taller1--2024\proyecto taller1\arbolexpresiones.cpp
+1709668985 source:d:\documentos\github\taller1--2024\proyecto taller1\arbolexpresiones.cpp
 	"ArbolExpresiones.h"
 	"Expresiones.h"
 
-1709611889 d:\documentos\github\taller1--2024\proyecto taller1\arbolexpresiones.h
+1709668985 d:\documentos\github\taller1--2024\proyecto taller1\arbolexpresiones.h
 	"Boolean.h"
 	"ValorNodo.h"
 
@@ -204,32 +204,32 @@
 1708567867 source:d:\documentos\github\taller1--2024\proyecto taller1\boolean.cpp
 	"Boolean.h"
 
-1709447677 source:d:\documentos\github\taller1--2024\proyecto taller1\expresiones.cpp
+1709627979 source:d:\documentos\github\taller1--2024\proyecto taller1\expresiones.cpp
 	"Expresiones.h"
 
-1709612962 source:d:\documentos\github\taller1--2024\proyecto taller1\listaexpresiones.cpp
+1709627979 source:d:\documentos\github\taller1--2024\proyecto taller1\listaexpresiones.cpp
 	"ListaExpresiones.h"
 
-1709612870 d:\documentos\github\taller1--2024\proyecto taller1\listaexpresiones.h
+1709627979 d:\documentos\github\taller1--2024\proyecto taller1\listaexpresiones.h
 	"Expresiones.h"
 	"Boolean.h"
 
-1709527312 source:d:\documentos\github\taller1--2024\proyecto taller1\listastring.cpp
+1709627979 source:d:\documentos\github\taller1--2024\proyecto taller1\listastring.cpp
 	"ListaString.h"
 	"Strigg.h"
 
-1709609985 source:d:\documentos\github\taller1--2024\proyecto taller1\strigg.cpp
+1709627979 source:d:\documentos\github\taller1--2024\proyecto taller1\strigg.cpp
 	"Strigg.h"
 
-1709499416 source:d:\documentos\github\taller1--2024\proyecto taller1\tiponodo.cpp
+1709627979 source:d:\documentos\github\taller1--2024\proyecto taller1\tiponodo.cpp
 	"TipoNodo.h"
 
-1709527312 source:d:\documentos\github\taller1--2024\proyecto taller1\valornodo.cpp
+1709627979 source:d:\documentos\github\taller1--2024\proyecto taller1\valornodo.cpp
 	"ValorNodo.h"
 	"TipoNodo.h"
 	"ListaString.h"
 
-1709612509 source:d:\documentos\github\taller1--2024\proyecto taller1\main.cpp
+1709627979 source:d:\documentos\github\taller1--2024\proyecto taller1\main.cpp
 	<iostream>
 	"ArbolExpresiones.h"
 	"Strigg.h"
@@ -300,10 +300,10 @@
 	"ListaExpresiones.h"
 	"comando.h"
 
-1709611001 source:d:\documentos\github\taller1--2024\proyecto taller1\comando.cpp
+1709628006 source:d:\documentos\github\taller1--2024\proyecto taller1\comando.cpp
 	"comando.h"
 
-1709500357 d:\documentos\github\taller1--2024\proyecto taller1\comando.h
+1709627979 d:\documentos\github\taller1--2024\proyecto taller1\comando.h
 	"ValorNodo.h"
 	"ArbolExpresiones.h"
 	"Expresiones.h"
@@ -326,10 +326,10 @@
 1709558847 c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\archivo.h
 	"ListaExpresiones.h"
 
-1709602514 source:d:\documentos\github\taller1--2024\proyecto taller1\archivo.cpp
+1709627979 source:d:\documentos\github\taller1--2024\proyecto taller1\archivo.cpp
 	"Archivo.h"
 
-1709527312 d:\documentos\github\taller1--2024\proyecto taller1\archivo.h
+1709627979 d:\documentos\github\taller1--2024\proyecto taller1\archivo.h
 	"ListaExpresiones.h"
 
 1709613724 source:c:\users\federico\documents\github\taller1--2024\proyecto taller1\arbolexpresiones.cpp

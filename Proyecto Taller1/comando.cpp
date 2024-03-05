@@ -200,7 +200,6 @@ void Save(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadore
 int numeroconvertido;
 str archivo;
 str dat;
-char c;
 strcrear(archivo);
 strcrear(dat);
 ArbolExpresiones arbolSinID;

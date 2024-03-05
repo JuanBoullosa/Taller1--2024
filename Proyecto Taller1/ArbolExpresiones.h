@@ -22,7 +22,7 @@ void AgregarParentesisIzquierdo(ArbolExpresiones &a,ValorNodo ValorNodoParIzq);
 //agrega parentesis derecho a un nodo del arbol
 void AgregarParentesisDerecho(ArbolExpresiones &a, ValorNodo ValorNodoParDer);
 //Crea un arbol a partir de un valor nodo, un arbol sub arboles y los parentiza EXPRESION NOT)
-ArbolExpresiones Cons (ValorNodo v ,ArbolExpresiones d, ArbolExpresiones &Creado, ValorNodo Izq, ValorNodo Der);
+void Cons (ValorNodo v ,ArbolExpresiones d, ArbolExpresiones &Creado, ValorNodo Izq, ValorNodo Der);
 //Crea un arbol a partir de un valor nodo, dos arboles y los parentiza
 void Cons2(ValorNodo v, ArbolExpresiones i, ArbolExpresiones d, ValorNodo Izq, ValorNodo Der, ArbolExpresiones &Creado);
 //Evalua el valor de las expresiones dentro de un arbol

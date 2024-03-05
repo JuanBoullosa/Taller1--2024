@@ -88,7 +88,7 @@ void AgregarParentesisDerecho(ArbolExpresiones &a, ValorNodo ValorNodoParDer){
     }
 }
 
-ArbolExpresiones Cons (ValorNodo v ,ArbolExpresiones d, ArbolExpresiones &Creado, ValorNodo Izq, ValorNodo Der ){
+void Cons (ValorNodo v ,ArbolExpresiones d, ArbolExpresiones &Creado, ValorNodo Izq, ValorNodo Der ){
     Creado = new nodo;
     Creado -> info = v;
     copiarArbol(Creado->hder, d);
