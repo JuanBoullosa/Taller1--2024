@@ -46,7 +46,7 @@ if (((LargoRecu(Lista1)>2) && (LargoRecu(Lista1)<5)) && (streq("compound", Lista
 }while(!(streq("exit", Lista1->palabra)));
 
 strdestruir(comando);
-EliminarListaString(Lista1);
+EliminarstringLista(Lista1);
 EliminarListaYArbol(ListExpPrincipal);
 printf("\nHasta la proxima\n");
 }

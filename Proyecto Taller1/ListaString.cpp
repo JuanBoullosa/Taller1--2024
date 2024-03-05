@@ -96,7 +96,23 @@ void partirString(str s, ListaString &L) {
 
 }
 
+void EliminarstringLista(ListaString &L) {
 
+    ListaString temp;
+    CrearLista(temp);
+
+    while (L != NULL) {
+        strdestruir(L->palabra);
+
+        temp = L->sig;
+
+
+        delete L;
+
+
+        L = temp;
+    }
+}
 
 
 

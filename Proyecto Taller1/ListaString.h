@@ -24,5 +24,6 @@ void partirString (str s, ListaString &L);
 //Elimina una lista de string dada
 void EliminarListaString (ListaString &L);
 
+void EliminarstringLista(ListaString &L);
 
 #endif // LISTASTRING_H_INCLUDED
