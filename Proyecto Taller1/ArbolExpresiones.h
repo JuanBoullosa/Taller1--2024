@@ -26,7 +26,7 @@ ArbolExpresiones Cons (ValorNodo v ,ArbolExpresiones d, ArbolExpresiones &Creado
 //Crea un arbol a partir de un valor nodo, dos arboles y los parentiza
 void Cons2(ValorNodo v, ArbolExpresiones i, ArbolExpresiones d, ValorNodo Izq, ValorNodo Der, ArbolExpresiones &Creado);
 //Evalua el valor de las expresiones dentro de un arbol
-boolean EvaluarArbol(ArbolExpresiones a);
+boolean EvaluarArbol(ArbolExpresiones a, boolean &resultado);
 //Copia un arbol en otro
 void copiarArbol(ArbolExpresiones &a, ArbolExpresiones b);
 //Asigna valor nodo en un arbol

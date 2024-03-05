@@ -54,7 +54,7 @@ void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1){
 }
 
 void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal,int contadorexp1){
-
+    boolean resultado;
     ArbolExpresiones arbolevaluate;
     Crear(arbolevaluate);
     int numeroconvertido;
@@ -68,7 +68,7 @@ void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal,int contado
             {
 
                 copiarArbol(arbolevaluate,TraerArbolExp(ListExpPrincipal, numeroconvertido));    //Traigo el arbol de la lista para evaluarlo
-                if(EvaluarArbol(arbolevaluate)== TRUE)                               //Funcion para evaluar un arbol de expresiones
+                if(EvaluarArbol(arbolevaluate,resultado)== TRUE)                               //Funcion para evaluar un arbol de expresiones
 
 
                     printf("El valor de la expresion es :TRUE\n");
