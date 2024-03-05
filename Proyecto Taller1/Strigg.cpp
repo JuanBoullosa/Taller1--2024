@@ -153,3 +153,48 @@ int i=0;
             return Digito;
 
 }
+
+boolean Alfabeto (str palabra){
+
+boolean Alfabeto = TRUE;
+int i=0;
+
+        while ((palabra[i] != '\0') && (Alfabeto == TRUE))
+        {
+            if (!((palabra[i] >= 'A' && palabra[i] <= 'Z')&&(palabra[i] >= 'a' && palabra[i] <= 'z')))
+            Alfabeto = FALSE;
+            i++;
+        }
+
+            return Alfabeto;
+
+}
+
+void dividirLoad(str comando, str &archivo, str &dat) {
+    // Definir variables para recorrer el string y calcular la longitud de la primera palabra
+    int f = 0;
+    int j = 0;
+
+    // Calcular la longitud de la primera palabra
+    while (comando[f] != '.' && comando[f] != '\0') {
+        f++;
+    }
+    // Asignar memoria para palabra1 y copiar la primera palabra
+    archivo = new char[f + 1];
+    for (j = 0; j < f; j++) {
+        archivo[j] = comando[j];
+    }
+    archivo[f] = '\0';
+    // Calcular el largo del resto
+    int largo = strlar(comando) - f + 1;
+
+    // Asignar memoria para resto y copiar el resto del string
+    dat = new char[largo];
+    j = 0;
+    while (comando[f] != '\0') {
+        dat[j] = comando[f];
+        f++;
+        j++;
+    }
+    dat[j] = '\0';
+}

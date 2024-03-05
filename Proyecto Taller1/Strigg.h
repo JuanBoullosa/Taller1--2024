@@ -30,4 +30,8 @@ void eliminarBlancosPrincipio(str comando, str &s2);
 boolean stringVacio (str &s);
 //Verifica que palabra sea un entero
 boolean EsDigito (str palabra);
+//Verifica que solo haya caracteres alfabeticos
+boolean Alfabeto (str palabra);
+//Divide el comando Load para verificar la correcta escritura
+void dividirLoad(str comando, str &archivo, str &dat);
 #endif // STRIGG_H_INCLUDED
