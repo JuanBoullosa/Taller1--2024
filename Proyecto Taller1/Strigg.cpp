@@ -141,12 +141,13 @@ boolean stringVacio (str &s){
 boolean EsDigito (str palabra){
 
 boolean Digito = TRUE;
-int i;
+int i=0;
 
-        for (i = 0; palabra[i] != '\0'; ++i)
+        while ((palabra[i] != '\0') && (Digito == TRUE))
         {
             if (!(palabra[i] >= '0' && palabra[i] <= '9'))
             Digito = FALSE;
+            i++;
         }
 
             return Digito;
