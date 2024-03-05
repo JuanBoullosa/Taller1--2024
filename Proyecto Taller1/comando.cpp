@@ -53,37 +53,31 @@ void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1){
 
 }
 
-void Evaluate (ListaString Lista1, ListaExpresiones ListExpPrincipal,int contadorexp1){
+boolean EvaluarArbol(ArbolExpresiones a, boolean &resultado) {
+    boolean resultadoaux;
 
-    ArbolExpresiones arbolevaluate;
-    Crear(arbolevaluate);
-    int numeroconvertido;
-
-
-        Lista1=Lista1->sig;
-        if(EsDigito(Lista1->palabra))
-        {                                                                       //Avanzo al string 2
-            sscanf(Lista1->palabra, "%d", &numeroconvertido);                       //Convierto el string en entero
-            if (numeroconvertido < contadorexp1)                                    //Me fijo si existe contador en la lista de expresiones
-            {
-
-                copiarArbol(arbolevaluate,TraerArbolExp(ListExpPrincipal, numeroconvertido));    //Traigo el arbol de la lista para evaluarlo
-                if(EvaluarArbol(arbolevaluate)== TRUE)                               //Funcion para evaluar un arbol de expresiones
-
-
-                    printf("El valor de la expresion es :TRUE\n");
-
-                else
-                    printf("El valor de la expresion es :FALSE\n");
-
+    if (a->info.dato.valor == TRUE) {
+        resultado = TRUE;
             }
-            else
-            printf("\nExpresion invalida\n");
-        }
         else
-            printf("\nExpresion invalida\n");
+            if (a->info.dato.valor == FALSE) {
+                resultado = FALSE;
+            }
+        else
+            if (a->info.dato.operador == 'A') {
+                resultado = (boolean)(EvaluarArbol(a->hder, resultado) && EvaluarArbol(a->hizq, resultado));
+            }
+        else
+            if (a->info.dato.operador == 'O') {
+                resultado = (boolean)(EvaluarArbol(a->hder, resultado) || EvaluarArbol(a->hizq, resultado));
+            }
+       else
+            if (a->info.dato.operador == 'N') {
+                resultadoaux = (boolean)(EvaluarArbol(a->hder, resultado));
+                resultado = (boolean)(!resultadoaux);
+            }
 
-
+    return resultado;
 }
 
 void Compound(ListaString Lista1,ListaExpresiones &ListExpPrincipal, int & contadorexp1){
