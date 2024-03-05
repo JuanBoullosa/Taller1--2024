@@ -1,5 +1,3 @@
-#include "comando.h"
-
 
 void Atomic(ListaString L, int &contadorexp, ListaExpresiones &ListExp){
 
@@ -15,7 +13,7 @@ Expresion expre;
                 CargarArbolAtomic(valNodo,arbolexp);
                 CargarExpresion(arbolexp, expre, contadorexp);
                 InsBackIterExp(ListExp, expre);
-                printf("\nExpresion %d:\n",contadorexp-1);
+                printf("\nExpresion %d :",contadorexp-1);
                 MostrarArbol(arbolexp);
                 printf("\n");
             }
@@ -36,7 +34,7 @@ void Show(ListaString Lista1 ,ListaExpresiones L, int contadorexp1){
         if(numeroconvertido < contadorexp1)
         {
             copiarArbol(arbolexpreID, TraerArbolExp(L , numeroconvertido));
-            printf("El valor de la expresion es: \n");
+            printf("\nLa expresion %d es: ",contadorexp1-1);
             MostrarArbol(arbolexpreID);
             printf("\n");
         }
@@ -109,7 +107,7 @@ Expresion expre;
                     Cons(ValorNodoCompound,arbolDer,arbolPrincipal,ValorNodoParIzq,ValorNodoParDer);                //Construimos el arbol a partir del valor not, el arbol copiado de la lista y le agregamos sus respectivos parentesis
                     CargarExpresion(arbolPrincipal, expre, contadorexp1);                                           //Cargamos expresion con ArbolPrincipal
                     InsBackIterExp(ListExpPrincipal, expre);                                                        //Insertamos la expresion en la Lista Principal de Expresiones
-                    printf("Expresion %d",contadorexp1-1);                                                          //Mostramos el numero de expresion
+                    printf("\nExpresion %d :",contadorexp1-1);                                                          //Mostramos el numero de expresion
                     MostrarArbol(arbolPrincipal);                                                                   //Mostramos el arbol construido en pantalla
                     printf("\n");                                                                                   //Salto de linea
                }
@@ -119,6 +117,10 @@ Expresion expre;
                             //%%%%%%%%%%   COMANDO AND Y OR  %%%%%%%%%%%%
        else                                                                                                                 //Si no es NOT
        {                                                                                                                    //{
+           if((LargoRecu(Lista1)<5))
+          {
+
+
             sscanf(Lista1->palabra, "%d", &numeroconvertido);                                                               //Convierto string 2 a entero
 
             if (numeroconvertido<contadorexp1)                                                                              //Condicion si el numero existe en la lista de expresiones
@@ -152,14 +154,15 @@ Expresion expre;
                                     printf("\n");                                                                               //Salto de linea
                                 }
                                 else
-                                   printf("\nLa segunda expresion no es valida\n");
+                                   printf("\nExpresion incorrecta\n");
                             }
                             else
-                                 printf("\nEl operador no es valido\n");
+                                 printf("\nExpresion incorrecta\n");
                                                                                                                                 //Mensaje de error
             }else
-                printf("\nLa primera expresion no es valida\n");
-
+                printf("\nExpresion incorrecta\n");
+            }else
+                printf("\nExpresion incorrecta\n");
 
        }
 
@@ -186,6 +189,7 @@ int suma=1;
                     copiarArbol(arbolSinID ,TraerArbolExp(ListExpPrincipal, numeroconvertido));     //Extraigo y copio arbol de expresiones
                     AsignarIDenOrden(arbolSinID, suma);                                                   //Asigno ID en orden al arbol
                     MostrarArbol(arbolSinID);
+                    MostrarIDdelArbol (arbolSinID);
                     Bajar_ArbolExpresiones(arbolSinID, Lista1->palabra);
         }
                  else
