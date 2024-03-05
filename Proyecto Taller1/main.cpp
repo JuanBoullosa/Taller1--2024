@@ -29,7 +29,7 @@ printf("\nIngrese comando: \n");                        //Solicitamos al usuario
 scan(comando);                                          // Scan dinamico para el ingreso de el string comando
 partirString(comando, Lista1);                          // Procedimiento para partir el string
 
-if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq("compound", Lista1->palabra)))//si el comando es compound y su largo es mayor a 3 y menor a 4
+if (((LargoRecu(Lista1)>2) && (LargoRecu(Lista1)<5)) && (streq("compound", Lista1->palabra)))//si el comando es compound y su largo es mayor a 3 y menor a 4
     Compound(Lista1,ListExpPrincipal,contadorexp1);
 
     else if(((LargoRecu(Lista1)==2)) && (streq("atomic", Lista1->palabra)))// si el comando es atomic y su largo es igual a 2
@@ -46,9 +46,6 @@ if (((LargoRecu(Lista1)>2) || (LargoRecu(Lista1)<5)) && (streq("compound", Lista
 
                     else if(((LargoRecu(Lista1)==2)) && (streq("load", Lista1->palabra)))   //si el comando es load y su largo es igual a 2
                     Load(Lista1,ListExpPrincipal,contadorexp1);
-
-                        else
-                            printf("\nComando incorrecto, intente nuvamente\n");
 
 }while(!(streq("exit", Lista1->palabra)));
 
