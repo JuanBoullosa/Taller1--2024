@@ -23,7 +23,7 @@ void InsBackIter  (ListaString &L , str s);
 void partirString (str s, ListaString &L);
 //Elimina una lista de string dada
 void EliminarListaString (ListaString &L);
-
+//Elimina los string dentro de una lista y su respectiva lista
 void EliminarstringLista(ListaString &L);
 
 #endif // LISTASTRING_H_INCLUDED

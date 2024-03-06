@@ -224,8 +224,7 @@
 1709678466 source:d:\documentos\github\taller1--2024\proyecto taller1\valornodo.cpp
 	"ValorNodo.h"
 
-1709678374 source:d:\documentos\github\taller1--2024\proyecto taller1\main.cpp
-	<iostream>
+1709683039 source:d:\documentos\github\taller1--2024\proyecto taller1\main.cpp
 	"comando.h"
 
 1709501791 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\arbolexpresiones.cpp
@@ -291,11 +290,12 @@
 	"ListaExpresiones.h"
 	"comando.h"
 
-1709669003 source:d:\documentos\github\taller1--2024\proyecto taller1\comando.cpp
+1709683108 source:d:\documentos\github\taller1--2024\proyecto taller1\comando.cpp
 	"comando.h"
 
-1709678334 d:\documentos\github\taller1--2024\proyecto taller1\comando.h
+1709683155 d:\documentos\github\taller1--2024\proyecto taller1\comando.h
 	"Archivo.h"
+	<iostream>
 
 1709493444 source:c:\users\juani\onedrive\escritorio\taller1--2024\proyecto taller1\comando.cpp
 	"comando.h"

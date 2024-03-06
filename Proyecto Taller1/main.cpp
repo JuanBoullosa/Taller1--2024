@@ -1,4 +1,3 @@
-#include <iostream>
 #include "comando.h"
 
 int main()
