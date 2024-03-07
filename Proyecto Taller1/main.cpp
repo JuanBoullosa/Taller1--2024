@@ -42,6 +42,9 @@ if (((LargoRecu(Lista1)>2) && (LargoRecu(Lista1)<5)) && (streq("compound", Lista
                     else if(((LargoRecu(Lista1)==2)) && (streq("load", Lista1->palabra)))   //si el comando es load y su largo es igual a 2
                     Load(Lista1,ListExpPrincipal,contadorexp1);
 
+                        else if (!(streq("exit", Lista1->palabra)))
+                                 printf("Comando incorrecto");
+
 }while(!(streq("exit", Lista1->palabra)));
 
 strdestruir(comando);
